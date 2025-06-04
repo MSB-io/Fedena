@@ -55,4 +55,51 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
     });
+    
+    // Stats counter animation
+    function animateCounters() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.textContent.replace(/[^0-9]/g, ''));
+            const suffix = stat.textContent.replace(/[0-9]/g, '');
+            let current = 0;
+            const increment = target / 100;
+            const duration = 2000; // 2 seconds
+            const stepTime = duration / 100;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                stat.textContent = Math.floor(current).toLocaleString() + suffix;
+            }, stepTime);
+        });
+    }
+    
+    // Observe stats section for animation trigger
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statsObserver.observe(statsSection);
+    }
+    
+    // Buy Now button functionality
+    const buyNowBtn = document.querySelector('.btn-buy-now');
+    if (buyNowBtn) {
+        buyNowBtn.addEventListener('click', function() {
+            console.log('Buy Now clicked');
+            // Add your purchase flow logic here
+        });
+    }
 });
