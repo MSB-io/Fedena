@@ -102,4 +102,173 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add your purchase flow logic here
         });
     }
+    
+    // Why Fedena section animations
+    const whyFedenaSection = document.querySelector('.why-fedena-section');
+    if (whyFedenaSection) {
+        const whyFedenaObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate floating elements
+                    const floatingElements = entry.target.querySelectorAll('.floating-elements > *');
+                    floatingElements.forEach((element, index) => {
+                        setTimeout(() => {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translate(0, 0) scale(1)';
+                        }, index * 200);
+                    });
+                    
+                    whyFedenaObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        whyFedenaObserver.observe(whyFedenaSection);
+        
+        // Initially hide floating elements
+        const floatingElements = whyFedenaSection.querySelectorAll('.floating-elements > *');
+        floatingElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translate(20px, 20px) scale(0.8)';
+            element.style.transition = 'all 0.6s ease';
+        });
+    }
+    
+    // Modules section animations
+    const modulesSection = document.querySelector('.modules-section');
+    if (modulesSection) {
+        const modulesObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate module cards
+                    const moduleCards = entry.target.querySelectorAll('.module-card');
+                    moduleCards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                    
+                    modulesObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        modulesObserver.observe(modulesSection);
+        
+        // Initially hide module cards
+        const moduleCards = modulesSection.querySelectorAll('.module-card');
+        moduleCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+        });
+    }
+    
+    // See All Features button
+    const seeAllBtn = document.querySelector('.btn-see-all');
+    if (seeAllBtn) {
+        seeAllBtn.addEventListener('click', function() {
+            console.log('See All Features clicked');
+            // Add your navigation logic here
+        });
+    }
+    
+    // Module links
+    const moduleLinks = document.querySelectorAll('.module-link');
+    moduleLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Module link clicked:', this.closest('.module-card').querySelector('.module-title').textContent);
+            // Add your module detail navigation logic here
+        });
+    });
+    
+    // Features section animations
+    const featuresSection = document.querySelector('.features-section');
+    if (featuresSection) {
+        const featuresObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate feature items
+                    const featureItems = entry.target.querySelectorAll('.feature-item');
+                    featureItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, index * 200);
+                    });
+                    
+                    featuresObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        featuresObserver.observe(featuresSection);
+        
+        // Initially hide feature items
+        const featureItems = featuresSection.querySelectorAll('.feature-item');
+        featureItems.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s ease';
+        });
+    }
+    
+    // Mobile app section animations
+    const mobileAppSection = document.querySelector('.mobile-app-section');
+    if (mobileAppSection) {
+        const mobileAppObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate phone mockups
+                    const phoneMockups = entry.target.querySelectorAll('.phone-mockup');
+                    phoneMockups.forEach((phone, index) => {
+                        setTimeout(() => {
+                            phone.style.opacity = '1';
+                            phone.style.transform = `translateY(${index === 1 ? '40px' : '0'}) scale(1)`;
+                        }, index * 300);
+                    });
+                    
+                    // Animate text content
+                    const textContent = entry.target.querySelector('.mobile-app-text');
+                    if (textContent) {
+                        setTimeout(() => {
+                            textContent.style.opacity = '1';
+                            textContent.style.transform = 'translateX(0)';
+                        }, 600);
+                    }
+                    
+                    mobileAppObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        
+        mobileAppObserver.observe(mobileAppSection);
+        
+        // Initially hide elements
+        const phoneMockups = mobileAppSection.querySelectorAll('.phone-mockup');
+        const textContent = mobileAppSection.querySelector('.mobile-app-text');
+        
+        phoneMockups.forEach(phone => {
+            phone.style.opacity = '0';
+            phone.style.transform = 'translateY(50px) scale(0.9)';
+            phone.style.transition = 'all 0.8s ease';
+        });
+        
+        if (textContent) {
+            textContent.style.opacity = '0';
+            textContent.style.transform = 'translateX(-30px)';
+            textContent.style.transition = 'all 0.8s ease';
+        }
+    }
+    
+    // Explore APP Features button
+    const exploreAppBtn = document.querySelector('.btn-explore-app');
+    if (exploreAppBtn) {
+        exploreAppBtn.addEventListener('click', function() {
+            console.log('Explore APP Features clicked');
+            // Add your app features navigation logic here
+        });
+    }
 });
