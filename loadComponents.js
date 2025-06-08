@@ -69,7 +69,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Load footer with proper path
   fetch(`${basePath}footer.html`)
     .then(res => {
-      console.log(`Footer fetch response:`, res.status, res.statusText);
       if (!res.ok) {
         throw new Error(`Failed to load footer: ${res.status} ${res.statusText}`);
       }
@@ -78,26 +77,10 @@ window.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       const footerElement = document.getElementById("footer");
       if (footerElement) {
-        console.log("Footer element found, inserting content");
         footerElement.innerHTML = data;
       } else {
         console.error("Footer element not found in the DOM");
       }
     })
-    .catch(err => {
-      console.error("Error loading footer:", err);
-      // Fallback for footer - show a minimal footer
-      const footerElement = document.getElementById("footer");
-      if (footerElement) {
-        footerElement.innerHTML = `
-          <footer class="bg-gray-900 text-white py-6">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-              <p>© ${new Date().getFullYear()} Fedena School Management System</p>
-            </div>
-          </footer>
-        `;
-      }
-    });
-    
-  console.log("Component loading setup complete");
+    .catch(err => console.error("Error loading footer:", err));
 });
