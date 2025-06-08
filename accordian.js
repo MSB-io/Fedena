@@ -12,19 +12,23 @@ document.addEventListener("DOMContentLoaded", function() {
 function initAccordion() {
   console.log("Initializing accordion...");
   
-  // Target all accordion containers across the site
-  // This selector will find all the accordions that use the standard structure
-  const accordionButtons = document.querySelectorAll(
-    ".bg-white.rounded-xl.shadow-lg button"
-  );
-  
-  console.log("Found accordion buttons:", accordionButtons.length);
-  
-  if (accordionButtons.length > 0) {
-    // Initialize standard accordions
-    initStandardAccordions(accordionButtons);
-  } else {
-    console.log("No standard accordion buttons found. The page might be loading or using outdated structure.");
+  try {
+    // Target all accordion containers across the site
+    // This selector will find all the accordions that use the standard structure
+    const accordionButtons = document.querySelectorAll(
+      ".bg-white.rounded-xl.shadow-lg button"
+    );
+    
+    console.log("Found accordion buttons:", accordionButtons.length);
+    
+    if (accordionButtons.length > 0) {
+      // Initialize standard accordions
+      initStandardAccordions(accordionButtons);
+    } else {
+      console.log("No accordions found on this page - this is normal for pages without FAQs.");
+    }
+  } catch (error) {
+    console.error("Error initializing accordions:", error);
   }
 }
 
