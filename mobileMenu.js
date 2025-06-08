@@ -37,8 +37,10 @@ window.initMobileMenu = function() {
           const arrow = this.querySelector('svg');
           if (dropdown.classList.contains('hidden')) {
             arrow.style.transform = 'rotate(0deg)';
+            this.classList.remove('bg-red-50', 'text-red-600');
           } else {
             arrow.style.transform = 'rotate(180deg)';
+            this.classList.add('bg-red-50', 'text-red-600');
           }
         }
       });
