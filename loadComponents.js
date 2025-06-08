@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const basePath = getBasePath();
   
   // Load navbar with proper path
-  fetch(`${basePath}components/navbar.html`)
+  fetch(`${basePath}navbar.html`)
     .then(res => {
       if (!res.ok) {
         throw new Error(`Failed to load navbar: ${res.status} ${res.statusText}`);
@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
     .catch(err => console.error("Error loading navbar:", err));
 
   // Load footer with proper path
-  fetch(`${basePath}components/footer.html`)
+  fetch(`${basePath}footer.html`)
     .then(res => {
       if (!res.ok) {
         throw new Error(`Failed to load footer: ${res.status} ${res.statusText}`);
