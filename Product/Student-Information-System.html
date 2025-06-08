@@ -1,0 +1,704 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Fedena Student Information System
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+    <!-- Fixed Floating Navbar -->
+    <div id="navbar" class="fixed top-0 left-0 right-0 z-50"></div>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen mt-4 flex items-center justify-center overflow-hidden">
+        <!-- New container with fixed width and rounded corners -->
+        <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden ">
+            <div class="relative bg-gradient-to-br from-[#0f1f3d] via-[#1a2a4f] to-[#0a1a33] rounded-3xl overflow-hidden py-20">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMWY1ZjkiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-30">
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="absolute top-20 left-10 w-16 h-16 bg-blue-200/30 rounded-full animate-pulse"></div>
+                <div class="absolute top-32 right-20 w-12 h-12 bg-blue-200/30 rounded-full animate-pulse delay-300"></div>
+                <div class="absolute bottom-40 left-20 w-20 h-20 bg-blue-200/30 rounded-full animate-pulse delay-700"></div>
+                <div class="absolute bottom-20 right-10 w-14 h-14 bg-blue-200/30 rounded-full animate-pulse delay-500"></div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 bg-red-500/10 text-red-400 text-sm font-semibold px-6 py-3 rounded-full mb-8 shadow-lg">
+                        <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></span>
+                        Streamline Student Data Management
+                    </div>
+
+                    <!-- Main Heading -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                        <span class="text-white">
+                            Online Student
+                        </span>
+                        <br>
+                        <span class="text-white">Information System</span>
+                    </h1>
+
+                    <!-- Subheading -->
+                    <p class="text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed">
+                        One-stop solution to systematically manage, store, and track all sorts of students related data at a
+                        single place with enhanced security and efficiency.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <button class="group relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-lg font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                            <span class="relative z-10 flex items-center gap-3">
+                                <i class="fas fa-play"></i>
+                                Request Live Demo
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-red-700 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left">
+                            </div>
+                        </button>
+
+                        <button class="group bg-white/10 hover:bg-white/20 text-white text-lg font-semibold px-10 py-4 rounded-2xl border-2 border-white/20 hover:border-white/30 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <span class="flex items-center gap-3">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is SIS -->
+    <section
+        class="min-h-screen flex items-center justify-center py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    What is the <span class="text-red-600">Student Information System</span> (SIS)?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    A comprehensive digital solution that automates data management and provides actionable insights
+                    for educational institutions worldwide.
+                </p>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="w-full">
+                    <div class="bg-white rounded-3xl shadow-xl p-8 border border-gray-100 space-y-6">
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Manually managing student data becomes a tiresome and vexing task for educators and
+                            administrators. With evolving technology in education, all operations can be
+                            easily streamlined, improving student productivity, efficiency &amp; results.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            With the Student Information System, institutes can manage an enormous amount of students'
+                            data in a single place with enhanced security in the most cost-effective way. Features such as
+                            admission processing, attendance tracking, performance analysis, parent communication, and
+                            much more can be seamlessly managed.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Our system not only reduces the workload of staff members but also ensures
+                            that institutes have complete control over their data, assisting faculties in monitoring
+                            student performance and making data-driven decisions to improve academic growth.
+                        </p>
+                        
+                        <!-- Stats that were originally below the image, now integrated into text section -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-gray-100">
+                            <div class="bg-gray-50 rounded-2xl shadow-sm p-4 text-center">
+                                <div class="text-2xl font-bold text-red-600 mb-1">40,000+</div>
+                                <div class="text-sm text-gray-600">Institutions</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-2xl shadow-sm p-4 text-center">
+                                <div class="text-2xl font-bold text-red-600 mb-1">20M+</div>
+                                <div class="text-sm text-gray-600">Users</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-2xl shadow-sm p-4 text-center">
+                                <div class="text-2xl font-bold text-red-600 mb-1">200+</div>
+                                <div class="text-sm text-gray-600">Countries</div>
+                            </div>
+                            <div class="bg-gray-50 rounded-2xl shadow-sm p-4 text-center">
+                                <div class="text-2xl font-bold text-red-600 mb-1">24/7</div>
+                                <div class="text-sm text-gray-600">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Benefits -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    Who <span class="text-red-600">Benefits</span> from Student Management System?
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Our comprehensive platform supports all stakeholders in the educational ecosystem
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                <!-- For Teachers -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="bg-gradient-to-r from-[#0f1f3d] to-[#1a2e55] p-6">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-user-tie text-red-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">For Teachers</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Easy communication with students and parents</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Data-driven reports on students' progress</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">A unified place to maintain the student's grades</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Easily manage a student's records</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- For Admins -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="bg-gradient-to-r from-[#0f1f3d] to-[#1a2e55] p-6">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-user-shield text-red-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">For Admins</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">High-level data security</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Centralized data repository</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Simplified admission process</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Streamlined daily operations</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">User friendly interface, minimal IT skills needed</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- For Students -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="bg-gradient-to-r from-[#0f1f3d] to-[#1a2e55] p-6">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-user-graduate text-red-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">For Students</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Effective communication with teachers</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Instant notification on important events</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Manage & evaluate performance and progress</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Access to attendance, timetable, examination schedule</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- For Parents -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div class="bg-gradient-to-r from-[#0f1f3d] to-[#1a2e55] p-6">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-red-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-white text-xl font-bold mb-2">For Parents</h3>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Monitor & track the progress of students</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Hassle-free fee payment</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Better communication with teachers</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1 flex-shrink-0"></i>
+                                <span class="text-gray-700">Consider engagement in creative programmes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Did you know -->
+    <section class="py-12 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-50 to-red-50 opacity-70"></div>
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMWY1ZjkiIGZpbGwtb3BhY2l0eT0iMC40Ij48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-50">
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 border border-gray-100">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-lightbulb text-2xl text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-1">Did you know?</h3>
+                            <p class="text-gray-600">Discover Fedena's global impact</p>
+                        </div>
+                    </div>
+                    <div class="md:flex-1 text-center md:text-left">
+                        <p class="text-lg text-gray-700">
+                            Fedena is the leading EdTech provider for K-12 and Higher Ed, serving more than
+                            <span class="font-bold text-red-600">40,000+ Institutes, 20+ million students and teachers
+                                in 200+ countries</span>
+                            around the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    Key <span class="text-red-600">Features</span> of Our Student Information System
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Comprehensive tools designed to streamline operations and enhance the educational experience
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-database text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Student Data Management</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Manage all types of data, such as students' personal details, academic progress,
+                                documents,
+                                and attendance details. Admins can easily export the data anytime and make data-driven
+                                decisions.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-file-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Report Generation</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Generate various comprehensive reports - attendance reports, fees pending reports,
+                                placement
+                                reports, examination result reports, and more. Customize and modify fields according to
+                                your institution's preferences.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-user-check text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Admission Management</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Automate the entire admission process, reduce errors and paperwork.
+                                Efficiently manage student and parent details, customize admission forms, manage
+                                documents,
+                                and streamline the entire process.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-credit-card text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Online Fees Payment</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                No more standing in long queues for fees submission. With Fedena, automate transactions,
+                                send instant alerts to parents/students on pending fees, add taxes and discounts
+                                according to
+                                your institution's requirements.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-bus-alt text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Transport Management</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Real-time tracking of vehicle routing and stops with GPS integration. Manage and
+                                schedule
+                                transport fees collection. Also, ensure better safety and security for students during
+                                transit.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div
+                    class="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div class="p-1">
+                        <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-t-2xl p-6">
+                            <div
+                                class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i class="fas fa-calendar-check text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Attendance Management</h3>
+                        </div>
+
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">
+                                Automate attendance tracking with biometric/RFID integration. Mark attendance
+                                subject-wise or
+                                day-wise, send instant alerts to parents, and keep them informed when their child misses
+                                classes.
+                            </p>
+
+                            <a class="inline-flex items-center text-red-600 font-semibold group-hover:text-red-700"
+                                href="#">
+                                <span>Learn more</span>
+                                <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Features Button -->
+            <div class="flex justify-center mt-12">
+                <button
+                    class="flex items-center gap-2 bg-white text-red-600 border-2 border-red-600 hover:bg-red-50 font-semibold px-8 py-3 rounded-xl transition-all duration-300">
+                    <span>View All Features</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Why Fedena -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden">
+            <div class="bg-gradient-to-br from-[#0f1f3d] via-[#1a2a4f] to-[#0a1a33] text-white relative overflow-hidden rounded-3xl py-16 px-4 sm:px-8">
+                <!-- Decorative elements -->
+                <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 right-0 w-80 h-80 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+                <div class="relative z-10">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-white">
+                            Why Choose <span class="text-red-500">Fedena</span> Student Information System?
+                        </h2>
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            Industry-leading technology with a focus on user experience and institutional growth
+                        </p>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Complete Institute Management</h3>
+
+                            <div class="space-y-6">
+                                <p class="text-gray-300 text-lg">
+                                    Fedena is a complete Institute Management System that helps schools & colleges efficiently
+                                    manage their daily academic & administrative activities.
+                                </p>
+
+                                <p class="text-gray-300 text-lg">
+                                    By bringing SIS & ERP features under one roof, we make it easier for you to understand how
+                                    various components work together to achieve better institutional growth and meet the demands
+                                    of administration, students, and parents.
+                                </p>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-shield-alt text-red-400"></i>
+                                        </div>
+                                        <span>Enterprise-grade security</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-cogs text-red-400"></i>
+                                        </div>
+                                        <span>Highly customizable</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-headset text-red-400"></i>
+                                        </div>
+                                        <span>24/7 Support & Training</span>
+                                    </div>
+
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-plug text-red-400"></i>
+                                        </div>
+                                        <span>20+ Integrations</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="mt-16 text-center">
+                        <a href="#" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                            <span>Schedule a Demo</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Integration -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    Powerful <span class="text-red-600">Integrations</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Enhance your student management platform with our seamless integrations for better functionality and
+                    efficiency
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <!-- Integration 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors duration-300">
+                        <i class="fas fa-fingerprint text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Biometric</h3>
+                    <p class="text-gray-500 text-sm">Secure attendance tracking with fingerprint & face recognition</p>
+                </div>
+
+                <!-- Integration 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors duration-300">
+                        <i class="fas fa-map-marker-alt text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Location</h3>
+                    <p class="text-gray-500 text-sm">GPS tracking for transport and campus management</p>
+                </div>
+
+                <!-- Integration 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors duration-300">
+                        <i class="fas fa-credit-card text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Payment Gateway</h3>
+                    <p class="text-gray-500 text-sm">Multiple payment options for hassle-free fee collection</p>
+                </div>
+
+                <!-- Integration 4 -->
+                <div
+                    class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div
+                        class="w-20 h-20 mx-auto bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-100 transition-colors duration-300">
+                        <i class="fas fa-chalkboard-teacher text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Online Classes</h3>
+                    <p class="text-gray-500 text-sm">Seamless virtual learning environment integration</p>
+                </div>
+            </div>
+
+            <!-- More integrations teaser -->
+            <div class="bg-gradient-to-r from-gray-50 to-white rounded-3xl shadow-md p-8 border border-gray-100">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">20+ Additional Integrations</h3>
+                        <p class="text-gray-600">
+                            From accounting software to learning management systems, Fedena seamlessly connects with the
+                            tools you already use.
+                        </p>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
+                        <span>Explore All Integrations</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 relative overflow-hidden">
+        <div class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl overflow-hidden">
+            <div class="bg-gradient-to-br from-gray-900 to-[#1a2a4f] text-white relative overflow-hidden rounded-3xl py-12 px-4 sm:px-8">
+                <!-- Decorative elements -->
+                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMWY1ZjkiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-100"></div>
+                
+                <div class="relative z-10">
+                    <div class="flex flex-col md:flex-row items-center justify-between">
+                        <div class="mb-8 md:mb-0 md:mr-8">
+                            <h2 class="text-3xl font-bold mb-4">Ready to transform your institution?</h2>
+                            <p class="text-gray-300 text-xl max-w-xl">
+                                Join 40,000+ educational institutions worldwide and experience the power of Fedena.
+                            </p>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#" class="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-center">
+                                View Pricing
+                            </a>
+                            <a href="#" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-center">
+                                Request Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <div id="footer"></div>
+    <script src="/js/mobileMenu.js"></script>
+    <script src="/js/loadComponents.js"></script>
+</body>
+
+</html>
