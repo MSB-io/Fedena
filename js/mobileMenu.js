@@ -1,9 +1,12 @@
 // Mobile menu functionality 
-function initMobileMenu() {
+// Make the function globally available through the window object
+window.initMobileMenu = function() {
+  console.log("Initializing mobile menu...");
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   
   if (mobileMenuButton && mobileMenu) {
+    console.log("Mobile menu elements found, attaching event listener");
     mobileMenuButton.addEventListener('click', function() {
       mobileMenu.classList.toggle('hidden');
       
@@ -17,6 +20,8 @@ function initMobileMenu() {
         mobileMenuButton.setAttribute('aria-label', 'Close menu');
       }
     });
+  } else {
+    console.warn("Mobile menu elements not found in the DOM");
   }
 
   // Handle mobile dropdown toggles

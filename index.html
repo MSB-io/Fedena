@@ -6,8 +6,10 @@
   <title>
     Fedena School Management Software
   </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <!-- Base URL tag to help with relative paths -->
+  <base href="./">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <style>
@@ -19,7 +21,13 @@
 
 <body class="bg-white text-gray-900">
   <!-- Fixed Floating Navbar -->
-  <div id="navbar" class="fixed top-0 left-0 right-0 z-50"></div>
+  <div id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <!-- Navbar will be loaded here dynamically -->
+    <!-- If you see this message, the navbar failed to load -->
+    <div class="bg-white shadow-md p-4 text-center text-red-600">
+      <noscript>JavaScript is required to load the navigation.</noscript>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section
@@ -1616,10 +1624,23 @@
     </div>
   </section>
 
-  <div id="footer"></div>
-  <script src="/js/mobileMenu.js"></script>
-  <script src="/js/loadComponents.js"></script>
-  <script src="/js/accordian.js"></script>
+  <div id="footer">
+    <!-- Footer will be loaded here dynamically -->
+    <!-- If you see this message, the footer failed to load -->
+    <div class="bg-gray-100 p-4 text-center text-red-600">
+      <noscript>JavaScript is required to load the footer.</noscript>
+    </div>
+  </div>
+  <script src="js/mobileMenu.js"></script>
+  <script src="js/loadComponents.js"></script>
+  <script src="js/accordian.js"></script>
+  
+  <!-- Debug console message for troubleshooting -->
+  <script>
+    console.log("Page loaded. Checking for navbar and footer elements:");
+    console.log("Navbar element:", document.getElementById("navbar"));
+    console.log("Footer element:", document.getElementById("footer"));
+  </script>
 </body>
 
 </html>

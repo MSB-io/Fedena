@@ -1,5 +1,10 @@
 // Accordion functionality
+document.addEventListener("DOMContentLoaded", function() {
+  initAccordion();
+});
+
 function initAccordion() {
+  console.log("Initializing accordion...");
   const accordionButtons = document.querySelectorAll(
     ".bg-white.rounded-xl.shadow-lg button"
   );
