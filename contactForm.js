@@ -1,4 +1,12 @@
 // contactForm.js - Handles form validation and submission for Contact.html
+
+// EmailJS Configuration
+const EMAILJS_CONFIG = {
+    publicKey: "ogZ9to8iUkDP1ZMh5", // Replace with your actual EmailJS public key
+    serviceId: "service_24sgw1k", // Replace with your EmailJS service ID
+    templateId: "template_cpsuwa9" // Replace with your EmailJS template ID
+};
+
 document.addEventListener("DOMContentLoaded", function() {
     // Load EmailJS library dynamically
     const script = document.createElement('script');
@@ -6,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     script.async = true;
     script.onload = function() {
         // Initialize EmailJS with your public key
-        emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        emailjs.init(EMAILJS_CONFIG.publicKey);
         console.log("EmailJS loaded and initialized");
     };
     document.head.appendChild(script);
@@ -122,7 +130,7 @@ function handleFormSubmit(e) {
     // Check if EmailJS is loaded
     if (typeof emailjs !== 'undefined') {
         // Send email using EmailJS
-        emailjs.send('fedena_contact_service', 'fedena_contact_template', templateParams)
+        emailjs.send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 showNotification('Form submitted successfully! We will get back to you soon.', 'success');
