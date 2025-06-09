@@ -1,5 +1,16 @@
 // contactForm.js - Handles form validation and submission for Contact.html
 document.addEventListener("DOMContentLoaded", function() {
+    // Load EmailJS library dynamically
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+    script.async = true;
+    script.onload = function() {
+        // Initialize EmailJS with your public key
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        console.log("EmailJS loaded and initialized");
+    };
+    document.head.appendChild(script);
+
     // Initialize captcha on page load
     generateCaptcha();
     
@@ -61,31 +72,108 @@ function handleFormSubmit(e) {
         return;
     }
     
-    // Form data is valid, show success message
-    showNotification('Form submitted successfully! We will get back to you soon.', 'success');
+    // Get form data - personal information
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const fullName = `${firstName} ${lastName}`;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
     
-    // Reset form
-    e.target.reset();
+    // Get form data - organization information
+    const organization = document.getElementById('organization').value;
+    const jobTitle = document.getElementById('jobTitle').value || 'Not specified';
+    const city = document.getElementById('city').value;
+    const country = document.getElementById('country').value;
+    const orgSize = document.getElementById('orgSize').value || 'Not specified';
     
-    // Generate new captcha
-    generateCaptcha();
+    // Get form data - inquiry information
+    const interest = document.getElementById('interest').value;
+    const timeframe = document.getElementById('timeframe').value || 'Not specified';
+    const source = document.getElementById('source').value || 'Not specified';
+    const message = document.getElementById('message').value || 'No additional information provided';
+    
+    // Show loading state
+    const submitButton = e.target.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.innerHTML;
+    submitButton.disabled = true;
+    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    // Create template parameters for EmailJS
+    const templateParams = {
+        from_name: fullName,
+        first_name: firstName,
+        last_name: lastName,
+        from_email: email,
+        phone: phone,
+        organization: organization,
+        job_title: jobTitle,
+        city: city,
+        country: country,
+        org_size: orgSize,
+        interest: interest,
+        timeframe: timeframe,
+        source: source,
+        message: message
+    };
+    
+    // Check if EmailJS is loaded
+    if (typeof emailjs !== 'undefined') {
+        // Send email using EmailJS
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                showNotification('Form submitted successfully! We will get back to you soon.', 'success');
+                // Reset form
+                e.target.reset();
+                // Generate new captcha
+                generateCaptcha();
+            })
+            .catch(function(error) {
+                console.error('FAILED...', error);
+                showNotification('Oops! There was a problem submitting your form. Please try again later.', 'error');
+            })
+            .finally(function() {
+                // Restore button state
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+    } else {
+        // EmailJS not loaded - fallback to simple notification
+        showNotification('Email service not available. Please try again later.', 'error');
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    }
 }
 
 // Validate form fields
 function validateForm() {
-    // Get form fields
-    const name = document.getElementById('name');
+    // Get form fields - personal information
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
-    const location = document.getElementById('location');
+    
+    // Get form fields - organization information
+    const organization = document.getElementById('organization');
+    const city = document.getElementById('city');
+    const country = document.getElementById('country');
+    
+    // Get form fields - inquiry information
     const interest = document.getElementById('interest');
     const captcha = document.getElementById('captcha');
     const captchaDisplay = document.getElementById('captchaDisplay');
     
-    // Validate name
-    if (!name.value.trim()) {
-        showNotification('Please enter your name', 'error');
-        name.focus();
+    // Validate first name
+    if (!firstName.value.trim()) {
+        showNotification('Please enter your first name', 'error');
+        firstName.focus();
+        return false;
+    }
+    
+    // Validate last name
+    if (!lastName.value.trim()) {
+        showNotification('Please enter your last name', 'error');
+        lastName.focus();
         return false;
     }
     
