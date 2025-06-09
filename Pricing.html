@@ -1,0 +1,452 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Pricing - Fedena School Management Software</title>
+  <!-- Base URL tag to help with relative paths -->
+  <base href="./">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .pricing-card {
+      transition: all 0.3s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+    .feature-check {
+      color: #10B981;
+      margin-right: 0.5rem;
+    }
+    .feature-x {
+      color: #EF4444;
+      margin-right: 0.5rem;
+    }
+    .tab-active {
+      background-color: #EF4444;
+      color: white;
+    }
+    .tab {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-900">
+  <!-- Fixed Floating Navbar -->
+  <div id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <!-- Navbar will be loaded here dynamically -->
+    <!-- If you see this message, the navbar failed to load -->
+    <div class="bg-white shadow-md p-4 text-center text-red-600">
+      <noscript>JavaScript is required to load the navigation.</noscript>
+    </div>
+  </div>
+
+  <!-- Main Content Area with top padding for fixed navbar -->
+  <main class="pt-32 pb-20">
+    <!-- Pricing Hero Section -->
+    <section class="bg-gradient-to-b from-gray-50 to-white py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Affordable Plans for Smart Institutes</h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">All plans include free cloud hosting with encrypted security.</p>
+        
+        <!-- App Type Toggle -->
+        <div class="mt-10 inline-flex bg-gray-100 p-1 rounded-lg">
+          <button id="web-toggle" class="tab tab-active px-6 py-2 text-sm font-medium rounded-md">Web App</button>
+          <button id="mobile-toggle" class="tab px-6 py-2 text-sm font-medium rounded-md">Both Web & Mobile App</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Cards Section -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          
+          <!-- Standard Plan -->
+          <div class="pricing-card bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
+              <div class="mb-4">
+                <span class="text-4xl font-bold">₹ 50,000</span>
+                <span class="text-gray-500">+ GST</span>
+                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
+              </div>
+              <a href="#" class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get Standard</a>
+            </div>
+            <div class="border-t border-gray-200 p-6">
+              <ul class="space-y-3">
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
+                <li class="feature-item"><i class="fas fa-times feature-x"></i> 10 Premium Modules</li>
+                <li class="feature-item"><i class="fas fa-times feature-x"></i> 12 Ultimate Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Premium Plan -->
+          <div class="pricing-card bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+              <div class="mb-4">
+                <span class="text-4xl font-bold">₹ 75,000</span>
+                <span class="text-gray-500">+ GST</span>
+                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
+              </div>
+              <a href="#" class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get Premium</a>
+            </div>
+            <div class="border-t border-gray-200 p-6">
+              <ul class="space-y-3">
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 10 Premium Modules</li>
+                <li class="feature-item"><i class="fas fa-times feature-x"></i> 12 Ultimate Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Ultimate Plan -->
+          <div class="pricing-card bg-white border-2 border-red-500 rounded-2xl shadow-xl overflow-hidden relative">
+            <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 text-xs font-semibold rounded-bl-lg">POPULAR</div>
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ultimate</h3>
+              <div class="mb-4">
+                <span class="text-4xl font-bold">₹ 1,00,000</span>
+                <span class="text-gray-500">+ GST</span>
+                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
+              </div>
+              <a href="#" class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get Ultimate</a>
+            </div>
+            <div class="border-t border-gray-200 p-6">
+              <ul class="space-y-3">
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 10 Premium Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> 12 Ultimate Modules</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
+                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Enterprise Plan -->
+          <div class="pricing-card bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-8 text-center">
+              <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+              <div class="mb-4">
+                <span class="text-xl">Custom Pricing</span>
+                <p class="text-sm text-gray-300 mt-1">Contact for details</p>
+              </div>
+              <a href="#" class="block w-full py-3 px-4 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors">Get Enterprise</a>
+            </div>
+            <div class="border-t border-gray-700 p-6">
+              <ul class="space-y-3">
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 21 Core Modules</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 17 Standard Modules</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 10 Premium Modules</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 12 Ultimate Modules</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Unlimited Users</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> One to one Online training</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Automatic Updates</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Email & Phone support</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Onboarding data & configuration</li>
+                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Product source code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules Description Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-16">Detailed Module Breakdown</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Core Modules -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <span class="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center mr-2 text-sm">22</span>
+              Core Modules
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Multiple Dashboards</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> News Management</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Timetable</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Student Admission</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Messaging System</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Student Attendance</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Courses and Batches</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Human Resources</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Finance</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Examination</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> User Management</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Report Center</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Employee / Teacher Login</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Students / Parents Login</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Student Information</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Custom Student Remarks</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Certificate Generator</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> ID Card Generator</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> SMS Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> School / Events Calendar</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Advance Fees</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-red-600 mt-1 mr-2"></i> Gradebook</li>
+            </ul>
+          </div>
+
+          <!-- Standard Modules -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-2 text-sm">17</span>
+              Standard Modules
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Hostel / Dormitory</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Instant Fees</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Library</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Data Management</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Email Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Transportation</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Custom Import</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Blog</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Poll</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Custom Report</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Theme</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Placement</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Gallery</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Task</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Inventory</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Discussion</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-blue-600 mt-1 mr-2"></i> Discipline</li>
+            </ul>
+          </div>
+
+          <!-- Premium Modules -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <span class="w-8 h-8 bg-yellow-500 text-white rounded-full flex items-center justify-center mr-2 text-sm">10</span>
+              Premium Modules
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Data Export</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Tally Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Payment Gateway Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Student Assignment Management</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Fees Import</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Google SSO</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Form Builder</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Reminder</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> App Frame</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-yellow-500 mt-1 mr-2"></i> Enquiry & Registration</li>
+            </ul>
+          </div>
+
+          <!-- Ultimate Modules -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+              <span class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center mr-2 text-sm">12</span>
+              Ultimate Modules
+            </h3>
+            <ul class="space-y-2">
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Alumni</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Audit</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Azure Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Doc Manager</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Automatic Timetable Generator</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Paybooks Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Gate Management</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Google Docs</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Online Examination</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> QuickBooks Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Google Meet Integration</li>
+              <li class="flex items-start"><i class="fas fa-check-circle text-purple-600 mt-1 mr-2"></i> Bigbluebutton Integration</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="py-16 text-center bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Can't decide which plan is right for you?</h3>
+          <p class="text-gray-600 mb-6">Our education specialists can guide you to the perfect solution based on your institution's unique needs.</p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="#" class="py-3 px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">
+              <i class="fas fa-calendar-alt mr-2"></i> Book a Demo
+            </a>
+            <a href="#" class="py-3 px-6 bg-white border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-gray-50 transition-colors">
+              <i class="fas fa-phone-alt mr-2"></i> Contact Sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">Loved by 40,000+ Institutes Around the World!</h2>
+        <p class="text-xl text-gray-600 text-center mb-12">Customer Testimonials</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex items-start mb-4">
+              <div class="bg-red-100 rounded-lg p-3 mr-4">
+                <i class="fas fa-quote-left text-red-600 text-xl"></i>
+              </div>
+              <p class="text-gray-700 italic">Fedena is an all-in-one school management software. You have got everything in it. It manages attendance, grade book, fees collection, and even HR.</p>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
+              <div>
+                <h4 class="font-semibold">Wellspring International School</h4>
+                <p class="text-sm text-gray-600">Vietnam</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex items-start mb-4">
+              <div class="bg-red-100 rounded-lg p-3 mr-4">
+                <i class="fas fa-quote-left text-red-600 text-xl"></i>
+              </div>
+              <p class="text-gray-700 italic">Help to maintain and use information about employees and students in a constructive way. Which makes any educational organization's life easier.</p>
+            </div>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-200 rounded-full mr-4"></div>
+              <div>
+                <h4 class="font-semibold">Indian Institute of Logistics</h4>
+                <p class="text-sm text-gray-600">India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        
+        <div class="space-y-6">
+          <!-- FAQ Item 1 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">What is Fedena?</h3>
+            <p class="text-gray-700">Fedena is an all-in-one school management system, which can be used to manage administrative and academic activities such as online admission management, fees, employees' payroll, examination, grade book, bulk data management, transportation, library, course and batches, student attendance, assignments, communication and much more. Find out more about Fedena.</p>
+          </div>
+          
+          <!-- FAQ Item 2 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">How is Fedena different from other school management software?</h3>
+            <p class="text-gray-700">Fedena stands out with its comprehensive feature set, unlimited user support, and flexible deployment options. It's designed for ease of use while offering deep customization to fit each institution's unique needs.</p>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">What kind of software programs do I require to run Fedena?</h3>
+            <p class="text-gray-700">Fedena is a cloud-based solution, so you only need a modern web browser (Chrome, Firefox, Safari, or Edge) to access it. There's no need for additional software installation on your computers.</p>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Can Fedena ERP software be customized for my Institute?</h3>
+            <p class="text-gray-700">Yes, Fedena is highly customizable. We understand that each educational institution has unique requirements, and our platform can be tailored to match your specific workflows and processes.</p>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="bg-gray-50 rounded-xl p-6">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Does Fedena provide data backup facility?</h3>
+            <p class="text-gray-700">Yes, Fedena provides automated daily backups of all your data. These backups are encrypted and stored securely, ensuring your information remains protected and recoverable in case of any unforeseen events.</p>
+          </div>
+          
+          <div class="text-center mt-8">
+            <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center justify-center">
+              Read more questions and answers <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-red-600 to-red-700 text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Kickstart your school automation today with Fedena.</h2>
+        <p class="text-xl mb-8">Book a one-on-one demo or start 14 days free trial today</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="py-3 px-8 bg-white text-red-600 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            Book a Demo
+          </a>
+          <a href="#" class="py-3 px-8 bg-transparent border-2 border-white text-white rounded-lg font-medium hover:bg-white hover:text-red-600 transition-colors">
+            Start Free Trial
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer">
+    <!-- Footer will be loaded here dynamically -->
+    <!-- If you see this message, the footer failed to load -->
+    <div class="bg-gray-100 p-4 text-center text-gray-500">
+      <noscript>JavaScript is required to load the footer.</noscript>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="accordian.js"></script>
+  <script src="mobileMenu.js"></script>
+  <script src="loadComponents.js"></script>
+  <script>
+    // Toggle between Web App and Both Web & Mobile App
+    const webToggle = document.getElementById('web-toggle');
+    const mobileToggle = document.getElementById('mobile-toggle');
+    
+    webToggle.addEventListener('click', function() {
+      webToggle.classList.add('tab-active');
+      mobileToggle.classList.remove('tab-active');
+      // Here you would typically update prices, but for simplicity we'll keep it static
+    });
+    
+    mobileToggle.addEventListener('click', function() {
+      mobileToggle.classList.add('tab-active');
+      webToggle.classList.remove('tab-active');
+      // Here you would typically update prices, but for simplicity we'll keep it static
+    });
+  </script>
+</body>
+
+</html>
