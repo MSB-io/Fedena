@@ -6,318 +6,410 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>
-        Fedena School Software
+        Fedena School Software - The Difference
     </title>
     <script src="https://cdn.tailwindcss.com">
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <style>
         body {
             font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #E94B35, #FF8F78);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(11, 30, 64, 0.1);
+        }
+
+        .feature-card:hover i {
+            transform: scale(1.2);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(201, 228, 255, 0.2);
         }
     </style>
 </head>
 
 <body class="bg-white text-[#0B1E40]">
     <div id="navbar"></div>
-    <!-- Hero Video Section -->
-    <section
-        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0B1E40] to-[#1a2a4f] text-white py-16 lg:py-24">
-        <div class="text-center px-4 sm:px-6 md:px-10 lg:px-16 max-w-7xl mx-auto">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold max-w-4xl mx-auto mb-12 leading-tight">
-                Why Fedena is the best school software for your institution?
-            </h2>
-            <div class="max-w-4xl mx-auto">
-                <div class="aspect-video bg-black/20 rounded-2xl overflow-hidden shadow-2xl">
-                    <iframe
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen="" class="w-full h-full" frameborder="0"
-                        src="https://www.youtube.com/embed/6v6q6v6q6v6"
-                        title="Fedena Pro - Best School Management Software">
-                    </iframe>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 bg-gradient-to-br from-[#0B1E40] to-[#1a2a4f] text-white overflow-hidden">
+        <div class="absolute top-0 right-0 w-full h-full">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjMEIxRTQwIiB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiLz48Y2lyY2xlIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEuNSIgY3g9IjcyMCIgY3k9IjM4MCIgcj0iMTUwIi8+PGNpcmNsZSBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGN4PSI3MjAiIGN5PSIzODAiIHI9IjI1MCIvPjxjaXJjbGUgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBjeD0iNzIwIiBjeT0iMzgwIiByPSIzNTAiLz48Y2lyY2xlIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEuNSIgY3g9IjcyMCIgY3k9IjM4MCIgcj0iNDUwIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
+        </div>
+
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">The Fedena Difference</h1>
+            <p class="text-lg sm:text-xl max-w-3xl mx-auto text-white/80 mb-12">
+                Discover why thousands of educational institutions worldwide choose Fedena as their preferred school management solution
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300 hover:bg-white/20">
+                    <i class="fas fa-rocket text-[#E94B35] text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Powerful Features</h3>
+                    <p class="text-white/70">Comprehensive toolset that grows with your institution's needs</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300 hover:bg-white/20">
+                    <i class="fas fa-paint-brush text-[#E94B35] text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Customizable</h3>
+                    <p class="text-white/70">Adaptable solutions that fit your unique institutional processes</p>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/20 transition-all duration-300 hover:bg-white/20">
+                    <i class="fas fa-user-shield text-[#E94B35] text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Secure & Reliable</h3>
+                    <p class="text-white/70">Enterprise-grade security with 99.9% uptime guarantee</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section
-        class="min-h-screen flex items-center justify-center py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
-            <h3 class="text-center font-bold text-[#0B1E40] text-2xl lg:text-3xl mb-16 max-w-4xl mx-auto">
-                Which two biggest problems Fedena school management solution solves:
-            </h3>
-            <div class="flex flex-col lg:flex-row lg:space-x-16 space-y-16 lg:space-y-0">
-                <div class="lg:w-1/2 flex flex-col lg:flex-row lg:items-center lg:space-x-6">
-                    <div class="lg:w-1/2">
-                        <img alt="Illustration of school management system on computer screen with gears and documents"
-                            class="mx-auto" height="200"
-                            src="https://storage.googleapis.com/a1aa/image/43b40d8d-d146-440d-c690-9f14cf438927.jpg"
-                            width="300" />
+    <!-- Key Differences Section -->
+    <section class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0B1E40] mb-4">Key Differences That Set Us Apart</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Fedena addresses the most critical challenges facing educational institutions today</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Difference 1: Customization -->
+                <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-[#0B1E40] flex items-center justify-center mr-4">
+                            <i class="fas fa-sliders-h text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#0B1E40]">Customization</h3>
                     </div>
-                    <div class="lg:w-1/2 text-[11px] sm:text-[12px] text-[#0B1E40]">
-                        <p class="font-semibold mb-1">
-                            1. The Need for customization
+                    <p class="text-gray-700 mb-6">
+                        Schools and colleges have unique systems developed over time. Fedena recognizes this diversity and provides configurable modules that adapt to your specific requirements, unlike rigid one-size-fits-all solutions.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Modular architecture allows you to activate only what you need</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Customizable workflows that match your existing processes</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Enterprise solution with API access for deep integration</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Difference 2: Ease of Use -->
+                <div class="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg transition-all duration-300 card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-[#0B1E40] flex items-center justify-center mr-4">
+                            <i class="fas fa-user-friends text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-[#0B1E40]">Ease of Use</h3>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        Most student information systems are difficult to learn and configure. Fedena was designed with simplicity in mind, ensuring anyone with basic computer knowledge can use it effectively within minutes.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Intuitive interface with minimal learning curve</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Streamlined workflows that save time and reduce errors</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-[#E94B35] mt-1 mr-2"></i>
+                            <span>Trusted by over 20 million users worldwide</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#0B1E40] mb-4">Outstanding Benefits</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Why institutions around the world trust Fedena for their school management needs</p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-laptop-code text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">User-Friendly Interface</h3>
+                    <p class="text-gray-600 text-sm">Intuitive design that's easy for everyone to learn and use</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-code text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Modern Technologies</h3>
+                    <p class="text-gray-600 text-sm">Built on latest web standards for optimal performance</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-tools text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Affordable Customization</h3>
+                    <p class="text-gray-600 text-sm">Cost-effective options to tailor the system to your needs</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-mobile-alt text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Mobile Learning</h3>
+                    <p class="text-gray-600 text-sm">Access learning materials anytime, anywhere on any device</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-headset text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Exceptional Support</h3>
+                    <p class="text-gray-600 text-sm">Dedicated team ready to assist with any questions or issues</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-th-large text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Feature Rich</h3>
+                    <p class="text-gray-600 text-sm">Comprehensive toolset for all educational management needs</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-tag text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Flexible Pricing</h3>
+                    <p class="text-gray-600 text-sm">Options for institutions of all sizes and budget constraints</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-mobile-alt text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Mobile Applications</h3>
+                    <p class="text-gray-600 text-sm">Native apps for iOS and Android devices for on-the-go access</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-cloud text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Cloud Hosted</h3>
+                    <p class="text-gray-600 text-sm">Secure cloud infrastructure with reliable accessibility</p>
+                </div>
+
+                <!-- Feature 10 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-puzzle-piece text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Plugin Marketplace</h3>
+                    <p class="text-gray-600 text-sm">Extend functionality with our growing library of add-ons</p>
+                </div>
+
+                <!-- Feature 11 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-shield-alt text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Secure & Reliable</h3>
+                    <p class="text-gray-600 text-sm">Enterprise-grade security protecting your sensitive data</p>
+                </div>
+
+                <!-- Feature 12 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center feature-card transition-all duration-300 hover:shadow-lg">
+                    <i class="fas fa-language text-[#E94B35] text-3xl mb-4 transition-transform duration-300"></i>
+                    <h3 class="font-semibold text-lg mb-2">Multi-language</h3>
+                    <p class="text-gray-600 text-sm">Support for multiple languages to serve diverse communities</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="Reasons-101.html" class="inline-block bg-white text-[#E94B35] border-2 border-[#E94B35] font-semibold rounded-full px-8 py-3 transition-all duration-300 hover:bg-[#E94B35] hover:text-white shadow-md hover:shadow-lg">
+                    <i class="fas fa-list-ol mr-2"></i>Discover All 101 Reasons
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-16 lg:py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#0B1E40] mb-4">Fedena vs. Traditional Solutions</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">See how Fedena compares to traditional school management systems</p>
+            </div>
+
+            <div class="overflow-x-auto max-w-5xl mx-auto">
+                <table class="comparison-table w-full border-collapse">
+                    <thead>
+                        <tr class="bg-[#0B1E40] text-white">
+                            <th class="p-4 text-left">Feature</th>
+                            <th class="p-4 text-center">Fedena</th>
+                            <th class="p-4 text-center">Traditional Systems</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Implementation Time</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Days to weeks</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Months to years</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Learning Curve</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Minimal (10 minutes)</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Steep (weeks of training)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Customization</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Highly configurable</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Limited or expensive</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Mobile Access</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Native apps + responsive web</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Limited or none</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Pricing Model</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Transparent, no hidden fees</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Complex with add-on costs</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-200 font-medium">Updates & Maintenance</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-check text-green-500"></i> Automatic, no downtime</td>
+                            <td class="p-4 border-b border-gray-200 text-center"><i class="fas fa-times text-red-500"></i> Manual, scheduled downtime</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section (Redesigned) -->
+    <section class="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-[#0B1E40] mb-4">What Our Users Say</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Real experiences from educational institutions using Fedena</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                    <div class="p-8 relative">
+                        <div class="absolute top-4 left-4 text-6xl text-[#E94B35]/10 font-serif">"</div>
+                        <p class="text-lg text-gray-700 italic mb-6 relative z-10">
+                            Fedena has simplified our admission procedures, data management process, data accessibility and
+                            communication between stakeholders—saving our valuable time as well as reducing paper waste.
+                            The system has transformed how we operate as an educational institution.
                         </p>
-                        <p class="mb-2">
-                            Schools and colleges have designed and evolved their own systems over time. New
-                            administrators,
-                            new thinking and new requirements have always led to modifications in a continuous cycle of
-                            change. Therefore almost all institutions have different systems and processes, even those
-                            in
-                            the same area. The Fedena school management system recognizes this and helps you with
-                            configurable modules and an enterprise solution to customize the software according to your
-                            unique requirement.
-                        </p>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-[#E94B35]/10 h-12 w-12 rounded-full flex items-center justify-center text-[#E94B35]">
+                                <i class="fas fa-school text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="font-semibold text-[#0B1E40]">Vidya Vikas Academy</p>
+                                <p class="text-sm text-gray-500">Leading Educational Institution</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="px-8 py-4 bg-gradient-to-r from-[#0B1E40] to-[#1a2a4f] text-white flex justify-between items-center">
+                        <span class="text-sm">One of many success stories</span>
+                        <a href="Case-Studies.html" class="flex items-center text-white hover:text-[#E94B35] transition-colors duration-300">
+                            <span class="mr-2">View Case Study</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="lg:w-1/2 flex flex-col lg:flex-row lg:items-center lg:space-x-6">
-                    <div class="lg:w-1/2 text-[11px] sm:text-[12px] text-[#0B1E40] order-2 lg:order-1">
-                        <p class="font-semibold mb-1">
-                            2. Limited Usage
+                
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-[#0B1E40]"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#0B1E40]/30"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#0B1E40]/30"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#0B1E40]/30"></button>
+                    <button class="w-3 h-3 rounded-full bg-[#0B1E40]/30"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner & Purchase Cards -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Partner Card -->
+                <div class="bg-gradient-to-br from-[#C9E4FF] to-[#E6F3FF] rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[#0B1E40]/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-handshake text-[#0B1E40] text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#0B1E40]">Resell Fedena</h3>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6">
+                            Embed Fedena in your application and sell it in your market, under your terms and pricing. Perfect for OEM partners looking to enhance their educational offerings.
                         </p>
-                        <p class="mb-2">
-                            Most student information systems are difficult to learn and configure, so many schools don’t
-                            use
-                            them. Fedena School ERP was designed to be easy to use. So easy that anyone with a basic
-                            knowledge of computers and email should be able to use it within 10 minutes.
-                        </p>
-                        <p class="italic text-[10px] text-[#0B1E40]/70">
-                            "Over the past 10 years, 20 million users have trusted Fedena to simplify and automate their
-                            daily school operations"
-                        </p>
+                        
+                        <a href="OEM-Partner.html" class="inline-block bg-white text-[#0B1E40] font-medium rounded px-6 py-3 shadow hover:bg-[#0B1E40] hover:text-white transition-colors duration-300">
+                            Become a Partner <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
-                    <div class="lg:w-1/2 order-1 lg:order-2">
-                        <img alt="Illustration of computer screen with video player and documents representing limited usage"
-                            class="mx-auto" height="200"
-                            src="https://storage.googleapis.com/a1aa/image/2cf9e35c-8b39-44b4-e72d-f421bf8f68ea.jpg"
-                            width="300" />
+                </div>
+                
+                <!-- Purchase Card -->
+                <div class="bg-gradient-to-br from-[#C9E4FF] to-[#E6F3FF] rounded-xl overflow-hidden shadow-lg transition-all duration-300 card-hover">
+                    <div class="p-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-[#0B1E40]/10 flex items-center justify-center mr-4">
+                                <i class="fas fa-shopping-cart text-[#0B1E40] text-2xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#0B1E40]">Buy Fedena</h3>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-6">
+                            All our plans include unlimited students, unlimited courses, priority support with no hidden fees. Find the perfect solution for your institution's size and needs.
+                        </p>
+                        
+                        <a href="Pricing.html" class="inline-block bg-white text-[#0B1E40] font-medium rounded px-6 py-3 shadow hover:bg-[#0B1E40] hover:text-white transition-colors duration-300">
+                            View Plans & Pricing <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Benefits Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-10">
-        <h3 class="text-center font-semibold text-[#0B1E40] text-base sm:text-lg mb-10 max-w-3xl mx-auto">
-            Amazing Benefits of Using Fedena Student Management System
-        </h3>
-        <div
-            class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-y-8 gap-x-4 text-[10px] sm:text-[11px] text-[#E94B35]">
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing User Friendly Interface" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/be3021bf-ea34-4ba0-01a1-f4bc683d6e8c.jpg"
-                    width="24" />
-                <span>
-                    User Friendly Interface
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Modern Web Technologies" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/a95e7e2f-bc60-4415-768f-76ffcf01a0d0.jpg"
-                    width="24" />
-                <span>
-                    Modern Web Technologies
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Affordable Customization" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/d109f50d-3462-4fd3-6fc1-01fa1f409085.jpg"
-                    width="24" />
-                <span>
-                    Affordable Customization
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Mobile Learning" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/0bb0a2d3-b895-4e30-0b3a-d558b46f490e.jpg"
-                    width="24" />
-                <span>
-                    Mobile Learning
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Amazing Support" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/05e4b6dd-1880-4047-ed4b-e6a424d88e2a.jpg"
-                    width="24" />
-                <span>
-                    Amazing Support
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Wide Range of Features" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/8aef6093-10d6-4a4c-d431-c7084aa1def3.jpg"
-                    width="24" />
-                <span>
-                    Wide Range of Features
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Flexible Pricing" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/d656f84d-d2be-416b-1503-cf2f757774c6.jpg"
-                    width="24" />
-                <span>
-                    Flexible Pricing
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Mobile Applications" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/31f16d8d-402a-4290-f102-5d738f49b1d3.jpg"
-                    width="24" />
-                <span>
-                    Mobile Applications
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Hosted on Cloud Servers" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/e9f1cdf2-b28f-4027-cd75-68253c1303d8.jpg"
-                    width="24" />
-                <span>
-                    Hosted on Cloud Servers
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Plugin Marketplace" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/18368a2e-187f-489c-d4b8-4f529438dbc8.jpg"
-                    width="24" />
-                <span>
-                    Plugin Marketplace
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Secure &amp; Reliable" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/8e7abb7e-3f06-4fb5-c36e-7998ae5cb90f.jpg"
-                    width="24" />
-                <span>
-                    Secure &amp; Reliable
-                </span>
-            </div>
-            <div class="flex flex-col items-center space-y-1">
-                <img alt="Icon representing Multi-language Support" height="24"
-                    src="https://storage.googleapis.com/a1aa/image/b49791b7-f1ce-4592-3456-35f5aa393d93.jpg"
-                    width="24" />
-                <span>
-                    Multi-language Support
-                </span>
-            </div>
-        </div>
-        <div class="mt-8 flex justify-center">
-            <button
-                class="text-[#E94B35] border border-[#E94B35] text-[12px] font-semibold rounded px-5 py-1 hover:bg-[#E94B35] hover:text-white transition">
-                101 Reasons To Use Fedena
-            </button>
-        </div>
-    </section>
-    <!-- Logos Section -->
-    <section class="bg-[#F7F9FC] py-8 px-4 sm:px-6 md:px-10 lg:px-16">
-        <p class="text-center text-[#0B1E40] font-semibold text-sm mb-6">
-            Loved by the pioneers in technology
-        </p>
-        <div class="flex flex-wrap justify-center items-center gap-10 max-w-4xl mx-auto">
-            <img alt="Deloitte Technology Fast50 logo" class="h-10 object-contain" height="40"
-                src="https://storage.googleapis.com/a1aa/image/7de0d237-9e08-413d-7e4c-ca59a711787d.jpg" width="120" />
-            <img alt="CNBC logo" class="h-10 object-contain" height="40"
-                src="https://storage.googleapis.com/a1aa/image/c23f59e1-d85f-4c65-39b9-b73948587d19.jpg" width="120" />
-            <img alt="MIT logo with tr35" class="h-10 object-contain" height="40"
-                src="https://storage.googleapis.com/a1aa/image/9181d364-d539-473b-f205-614c8e769770.jpg" width="120" />
-            <img alt="NASSCOM EMERGE 10 logo" class="h-10 object-contain" height="40"
-                src="https://storage.googleapis.com/a1aa/image/7fbecd96-a626-420d-9597-08674f94dc3e.jpg" width="120" />
-        </div>
-    </section>
-    <!-- Testimonial Section -->
-    <section class="max-w-3xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-10 text-center">
-        <h3 class="text-[#0B1E40] font-semibold text-base sm:text-lg mb-8">
-            Why Institutes Love Fedena School ERP System?
-        </h3>
-        <div class="relative bg-white rounded-lg shadow-lg p-6 sm:p-8 max-w-md mx-auto">
-            <div
-                class="absolute -top-5 left-1/2 -translate-x-1/2 bg-white rounded-full w-10 h-10 flex items-center justify-center border border-[#E94B35] text-[#E94B35] text-2xl font-bold leading-none select-none">
-                “
-            </div>
-            <img alt="Vidya Vikas Academy logo" class="mx-auto rounded-full border border-[#E94B35] mb-4" height="60"
-                src="https://storage.googleapis.com/a1aa/image/0a36a323-156b-4caa-1266-cd51a0b3af32.jpg" width="60" />
-            <p class="text-[12px] text-[#0B1E40] mb-4">
-                Fedena has simplified our admission procedures, data management process, data accessibility and
-                communication between the stakeholders thereby saving our valuable time as well as paper.
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-[#0B1E40] to-[#1a2a4f] text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Ready to Experience the Fedena Difference?</h2>
+            <p class="text-lg text-white/80 max-w-2xl mx-auto mb-10">
+                Join thousands of educational institutions worldwide that have transformed their administration with Fedena
             </p>
-            <p class="text-[#E94B35] text-[10px] font-semibold mb-4">
-                Vidya Vikas Academy
-            </p>
-            <button
-                class="bg-[#E94B35] text-white text-[12px] font-semibold rounded px-6 py-2 w-full hover:bg-[#c43e2b] transition">
-                Read Full Case Study
-            </button>
-            <button aria-label="Previous testimonial"
-                class="absolute top-1/2 left-2 -translate-y-1/2 text-[#0B1E40] hover:text-[#E94B35]">
-                <i class="fas fa-chevron-left text-lg">
-                </i>
-            </button>
-            <button aria-label="Next testimonial"
-                class="absolute top-1/2 right-2 -translate-y-1/2 text-[#0B1E40] hover:text-[#E94B35]">
-                <i class="fas fa-chevron-right text-lg">
-                </i>
-            </button>
-        </div>
-        <div class="flex justify-center space-x-2 mt-6">
-            <span class="w-2 h-2 rounded-full bg-[#0B1E40]/40">
-            </span>
-            <span class="w-2 h-2 rounded-full bg-[#0B1E40]/40">
-            </span>
-            <span class="w-2 h-2 rounded-full bg-[#0B1E40]/40">
-            </span>
-            <span class="w-2 h-2 rounded-full bg-[#0B1E40]/40">
-            </span>
-            <span class="w-2 h-2 rounded-full bg-[#0B1E40]/40">
-            </span>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Contact.html" class="bg-[#E94B35] text-white font-semibold rounded-full px-8 py-3 hover:bg-[#c43e2b] transition-colors duration-300 shadow-lg">
+                    <i class="fas fa-calendar-check mr-2"></i>Schedule a Demo
+                </a>
+                <a href="FAQ.html" class="bg-transparent border-2 border-white text-white font-semibold rounded-full px-8 py-3 hover:bg-white hover:text-[#0B1E40] transition-colors duration-300 shadow-lg">
+                    <i class="fas fa-question-circle mr-2"></i>Read FAQs
+                </a>
+            </div>
         </div>
     </section>
-    <!-- Resell & Buy Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16 py-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="bg-[#C9E4FF] p-5 rounded text-[11px] sm:text-[12px] text-[#0B1E40]">
-            <h4 class="font-semibold mb-2 text-[13px]">
-                Resell Fedena
-            </h4>
-            <p class="mb-4">
-                Embed Fedena in your application and sell it in your market, under your terms and pricing.
-            </p>
-            <button
-                class="text-[#0B1E40] border border-[#0B1E40] text-[11px] font-normal rounded px-3 py-1 hover:bg-[#0B1E40] hover:text-white transition">
-                Partner
-            </button>
-        </div>
-        <div class="bg-[#C9E4FF] p-5 rounded text-[11px] sm:text-[12px] text-[#0B1E40]">
-            <h4 class="font-semibold mb-2 text-[13px]">
-                Buy Fedena
-            </h4>
-            <p class="mb-4">
-                All our plans include unlimited students, unlimited courses, priority support with no hidden fee.
-            </p>
-            <button
-                class="text-[#0B1E40] border border-[#0B1E40] text-[11px] font-normal rounded px-3 py-1 hover:bg-[#0B1E40] hover:text-white transition">
-                Plan and pricing
-            </button>
-        </div>
-    </section>
-    <!-- Call to Action Section -->
-    <section class="bg-[#0B1E40] text-white text-center py-10 px-4 sm:px-6 md:px-10 lg:px-16">
-        <h3 class="font-semibold text-lg mb-2">
-            Efficient and Effective School ERP Software
-        </h3>
-        <p class="text-[11px] max-w-2xl mx-auto mb-6">
-            Suitable for all types of institutes such as K12, Universities, Higher-Ed, Training Institutes and more.
-        </p>
-        <div class="flex justify-center space-x-4 max-w-xs mx-auto">
-            <button
-                class="bg-[#E94B35] text-white text-[13px] font-semibold rounded px-6 py-2 hover:bg-[#c43e2b] transition">
-                Book A Demo
-            </button>
-            <button
-                class="border border-[#E94B35] text-[#E94B35] text-[13px] font-semibold rounded px-6 py-2 hover:bg-[#E94B35] hover:text-white transition">
-                Frequently Asked Questions
-            </button>
-        </div>
-    </section>
+
     <div id="footer"></div>
     <script src="accordian.js"></script>
     <script src="mobileMenu.js"></script>
