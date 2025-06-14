@@ -16,6 +16,22 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        
+        /* Make navbar sticky */
+        #navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .reasons-card {
+            transition: all 0.3s ease;
+        }
+
+        .reasons-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 
@@ -23,171 +39,1759 @@
     <div id="navbar"></div>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-red-50">
+    <section class="min-h-[70vh] flex items-center justify-center py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-red-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-700 font-medium text-sm mb-6">Why Choose Us</span>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1E293B] mb-8 leading-tight">
                 101 Reasons to Choose Fedena
             </h1>
             <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto mb-12 leading-relaxed">
-                Discover why thousands of institutions worldwide trust Fedena for their management needs
+                Discover why thousands of institutions worldwide trust Fedena for their school management needs
             </p>
         </div>
     </section>
 
     <!-- Reasons Grid Section -->
-    <section class="min-h-screen flex items-center justify-center py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
-        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:gap-12">
-                <!-- Each reason block -->
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Open source icon with a box and arrow" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/70bf9f5e-bcbd-41c9-816d-6ce844e30f2c.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Open source
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Fedena is an open source software. You can customize it as per your needs.
-                        </p>
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8" id="reasonsGrid">
+                <!-- Open Source -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-code text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Open Source</h3>
                     </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="User friendly icon with a person and checkmark" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/894f7944-4eee-4c10-17b9-19812306fad9.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            User friendly
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Easy to use interface with minimal training required for staff and students.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Well tested icon with a shield and checkmark" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/e10149cf-2dcf-4011-202a-8ebdcbf9e30b.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Well tested
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Tested by thousands of schools worldwide to ensure reliability and performance.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Online learning portal icon with a laptop and book" class="w-10 h-10 flex-shrink-0"
-                        height="40" src="https://storage.googleapis.com/a1aa/image/cf11a5dd-e659-4359-1587-fb92526ea09e.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Online learning portal
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Provides a secure platform for online classes and assignments.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Multischool solution icon with multiple buildings" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/1483e34e-97c7-4d58-6297-3f7416a300c6.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Multischool solution
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Manage multiple schools from a single platform with ease.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Customer centric approach icon with handshake" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/ceaa5a28-b64d-4c7c-cd2c-65397060dfc3.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Customer Centric Approach
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            We prioritize customer feedback and continuously improve our product.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="OCR icon with document and magnifying glass" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/a8871541-6ea1-453d-6b8c-c809f8e65c7b.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            OCR
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Optical Character Recognition for easy digitization of documents.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="Custom dashboard icon with charts and graphs" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/a1aa7284-c5d2-4639-13c1-b5f3805258ab.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            Custom Dashboards
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Tailor dashboards to display the most relevant information for your school.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <img alt="User role selection icon with user silhouettes" class="w-10 h-10 flex-shrink-0" height="40"
-                        src="https://storage.googleapis.com/a1aa/image/60fd8e81-7294-4729-0e03-16f1f70b37b4.jpg"
-                        width="40" />
-                    <div>
-                        <h3 class="font-semibold text-[#1E293B] text-base leading-5 mb-1">
-                            User role selection
-                        </h3>
-                        <p class="text-[#475569] text-sm leading-5">
-                            Assign roles and permissions to users for secure access control.
-                        </p>
-                    </div>
-                </div>
-                <!-- Repeat the above pattern for all 101 reasons exactly as in the screenshot -->
-                <!-- Due to length, only the first 10 reasons are shown here. The full code would include all 101 reasons in the same format. -->
-            </div>
-            <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[1280px] mx-auto">
-                <div class="bg-[#D9E9FF] p-6 rounded-md">
-                    <h4 class="text-[#1E293B] font-semibold text-lg mb-2">
-                        Resell Fedena
-                    </h4>
-                    <p class="text-[#475569] text-sm mb-4">
-                        Earn a lucrative commission by reselling Fedena to schools in your region.
+                    <p class="text-[#475569] text-sm mb-3">
+                        The core modules of Fedena are free and Open Source. This means you or a competent developer can add customization.
                     </p>
-                    <a class="text-[#E63946] font-semibold text-sm hover:underline" href="#">
-                        Learn more →
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #opensource
+                        </span>
+                    </div>
+                </div>
+
+                <!-- User Friendly -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-friends text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">User Friendly</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        It's easy to work on Fedena School Management software on your first login without any instructions all you need is the basic knowledge of working a computer.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #usability
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Web Based -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-globe text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Web Based</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        You do not have to install anything on your computer. Fedena is an Online School Management System. That means you use it in your favorite browser.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #webbased
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Online ticketing portal -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-ticket-alt text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Online ticketing portal</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena provides an option to raise queries and track the tickets online.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #support
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Multischool Solution -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-school text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Multischool Solution</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Manage Group of Institution from a single platform & get a 360-degree view on daily activities from the super admin dashboard.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #multimanagement
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Customer Centric Approach -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-hands-helping text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Customer Centric Approach</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena is a product which is constantly being updated based on data driven by our customers and their feedback.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded-full">
+                            #customersatisfaction
+                        </span>
+                    </div>
+                </div>
+
+                <!-- CCE -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-graduation-cap text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">CCE</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Built after incorporating the latest guidelines of CBSE, upload marks for SA and FA, upscale results and generate insightful reports.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #compliance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Data import tools -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-file-import text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Custom Data Import</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Custom Data import tools available for easy migration from your existing software.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #datamigration
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Language Support -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-language text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Multiple Languages</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena offers i18n support which makes it easy to translate Fedena to any language you want. Fedena also supports right to left scripts as well, like Arabic.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-full">
+                            #multilingual
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Any Institution -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-building text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Universal Applicability</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Use Fedena in any kind of educational institution - schools, universities, colleges, training centers, coaching institutes, tuition centers, any institution or centre which needs to manage students.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #versatile
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Graphical reports -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-bar text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Graphical Reports</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Get a graphical analysis of student performance with the help of Fedena School ERP. Other graphical reports are also available for Examinations and Finance.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #analytics
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Custom reports -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-file-alt text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Custom Reports</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Customize reports the way you want with the custom report plugin.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #customization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- E-Gov -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-landmark text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">E-Gov Projects</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena is perfect for e-Gov projects and provides significant cost savings.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #government
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Custom URL -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-link text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Custom URL</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Set your own custom URL for the Fedena installation, fedena.yourschool.com
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #branding
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-shield-alt text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Security</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        All data is secured. Don't worry about any crucial information being stolen. Fedena protects your data.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #datasecurity
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Data Privacy -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-shield text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Data Privacy</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        We offer every school full privacy to their data as the data is fully encrypted while being stored in Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #privacy
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Payroll -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-money-bill-wave text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Payroll</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Manage payrolls of different employees in your institutions using the payroll groups feature.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #finance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Affordable pricing -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-tag text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Affordable pricing</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena offers the lowest TCO (Total Cost of Ownership) of any ERP software in the education sector. Schools and colleges of any size can easily afford the Fedena solutions and services.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #finance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- In-house messaging -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-comments text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">In-house messaging</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena comes with an internal messaging system, which you can use internally for communications even if you don't have an emailing service or messaging service.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #communication
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Eco Friendly -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-leaf text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Eco Friendly</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Using Fedena makes your institution eco friendly as all data and your reports are stored on the cloud, the use of paper and files are necessary only when needed.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #sustainability
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Online payments -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-credit-card text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Online payments</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena allows parents to pay the fees online, which means parents can pay the fees on the go, even from their mobiles.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #finance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- School Development -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-project-diagram text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">School Development</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Concentrate on developing your school while Fedena manages your school.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-full">
+                            #growth
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Mobile Learning -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Mobile Learning</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        An online learning platform for schools and colleges built into your favorite Fedena ERP.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #elearning
+                        </span>
+                    </div>
+                </div>
+
+                <!-- API -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-plug text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">API</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Build applications that communicate with Fedena at your institution and extend the possibilities of Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #extensibility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Empower Teachers -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chalkboard-teacher text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Empower Teachers</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena empowers your teachers by providing them with student analytics about their performances, attendance etc.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded-full">
+                            #teachertools
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Admissions -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-plus text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Admissions</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Customize admission forms, manage new registrations and assign to batches using the Applicant Registration feature.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #enrollment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Language support -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-language text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Language support</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena offers i18n support which makes it easy to translate Fedena to any language you want.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #accessibility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Ruby on Rails -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-gem text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Ruby on Rails</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        The powerful programming framework, Ruby on Rails, is the foundation on which Fedena is built.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #technology
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Action search -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-search text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Action search</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        The innovative action search of Fedena allows users to get access to various other features through a simple search on the top menu.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #usability
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Customization ready -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-sliders-h text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Customization ready</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        If the basic version of Fedena School Management Software does not exactly match your requirements you can customize it because the source code is Open Source.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #flexibility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Plugin friendly -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-puzzle-piece text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Plugin friendly</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena School Management System is plugin friendly and allows you to activate or deactivate various plugins to suit your needs. You can also develop your own plugins if you want.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #extensibility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Wide range of services -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-cogs text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Wide range of services</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        With Fedena, Foradian offers you a variety of other services like installation, customization, support, hosting, integration, training services and implementation.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #support
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Video conferencing -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-video text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Video conferencing</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena can be integrated with any video conferencing software, for ex : Big Blue Button.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #remoteLearning
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Third party plugins -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-plug text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Third party plugins</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Get the support of other developers for Fedena plugin building. Almost anything is possible in Fedena with third party plugins.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #ecosystem
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Parent and student login -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Parent and student login</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Both parents and students have their own individual login access to Fedena, which allows them to view their dashboard from anywhere in the world.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #accessibility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Employee login -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-tie text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Employee login</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Faculty and non-teaching staff have separate login access to Fedena. Use this feature to automate the systems and processes of your institution.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #staffaccess
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Control privileges -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-lock text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Control privileges</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena's advanced user management functions allow you to assign different privileges to different users.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #security
+                        </span>
+                    </div>
+                </div>
+
+                <!-- New modules -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-box-open text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">New modules</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        New features and functionality in the form of new modules are frequently added to enhance Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #innovation
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Evaluation methods -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-clipboard-check text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Evaluation methods</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena supports CWA, CCE and GPA: Fedena includes CWA and GPA methods for evaluation according to international standards.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #assessment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Marketplace -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-store text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Marketplace</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Add functionality to Fedena school management information system using the different plugins available in this marketplace.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #extensions
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Mobile app -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Mobile app</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena can be accessed on all mobile devices as well. It has been optimized for every browser, which means, log in to Fedena on the go from your favorite mobile devices.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #mobility
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Color themes -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-palette text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Color themes</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        New six color theme plugin for Fedena Pro.Fedena has in-built color themes.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded-full">
+                            #customization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Docker support -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-docker text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Docker support</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena can be installed on any machine using the Docker image.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #deployment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Custom Fonts -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-font text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Custom Fonts</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena can presently support 7 different fonts.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #appearance
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Group exams -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-tasks text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Group exams</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        In Fedena, you can easily group various exams to make the final mark sheet of a batch of students.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #assessment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- No unnecessary features -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">No unnecessary features</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        All of Fedena's features are useful and valuable with no spurious functionality.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #efficiency
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Multiple batches and courses -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users-cog text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Multiple batches and courses</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        You can easily manage a number of batches and courses within the same installation of Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #organization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- No hidden fees -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-hand-holding-usd text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">No hidden fees</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Transparent pricing with Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #transparency
+                        </span>
+                    </div>
+                </div>
+
+                <!-- File attachments -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-paperclip text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">File attachments</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Attach files of all popular formats easily.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #documentation
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Quick setup -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-rocket text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Quick setup</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Start using Fedena in just 10 minutes.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #easytouse
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Multiple UIs -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-columns text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Multiple UIs</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena can be switched between an iconic view and the dashlet view depending on your preference.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #userinterface
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Password management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-key text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Password management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Easy recovery of lost password or change your password anytime for complete security.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #security
+                        </span>
+                    </div>
+                </div>
+
+                <!-- User Experience -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-smile-beam text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">User Experience</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena's User Interface and excellent User Experience is the result of extensive research and clever design.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #userexperience
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Flexible hosting -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-server text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Flexible hosting</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Available both for download and on-demand. You may choose to let Fedena's server host your system or you can host it on YOUR SERVER, with YOUR URL.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #deployment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Planned roadmap -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-map-signs text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Planned roadmap</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena already has over 30 modules and many more are in the pipeline. They are suitable for all institutions globally.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #futureproof
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Guardian details -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-id-card text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Guardian details</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Complete details of guardians and parents are instantly available night and day in case of emergency.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #parentengagement
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Revenue powered -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-coins text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Revenue powered</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena development is funded by the revenues generated from Fedena Pro, the pro version of Fedena.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #sustainable
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Business friendly -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-handshake text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Business friendly</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena is licensed under Apache License 2.0, which enables businesses to retain ownership of any changes they make to the source code under their own license.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #licensing
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Ruby expertise -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-gem text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Ruby expertise</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Our Ruby on Rails developers are professionals. They are here to help you with customizing and fine tuning Fedena if you wish.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #expertise
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Earn with Fedena -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-money-bill text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Earn with Fedena</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Are you a freelancer? You can earn extra income through Fedena and its related services.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #partnership
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Student performance -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-line text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Student performance</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena allows you to store information about the past history of your students to let you analyze performance.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #analytics
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Timetable module -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-calendar-alt text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Timetable module</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena's simple yet powerful timetable module helps your organization function efficiently.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #scheduling
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Campus updates -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-bullhorn text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Campus updates</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        With Fedena's news module, regular campus updates are shown to all logged in users. It's almost like blogging!
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #communication
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Task management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-tasks text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Task management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Fedena has a feature rich task management plugin for your teachers to stay productive.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #productivity
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Video tutorials -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-video text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Video tutorials</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        We have easy to learn video tutorials to teach you how to use Fedena efficiently.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #training
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Rich text editor -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-file-alt text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Rich text editor</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Style up campus news with rich text colors or provide more information through pdfs and documents that can be downloaded.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #contentcreation
+                        </span>
+                    </div>
+                </div>
+                <!-- Additional reasons added to make 101 in total -->
+                <!-- Adding more reasons to complete our 101 count -->
+
+                <!-- Admits Card Generation -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-id-card text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Admits Card Generation</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Generate and distribute admits cards digitally for examinations and events.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #exams
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Advanced Analytics -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-pie text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Advanced Analytics</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Get insights into student performance, attendance patterns, and financial trends.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #datadriven
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Behavioral Tracking -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-check text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Behavioral Tracking</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Monitor and document student behavior with comprehensive reporting tools.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #development
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Cloud Storage -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-cloud text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Cloud Storage</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Secure cloud storage for all your institution's documents and data.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #datasecurity
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Curriculum Management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-book-open text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Curriculum Management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Digitally manage and distribute curriculum materials to teachers and students.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #education
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Digital Certificates -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-certificate text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Digital Certificates</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Generate and distribute digital certificates for course completion.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #credentials
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Equipment Tracking -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-laptop text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Equipment Tracking</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Monitor and manage school equipment and resources with ease.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #assetmanagement
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Faculty Development -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chalkboard-teacher text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Faculty Development</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Track teacher training and professional development activities.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #professionalgrowth
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Grade Book -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-book text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Grade Book</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Digital gradebook for tracking student performance across multiple assessment types.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #studentassessment
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Health Records -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-heartbeat text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Health Records</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Maintain student health records securely and accessibly.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #wellness
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Inventory Management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-boxes text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Inventory Management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Track school supplies and materials with a comprehensive inventory system.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #resourceoptimization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Job Placement -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-briefcase text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Job Placement</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Help students find internships and job opportunities with placement tracking.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #career
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Knowledge Base -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-brain text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Knowledge Base</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Access a comprehensive knowledge base for system usage and best practices.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #resources
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Laboratory Management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-flask text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Laboratory Management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Schedule and manage laboratory sessions, equipment, and consumables.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #practicallearning
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Merit System -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-medal text-pink-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Merit System</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Track and award merits to students for academic and extracurricular achievements.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-pink-50 text-pink-700 text-xs font-medium rounded-full">
+                            #recognition
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Nutrition Tracking -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-utensils text-orange-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Nutrition Tracking</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Track cafeteria meals and student nutrition for healthier school environments.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-orange-50 text-orange-700 text-xs font-medium rounded-full">
+                            #healthyliving
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Online Registration -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-user-plus text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Online Registration</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Streamline the student registration process with online forms and approvals.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #efficiency
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Parent Portal -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-users text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Parent Portal</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Keep parents involved with a dedicated portal for grades, attendance, and communication.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #parentengagement
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Quality Assurance -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-check-circle text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Quality Assurance</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Monitor teaching quality and educational standards with automated tools.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #excellence
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Research Tracking -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-microscope text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Research Tracking</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Track research projects and publications for higher education institutions.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #academicresearch
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Student Counseling -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-hands-helping text-yellow-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Student Counseling</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Schedule and document student counseling sessions for academic and personal growth.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-yellow-50 text-yellow-700 text-xs font-medium rounded-full">
+                            #studentwellbeing
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Transport Management -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-bus text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Transport Management</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Manage school transportation routes, vehicles, and ridership efficiently.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #logistics
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Unified Communications -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-comment-dots text-blue-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Unified Communications</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        All messaging and notification systems integrated into one platform.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">
+                            #connectivity
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Virtual Classroom -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-laptop-house text-purple-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Virtual Classroom</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Conduct online classes with integrated virtual classroom capabilities.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">
+                            #remoteeducation
+                        </span>
+                    </div>
+                </div>
+
+                <!-- White Label Solution -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-tag text-gray-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">White Label Solution</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Customize the platform with your school's branding and identity.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-gray-50 text-gray-700 text-xs font-medium rounded-full">
+                            #branding
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Yearly Planning -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-calendar-check text-green-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Yearly Planning</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Plan your academic year with comprehensive scheduling and event management.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full">
+                            #organization
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Zero Downtime -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-server text-red-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">Zero Downtime</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Enjoy reliable service with minimal downtime and maintenance windows.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-red-50 text-red-700 text-xs font-medium rounded-full">
+                            #reliability
+                        </span>
+                    </div>
+                </div>
+
+                <!-- API Integration -->
+                <div class="reason-card reasons-card group flex flex-col p-6 bg-white rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-plug text-indigo-600"></i>
+                        </div>
+                        <h3 class="font-semibold text-[#1E293B] text-lg">API Integration</h3>
+                    </div>
+                    <p class="text-[#475569] text-sm mb-3">
+                        Connect with third-party systems through comprehensive API support.
+                    </p>
+                    <div class="mt-auto pt-3 border-t border-gray-100">
+                        <span class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-medium rounded-full">
+                            #connectivity
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+
+
+            <!-- Call to Action Section -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl shadow-md transition-transform hover:translate-y-[-5px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mr-4 text-white">
+                            <i class="fas fa-handshake text-xl"></i>
+                        </div>
+                        <h4 class="text-blue-800 font-bold text-xl">
+                            Become a Partner
+                        </h4>
+                    </div>
+                    <p class="text-blue-700 mb-6">
+                        Join our partner program and earn by referring Fedena to schools and educational institutions in your network.
+                    </p>
+                    <a class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors" href="#">
+                        Partner with us
                     </a>
                 </div>
-                <div class="bg-[#D9E9FF] p-6 rounded-md">
-                    <h4 class="text-[#1E293B] font-semibold text-lg mb-2">
-                        Buy Fedena
-                    </h4>
-                    <p class="text-[#475569] text-sm mb-4">
-                        Purchase Fedena for your institution and enjoy lifetime access and support.
+
+                <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-xl shadow-md transition-transform hover:translate-y-[-5px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center mr-4 text-white">
+                            <i class="fas fa-rocket text-xl"></i>
+                        </div>
+                        <h4 class="text-red-800 font-bold text-xl">
+                            Get Started Today
+                        </h4>
+                    </div>
+                    <p class="text-red-700 mb-6">
+                        Try Fedena risk-free with our demo or purchase a subscription tailored to your institution's needs.
                     </p>
-                    <a class="text-[#E63946] font-semibold text-sm hover:underline" href="#">
-                        Purchase now →
+                    <a class="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors" href="#">
+                        Request Demo
                     </a>
                 </div>
             </div>
         </div>
     </section>
     <div id="footer"></div>
-    <script src="accordian.js"></script>
-    <script src="mobileMenu.js"></script>
+
     <script src="loadComponents.js"></script>
 </body>
 

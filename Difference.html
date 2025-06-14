@@ -17,6 +17,13 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* Ensure navbar is above other content and make it sticky */
+        #navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
         .gradient-text {
             background: linear-gradient(to right, #E94B35, #FF8F78);
             -webkit-background-clip: text;
@@ -42,8 +49,8 @@
 <body class="bg-white text-[#0B1E40]">
     <div id="navbar"></div>
 
-    <!-- Hero Section -->
-    <section class="relative py-20 bg-gradient-to-br from-[#0B1E40] to-[#1a2a4f] text-white overflow-hidden">
+    <!-- Hero Section - with adjusted z-index to prevent dropdown overlap -->
+    <section class="relative py-20 bg-gradient-to-br from-[#0B1E40] to-[#1a2a4f] text-white overflow-hidden" style="z-index: 0;">
         <div class="absolute top-0 right-0 w-full h-full">
             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cmVjdCBmaWxsPSIjMEIxRTQwIiB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI3NjAiLz48Y2lyY2xlIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEuNSIgY3g9IjcyMCIgY3k9IjM4MCIgcj0iMTUwIi8+PGNpcmNsZSBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsMC4xKSIgc3Ryb2tlLXdpZHRoPSIxLjUiIGN4PSI3MjAiIGN5PSIzODAiIHI9IjI1MCIvPjxjaXJjbGUgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMS41IiBjeD0iNzIwIiBjeT0iMzgwIiByPSIzNTAiLz48Y2lyY2xlIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBzdHJva2Utd2lkdGg9IjEuNSIgY3g9IjcyMCIgY3k9IjM4MCIgcj0iNDUwIi8+PC9nPjwvc3ZnPg==')] opacity-10"></div>
         </div>
