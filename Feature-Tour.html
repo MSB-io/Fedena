@@ -4,656 +4,711 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>
-        Fedena School ERP
+        Fedena Feature Tour - School Management Software
     </title>
     <!-- Base URL tag to help with relative paths -->
     <base href="./">
     <script src="https://cdn.tailwindcss.com">
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    height: {
+                        '100vh': '100vh',
+                        '85vh': '85vh',
+                        '75vh': '75vh',
+                    },
+                    minHeight: {
+                        '90vh': '90vh',
+                        '80vh': '80vh',
+                        '70vh': '70vh',
+                        '60vh': '60vh',
+                    }
+                },
+            }
         }
-    </style>
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
 </head>
 
+
+
 <body class="bg-white text-gray-900">
-    <div id="navbar"></div>
+    <!-- Fixed Floating Navbar -->
+    <div id="navbar" class="fixed top-0 left-0 right-0 z-50">
+        <!-- Navbar will be loaded here dynamically -->
+    </div>
+
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-red-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a2a4f] leading-tight mb-8">
-                Ultimate School ERP Software for all kind of Institutes
+    <section
+        class="relative h-75vh mt-8 pt-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-red-50">
+        <!-- Background Pattern -->
+        <div
+            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmMWY1ZjkiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-30">
+        </div>
+
+        <!-- Floating Elements -->
+        <div class="absolute top-24 left-10 w-16 h-16 bg-red-200/30 rounded-full animate-pulse"></div>
+        <div class="absolute top-36 right-20 w-12 h-12 bg-red-200/30 rounded-full animate-pulse delay-300"></div>
+        <div class="absolute bottom-32 left-20 w-20 h-20 bg-red-200/30 rounded-full animate-pulse delay-700"></div>
+        <div class="absolute bottom-16 right-10 w-14 h-14 bg-red-200/30 rounded-full animate-pulse delay-500"></div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
+            <!-- Badge -->
+            <div
+                class="inline-flex items-center gap-2 bg-gradient-to-r from-red-100 to-red-100 text-red-600 text-sm font-semibold px-6 py-3 rounded-full mb-6 shadow-lg mx-auto">
+                <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                Complete Feature Tour
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-center">
+                <span class="text-black">Discover The Power of</span>
+                <br>
+                <span class="text-red-600">Fedena ERP</span>
             </h1>
-            <p class="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                Fedena School ERP system has every feature you will ever need to run your institution efficiently
+
+            <!-- Subheading -->
+            <p class="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed text-center">
+                Explore our comprehensive suite of features designed to streamline operations and
+                enhance the educational experience for all <span class="font-semibold text-red-600">stakeholders</span>.
             </p>
-        </div>
-    </section>
-    
-    <!-- Content Section -->
-    <section class="min-h-screen flex items-center justify-center py-16 lg:py-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-start md:space-x-12 lg:space-x-16">
-                <article class="text-base lg:text-lg text-gray-700 md:w-1/2 leading-relaxed space-y-6">
-                    <p>
-                        School ERP Software is a platform which helps in managing the day to day academic and administrative
-                        activities from a single platform. Fedena provides user-friendly dashboards with login access for
-                        teachers, non-teaching staff, students, parents, and management personnel of your institution. The
-                        various modules available in school ERP software automate daily operations of your institution such
-                        as from students’ admission to generating transfer certificates to digitizing the online learning
-                        experience all can be managed effortlessly .
-                    </p>
-                    <p>
-                        Fedena School ERP has modules to manage Timetable, Attendance, Online Class, Examinations,
-                        Gradebooks, Mobile Learning, Hostel, Library, Transportation, School Calendar, Events, and many
-                        more. It has a fully-fledged Human Resource module to manage the payroll and employee pay slips. The
-                        Finance module helps you to plan and allot different fee structures to students. Fedena School ERP
-                        System is also an excellent collaboration tool using its Task, Discussion, Poll, Blog, and
-                        Videoconference plugins. There is an internal messaging system within Fedena, but you can also
-                        integrate it with external communication tools like email and texting. To find out more about the
-                        school ERP system, scroll through the following descriptions, try the.
-                    </p>
-                </article>
-                <figure class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
-                    <img alt="Illustration of school ERP software with icons and monitor screen showing a magnifying glass on a document"
-                        class="max-w-full h-auto" height="280" loading="lazy"
-                        src="https://storage.googleapis.com/a1aa/image/12b5d10c-1237-421d-e14b-7a8236c1fe3d.jpg"
-                        width="400" />
-                </figure>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-2">
+                <button
+                    class="group relative overflow-hidden bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-lg font-semibold px-10 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
+                    <span class="relative z-10 flex items-center gap-3">
+                        <i class="fas fa-play"></i>
+                        Request Live Demo
+                    </span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-red-700 to-red-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left">
+                    </div>
+                </button>
+
+                <button
+                    class="group bg-white hover:bg-gray-50 text-gray-900 text-lg font-semibold px-10 py-4 rounded-2xl border-2 border-gray-200 hover:border-red-300 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <span class="flex items-center gap-3">
+                        <i class="fas fa-calculator text-red-600"></i>
+                        View Pricing Plans
+                    </span>
+                </button>
             </div>
         </div>
     </section>
+
+    <!-- Overview Section -->
+    <section class="py-20 min-h-90vh bg-white relative overflow-hidden flex items-center">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-red-50 rounded-full -translate-x-1/2 -translate-y-1/2 opacity-70"></div>
+        <div class="absolute bottom-0 right-0 w-80 h-80 bg-red-50 rounded-full translate-x-1/3 translate-y-1/3 opacity-70"></div>
+        <div class="absolute top-1/2 right-20 w-20 h-20 bg-red-100 rounded-full opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                
+                <h2 class="text-3xl lg:text-5xl font-bold mb-8 text-gray-900">
+                    Complete <span class="text-red-600">School Management Solution</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Fedena provides a unified platform to manage all aspects of your educational institution with ease
+                    and efficiency.
+                </p>
+            </div>
+
+            <!-- Card layout with features -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Feature card 1 -->
+                <div class="bg-gradient-to-br from-white to-red-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tachometer-alt text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">User-Friendly Dashboards</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Customized access for teachers, administrative staff, students, parents, and management 
+                        personnel of your institution with intuitive interfaces.
+                    </p>
+                </div>
+                
+                <!-- Feature card 2 -->
+                <div class="bg-gradient-to-br from-white to-red-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-puzzle-piece text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Comprehensive Modules</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Covers everything from student admissions to timetable management, attendance tracking, 
+                        examination systems, and digital learning tools.
+                    </p>
+                </div>
+                
+                <!-- Feature card 3 -->
+                <div class="bg-gradient-to-br from-white to-red-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-users text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">Enhanced Collaboration</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Integrated tools like Tasks, Discussions, Polls, Blogs, and Video conferencing 
+                        capabilities to keep your entire institution connected.
+                    </p>
+                </div>
+                
+                <!-- Feature card 4 -->
+                <div class="bg-gradient-to-br from-white to-red-50 p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-dollar-sign text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-900">HR & Finance</h3>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Complete Human Resources & Finance management with payroll tracking, employee management, 
+                        and flexible fee structure implementation for students.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Call to action button -->
+            <div class="text-center mt-12">
+                <button class="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                    <span class="flex items-center gap-2">
+                        <i class="fas fa-arrow-right"></i>
+                        Explore All Features
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Modules sections -->
-    <section class="max-w-6xl mx-auto mt-12 space-y-10">
-        <!-- Core Modules -->
-        <div>
-            <h2 class="text-[#1a2a4f] font-semibold text-sm mb-4">
-                Core Modules (21)
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 text-xs text-[#ef4a3f]">
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-book-open text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Courses and Batches
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-friends text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Human Resources
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-check text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Student Attendance
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-calendar-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Timetable
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-clipboard-list text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Gradebook
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-sms text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            SMS Integration
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-id-card text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            ID Card Generator
-                        </span>
-                    </div>
+    <section class="py-20 min-h-80vh bg-gradient-to-b from-white to-gray-50 flex flex-col justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    Explore Our <span class="text-red-600">Powerful Modules</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Fedena offers over 100+ modules to handle every aspect of institutional management
+                </p>
+            </div>
+
+            <!-- Module Categories -->
+            <div class="mb-16">
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        class="px-6 py-3 bg-red-600 text-white font-semibold rounded-full shadow-md hover:bg-red-700 transition-colors">
+                        Core Modules (21)
+                    </button>
+                    <button
+                        class="px-6 py-3 bg-white text-gray-700 font-semibold rounded-full shadow-md hover:bg-gray-50 transition-colors">
+                        Add-on Modules (40+)
+                    </button>
+                    <button
+                        class="px-6 py-3 bg-white text-gray-700 font-semibold rounded-full shadow-md hover:bg-gray-50 transition-colors">
+                        Communication Modules (10+)
+                    </button>
+                    <button
+                        class="px-6 py-3 bg-white text-gray-700 font-semibold rounded-full shadow-md hover:bg-gray-50 transition-colors">
+                        Finance Modules (15+)
+                    </button>
                 </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-certificate text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Certificate Generator
-                        </span>
+            </div>
+
+            <!-- Core Modules Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Module Card 1 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-book-open text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Courses and Batches</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-th-large text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Multiple Dashboards
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-plus text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Student Admission
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-newspaper text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            News Management
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Examination
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-calendar-check text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            School / Events Calendar
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-dollar-sign text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Finance
-                        </span>
-                    </div>
+                    <p class="text-gray-600 mb-4">Manage course structures, academic years, and student batches with
+                        complete flexibility.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
                 </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Student Information
-                        </span>
+
+                <!-- Module Card 2 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-user-friends text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Human Resources</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-lock text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Employee / Teacher Login
-                        </span>
+                    <p class="text-gray-600 mb-4">Complete employee management with payroll, leave tracking, and
+                        performance evaluation.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Module Card 3 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-user-check text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Student Attendance</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-users text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Students / Parents Login
-                        </span>
+                    <p class="text-gray-600 mb-4">Track and manage attendance with automated reports and instant parent
+                        notifications.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Module Card 4 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-calendar-alt text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Timetable</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-comments text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Messaging System
-                        </span>
+                    <p class="text-gray-600 mb-4">Create and manage complex schedules with flexible timetable generation
+                        and management.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Module Card 5 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-clipboard-list text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Gradebook</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-cog text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            User Management
-                        </span>
+                    <p class="text-gray-600 mb-4">Track student performance with customizable grading systems and
+                        comprehensive reporting.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Module Card 6 -->
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-file-alt text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900">Examination</h3>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Report Center
-                        </span>
+                    <p class="text-gray-600 mb-4">Create, schedule, and grade exams with automated result generation and
+                        analysis.</p>
+                    <a href="#" class="text-red-600 font-medium hover:text-red-700 flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- View All Modules Button -->
+            <div class="mt-12 text-center">
+                <button
+                    class="group relative overflow-hidden bg-white text-gray-900 text-lg font-semibold px-10 py-4 rounded-2xl border-2 border-red-600 transition-all duration-300 transform hover:scale-105 hover:bg-red-600 hover:text-white">
+                    <span class="flex items-center gap-3">
+                        <i class="fas fa-th-large"></i>
+                        View All 100+ Modules
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Highlights Section -->
+    <section class="py-20 min-h-90vh bg-white flex flex-col justify-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    Key <span class="text-red-600">Feature Highlights</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Discover the standout capabilities that make Fedena the preferred choice for educational
+                    institutions worldwide
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div
+                    class="group p-8 rounded-3xl bg-gradient-to-br from-red-50 to-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
+                    <div
+                        class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
+                        <i class="fas fa-mobile-alt text-white text-2xl"></i>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-comment-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Custom Student Remarks
-                        </span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Mobile Accessibility</h3>
+                    <p class="text-gray-600 mb-5">
+                        Access Fedena on any device with our responsive design and dedicated mobile applications for
+                        Android and iOS platforms.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Native mobile apps</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Push notifications</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Offline capabilities</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div
+                    class="group p-8 rounded-3xl bg-gradient-to-br from-red-50 to-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
+                    <div
+                        class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
+                        <i class="fas fa-chart-pie text-white text-2xl"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Advanced Analytics</h3>
+                    <p class="text-gray-600 mb-5">
+                        Make data-driven decisions with comprehensive analytics dashboards and customizable reporting
+                        tools.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Performance tracking</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Custom report builder</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Data visualization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div
+                    class="group p-8 rounded-3xl bg-gradient-to-br from-red-50 to-white border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:translate-y-[-5px]">
+                    <div
+                        class="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-700 transition-colors">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+                    <p class="text-gray-600 mb-5">
+                        Keep your institutional data secure with enterprise-grade security protocols and compliance
+                        measures.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">End-to-end encryption</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Role-based access control</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span class="text-gray-700">Regular security audits</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Standard Modules -->
-        <div>
-            <h2 class="text-[#1a2a4f] font-semibold text-sm mb-4">
-                Standard Modules (17)
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 text-xs text-[#ef4a3f]">
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-home text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Hostel / Dormitory
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-database text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Data Management
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-import text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Custom Import
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Custom Report
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-image text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Gallery
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-comments text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Discussion
-                        </span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-receipt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Instant Fees
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-envelope text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Email Integration
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-blog text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Blog
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-palette text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Theme
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-tasks text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Task
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-balance-scale text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Discipline
-                        </span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-book text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Library
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-bus text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Transportation
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-poll text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Poll
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-briefcase text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Placement
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-boxes text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Inventory
-                        </span>
-                    </div>
-                </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 min-h-70vh bg-gradient-to-b from-gray-50 to-white flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-gray-900">
+                    What Our <span class="text-red-600">Users Say</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Join thousands of satisfied educational institutions already using Fedena
+                </p>
             </div>
-        </div>
-        <!-- Premium Modules -->
-        <div>
-            <h2 class="text-[#1a2a4f] font-semibold text-sm mb-4">
-                Premium Modules (10)
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 text-xs text-[#ef4a3f]">
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-export text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Data Export
-                        </span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="p-8 bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl">
+                            JD
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">John Doe</h4>
+                            <p class="text-gray-500">Principal, International School</p>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-tasks text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Student Assignment Management
-                        </span>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Form Builder
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-pen-fancy text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Enquiry &amp; Registration
-                        </span>
-                    </div>
+                    <blockquote class="text-gray-700 italic">
+                        "Implementing Fedena has transformed our administrative processes completely. The time saved on
+                        paperwork has allowed our staff to focus more on teaching and student development."
+                    </blockquote>
                 </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-calculator text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Tally Integration
-                        </span>
+
+                <!-- Testimonial 2 -->
+                <div class="p-8 bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-green-600 font-bold text-xl">
+                            SM
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Sarah Miller</h4>
+                            <p class="text-gray-500">Administrator, Public School</p>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-invoice-dollar text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Fees Import
-                        </span>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-bell text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Reminder
-                        </span>
-                    </div>
+                    <blockquote class="text-gray-700 italic">
+                        "The analytics and reporting features have been game-changing for us. We can now make
+                        data-driven decisions about resource allocation and student support initiatives."
+                    </blockquote>
                 </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-credit-card text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Payment Gateway Integration
-                        </span>
+
+                <!-- Testimonial 3 -->
+                <div class="p-8 bg-white rounded-3xl shadow-lg border border-gray-100">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-xl">
+                            RK
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold">Raj Kumar</h4>
+                            <p class="text-gray-500">Director, University College</p>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-sign-in-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Google SSO
-                        </span>
+                    <div class="mb-6">
+                        <div class="flex text-yellow-400 mb-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-columns text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            App Frame
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Ultimate Modules -->
-        <div>
-            <h2 class="text-[#1a2a4f] font-semibold text-sm mb-4">
-                Ultimate Modules (12)
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 text-xs text-[#ef4a3f]">
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-user-graduate text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Alumni
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Doc Manager
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-door-open text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Gate Management
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-invoice text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            QuickBooks Integration
-                        </span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-clipboard-check text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Audit
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-calendar-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Automatic Timetable Generator
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Google Docs
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-video text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Google Meet Integration
-                        </span>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-cloud text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Azure Integration
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-invoice-dollar text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Paybooks Integration
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-file-alt text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Online Examination
-                        </span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fab fa-bandcamp text-[#ef4a3f]">
-                        </i>
-                        <span class="text-gray-900 font-normal">
-                            Bigbluebutton Integration
-                        </span>
-                    </div>
+                    <blockquote class="text-gray-700 italic">
+                        "We evaluated several ERP solutions, and Fedena stood out for its comprehensive module set and
+                        ease of use. The custom configuration options allowed us to adapt it perfectly to our needs."
+                    </blockquote>
                 </div>
             </div>
         </div>
     </section>
     <!-- Addon Apps -->
-    <section class="bg-gray-100 mt-16 py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-[#1a2a4f] font-semibold text-center mb-6">
-                Addon Apps
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-xs text-[#ef4a3f]">
-                <div class="text-center md:text-left">
-                    <div class="flex justify-center md:justify-start mb-2">
-                        <i class="fas fa-mobile-alt text-[#ef4a3f] text-lg">
-                        </i>
+    <section class="bg-gradient-to-r from-gray-50 to-red-50 mt-16 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block px-4 py-2 rounded-full bg-red-100 text-red-600 text-sm font-semibold mb-4">
+                    EXTEND FUNCTIONALITY
+                </span>
+                <h3 class="text-3xl font-bold text-gray-900 mb-6">
+                    Powerful <span class="text-red-600">Add-on Solutions</span> For Your Institution
+                </h3>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Enhance your Fedena experience with these specialized tools designed to address specific institutional needs
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 transform hover:-translate-y-1">
+                    <div class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-red-600 text-2xl"></i>
                     </div>
-                    <h4 class="text-gray-900 font-semibold mb-1">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
                         Fedena Mobile App
                     </h4>
-                    <p class="text-gray-700 mb-1">
-                        iOS &amp; Android apps in your brand for parents, teachers &amp; students
+                    <p class="text-gray-600 mb-6">
+                        Customized iOS & Android apps with your institution's branding for seamless engagement between parents, teachers & students
                     </p>
-                    <a class="text-[#ef4a3f] font-semibold hover:underline" href="#">
+                    <a class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 group" href="#">
                         Learn more
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
                     </a>
                 </div>
-                <div class="text-center md:text-left">
-                    <div class="flex justify-center md:justify-start mb-2">
-                        <i class="fas fa-building text-[#ef4a3f] text-lg">
-                        </i>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 transform hover:-translate-y-1">
+                    <div class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-red-600 text-2xl"></i>
                     </div>
-                    <h4 class="text-gray-900 font-semibold mb-1">
-                        Fedena Multi-School ERP System
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
+                        Multi-School ERP System
                     </h4>
-                    <p class="text-gray-700 mb-1">
-                        One dashboard to manage and track all your institutions
+                    <p class="text-gray-600 mb-6">
+                        Unified dashboard to centrally manage, track, and monitor all your institutions with comprehensive analytics and reporting
                     </p>
-                    <a class="text-[#ef4a3f] font-semibold hover:underline" href="#">
+                    <a class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 group" href="#">
                         Learn more
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
                     </a>
                 </div>
-                <div class="text-center md:text-left">
-                    <div class="flex justify-center md:justify-start mb-2">
-                        <i class="fas fa-cogs text-[#ef4a3f] text-lg">
-                        </i>
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 transform hover:-translate-y-1">
+                    <div class="bg-red-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-red-600 text-2xl"></i>
                     </div>
-                    <h4 class="text-gray-900 font-semibold mb-1">
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">
                         Fedena Integration
                     </h4>
-                    <p class="text-gray-700 mb-1">
-                        Integrate various web-based services with Fedena
+                    <p class="text-gray-600 mb-6">
+                        Seamlessly connect Fedena with your existing systems and third-party tools through our robust API and integration services
                     </p>
-                    <a class="text-[#ef4a3f] font-semibold hover:underline" href="#">
+                    <a class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 group" href="#">
                         Learn more
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
                     </a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Resell and Buy Fedena -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-[#d6e9fc] p-6 rounded">
-            <h4 class="text-[#1a2a4f] font-semibold text-sm mb-2">
-                Resell Fedena
-            </h4>
-            <p class="text-xs text-gray-900 mb-3">
-                Embed Fedena in your application and sell it in your market, under your terms and pricing.
-            </p>
-            <button
-                class="text-[#ef4a3f] text-xs font-semibold border border-[#ef4a3f] px-3 py-1 rounded hover:bg-[#ef4a3f] hover:text-white transition">
-                Partner
-            </button>
-        </div>
-        <div class="bg-[#d6e9fc] p-6 rounded">
-            <h4 class="text-[#1a2a4f] font-semibold text-sm mb-2">
-                Buy Fedena
-            </h4>
-            <p class="text-xs text-gray-900 mb-3">
-                All our plans include unlimited students, unlimited courses, priority support with no hidden fee.
-            </p>
-            <button
-                class="text-[#ef4a3f] text-xs font-semibold border border-[#ef4a3f] px-3 py-1 rounded hover:bg-[#ef4a3f] hover:text-white transition">
-                Plan and pricing
-            </button>
-        </div>
-    </section>
-    <!-- Call to action -->
-    <section class="bg-[#1a2a4f] mt-16 py-10">
-        <div class="max-w-4xl mx-auto px-4 text-center text-white">
-            <h3 class="font-semibold text-sm mb-2">
-                Efficient and Effective School ERP Software
-            </h3>
-            <p class="text-xs mb-6">
-                Suitable for all types of Institutes such as K12, Universities, Higher-Ed, Training Institutes and
-                more.
-            </p>
-            <div class="flex justify-center space-x-4">
-                <button class="bg-[#ef4a3f] px-5 py-2 text-xs font-semibold rounded hover:bg-[#d43e33] transition">
-                    Book A Demo
-                </button>
-                <button
-                    class="border border-[#ef4a3f] px-5 py-2 text-xs font-semibold rounded hover:bg-[#ef4a3f] hover:text-white transition">
-                    Frequently Asked Questions
-                </button>
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Resell Fedena Card -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl shadow-xl overflow-hidden">
+                    <div class="p-8 md:p-10">
+                        <div class="bg-blue-600/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">
+                            Partner & Resell Fedena
+                        </h4>
+                        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                            Integrate Fedena within your existing solutions and create new revenue streams by offering it to your clients under your own branding and pricing strategy.
+                        </p>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                                <span class="text-gray-700">White-label solution</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                                <span class="text-gray-700">Flexible pricing options</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-600 mr-3"></i>
+                                <span class="text-gray-700">Partner success program</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            Become a Partner
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Buy Fedena Card -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl shadow-xl overflow-hidden">
+                    <div class="p-8 md:p-10">
+                        <div class="bg-red-600/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-rocket text-red-600 text-2xl"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">
+                            Buy Fedena For Your Institution
+                        </h4>
+                        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+                            All our plans include unlimited students, unlimited courses, and priority support with no hidden fees. Choose the plan that best suits your institution's needs.
+                        </p>
+                        <ul class="mb-8 space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-red-600 mr-3"></i>
+                                <span class="text-gray-700">Unlimited users</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-red-600 mr-3"></i>
+                                <span class="text-gray-700">Dedicated support</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-red-600 mr-3"></i>
+                                <span class="text-gray-700">Regular updates & upgrades</span>
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-block bg-red-600 hover:bg-red-700 text-white font-medium px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105">
+                            View Plans & Pricing
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Call to action -->
+    <section class="py-20 bg-gradient-to-r from-red-600 to-red-700 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <h3 class="font-bold text-3xl text-white mb-4">
+                    Efficient and Effective School ERP Software
+                </h3>
+                <p class="text-xl text-blue-50/90 mb-10 max-w-3xl mx-auto">
+                    Perfect solution for all types of educational institutions: K-12 Schools, Universities, 
+                    Higher-Ed Institutions, Training Centers and more.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <button class="bg-white hover:bg-gray-100 text-blue-900 px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule a Demo
+                    </button>
+                    <button class="border-2 border-white/60 hover:border-white bg-transparent px-8 py-4 text-lg font-bold rounded-xl text-white hover:bg-white/10 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                        <i class="fas fa-question-circle"></i>
+                        Frequently Asked Questions
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="mobileMenu.js"></script>
+    <script src="loadComponents.js"></script>
+    <script src="accordian.js"></script>
+
     </main>
-    <div id="footer"></div>
-    <div id="footer"></div>
-<script src="mobileMenu.js"></script>
-<script src="loadComponents.js"></script>
-<script src="accordian.js"></script>
 </body>
 
 </html>
