@@ -79,12 +79,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const ultimateCoreModules = document.querySelector('.pricing-card:nth-child(3) ul li:first-child');
   const enterpriseCoreModules = document.querySelector('.pricing-card:nth-child(4) ul li:first-child');
 
+  // Get the toggle slider element
+  const toggleSlider = document.getElementById('toggle-slider');
+
   // Toggle between Web App and Both Web & Mobile App
   webToggle.addEventListener('click', function () {
     if (currentAppType !== 'webApp') {
       currentAppType = 'webApp';
-      webToggle.classList.add('tab-active');
-      mobileToggle.classList.remove('tab-active');
+      webToggle.classList.add('toggle-active');
+      mobileToggle.classList.remove('toggle-active');
+      toggleSlider.classList.remove('right');
       updatePrices();
     }
   });
@@ -92,8 +96,9 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileToggle.addEventListener('click', function () {
     if (currentAppType !== 'bothWebAndMobile') {
       currentAppType = 'bothWebAndMobile';
-      mobileToggle.classList.add('tab-active');
-      webToggle.classList.remove('tab-active');
+      mobileToggle.classList.add('toggle-active');
+      webToggle.classList.remove('toggle-active');
+      toggleSlider.classList.add('right');
       updatePrices();
     }
   });

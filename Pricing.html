@@ -16,11 +16,8 @@
     }
 
     .pricing-card {
-      transition: all 0.3s ease;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-10px);
+      /* Static card styling without hover effects */
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
 
     .feature-item {
@@ -39,14 +36,56 @@
       margin-right: 0.5rem;
     }
 
-    .tab-active {
-      background-color: #EF4444;
+    /* Fixed toggle styling without overlap */
+    .toggle-container {
+      display: inline-flex;
+      background: #f3f4f6;
+      border-radius: 999px;
+      padding: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+      border: 1px solid #e5e7eb;
+      position: relative;
+      width: 420px; /* Fixed width to ensure proper spacing */
+    }
+    
+    .toggle-option {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      padding: 10px 0;
+      font-weight: 600;
+      font-size: 0.925rem;
+      color: #6b7280;
+      text-align: center;
+      border-radius: 999px;
+      flex: 1; /* Equal width for both options */
+    }
+    
+    .toggle-active {
       color: white;
     }
-
-    .tab {
-      cursor: pointer;
-      transition: all 0.3s ease;
+    
+    .toggle-slider {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      bottom: 4px;
+      width: calc(50% - 4px);
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+      border-radius: 999px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+    }
+    
+    .toggle-slider.right {
+      transform: translateX(100%);
+    }
+    
+    /* Make sure text doesn't overflow and is properly centered */
+    .toggle-text {
+      display: inline-block;
+      white-space: nowrap;
+      padding: 0 10px;
     }
   </style>
 </head>
@@ -70,10 +109,17 @@
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">All plans include free cloud hosting with encrypted security.
         </p>
 
-        <!-- App Type Toggle -->
-        <div class="mt-10 inline-flex bg-gray-100 p-1 rounded-lg">
-          <button id="web-toggle" class="tab tab-active px-6 py-2 text-sm font-medium rounded-md">Web App</button>
-          <button id="mobile-toggle" class="tab px-6 py-2 text-sm font-medium rounded-md">Both Web & Mobile App</button>
+        <!-- App Type Toggle - Fixed Design without overlap -->
+        <div class="mt-10 flex justify-center">
+          <div class="toggle-container">
+            <div class="toggle-slider" id="toggle-slider"></div>
+            <button id="web-toggle" class="toggle-option toggle-active">
+              <span class="toggle-text">Web App</span>
+            </button>
+            <button id="mobile-toggle" class="toggle-option">
+              <span class="toggle-text">Both Web & Mobile App</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -92,9 +138,6 @@
                 <span class="text-gray-500">+ GST</span>
                 <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
               </div>
-              <a href="#"
-                class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get
-                Standard</a>
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
@@ -120,9 +163,6 @@
                 <span class="text-gray-500">+ GST</span>
                 <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
               </div>
-              <a href="#"
-                class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get
-                Premium</a>
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
@@ -150,9 +190,6 @@
                 <span class="text-gray-500">+ GST</span>
                 <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
               </div>
-              <a href="#"
-                class="block w-full py-3 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">Get
-                Ultimate</a>
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
@@ -178,9 +215,6 @@
                 <span class="text-xl">Custom Pricing</span>
                 <p class="text-sm text-gray-300 mt-1">Contact for details</p>
               </div>
-              <a href="#"
-                class="block w-full py-3 px-4 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-100 transition-colors">Get
-                Enterprise</a>
             </div>
             <div class="border-t border-gray-700 p-6">
               <ul class="space-y-3">
@@ -204,13 +238,13 @@
 
     <!-- Help Section -->
     <section class="py-16 text-center bg-white">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mt-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
           <h3 class="text-2xl font-bold text-gray-900 mb-4">Can't decide which plan is right for you?</h3>
           <p class="text-gray-600 mb-6">Our education specialists can guide you to the perfect solution based on your
             institution's unique needs.</p>
           <div class="flex flex-wrap justify-center gap-4">
-            <a href="#"
+            <a href="Contact.html"
               class="py-3 px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">
               <i class="fas fa-calendar-alt mr-2"></i> Contact Us for a Consultation
             </a>
