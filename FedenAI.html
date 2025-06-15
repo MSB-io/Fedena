@@ -71,8 +71,8 @@
 <body class="bg-gray-50 h-screen flex flex-col relative">
     <!-- Floating Hamburger Icon -->
     <button id="hamburgerToggle"
-        class="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
-        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        class="fixed top-3 left-3 sm:top-4 sm:left-4 z-50 p-2 sm:p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
     </button>
@@ -83,13 +83,13 @@
 
     <!-- Floating Sidebar Container -->
     <div id="sidebarContainer"
-        class="fixed top-1/2 left-0 z-40 w-80 h-[75vh] bg-white shadow-2xl border-r border-gray-200 rounded-r-2xl transform -translate-y-1/2 flex flex-col">
+        class="fixed top-1/2 left-0 z-40 w-72 sm:w-80 h-[80vh] sm:h-[75vh] bg-white shadow-2xl border-r border-gray-200 rounded-r-xl sm:rounded-r-2xl transform -translate-y-1/2 flex flex-col">
         <!-- Sidebar Header -->
-        <div class="p-4 border-b border-gray-100 flex-shrink-0">
+        <div class="p-3 sm:p-4 border-b border-gray-100 flex-shrink-0">
             <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3">
-                    <div class="w-8 h-8 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <div class="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
                                 opacity="0.9" />
                         </svg>
@@ -97,8 +97,8 @@
                 </div>
                 <!-- Square New Chat Button -->
                 <button id="newChatBtn"
-                    class="p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-lg transition-colors">
-                    <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    class="p-1.5 sm:p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-md sm:rounded-lg transition-colors">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
                 </button>
@@ -107,16 +107,16 @@
 
         <!-- Chat History -->
         <div class="flex-1 overflow-hidden min-h-0">
-            <div class="p-4 h-full">
-                <h4 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">Recent Chats</h4>
-                <div id="chatHistory" class="space-y-1 h-[calc(100%-2rem)] overflow-y-auto pr-2">
+            <div class="p-3 sm:p-4 h-full">
+                <h4 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">Recent Chats</h4>
+                <div id="chatHistory" class="space-y-1 h-[calc(100%-1.5rem)] sm:h-[calc(100%-2rem)] overflow-y-auto pr-1 sm:pr-2">
                     <!-- Chat history items will be added here -->
                 </div>
             </div>
         </div>
 
         <!-- Sidebar Footer -->
-        <div class="p-4 border-t border-gray-100 flex-shrink-0">
+        <div class="p-3 sm:p-4 border-t border-gray-100 flex-shrink-0">
             <div class="text-xs text-gray-500">Powered by Gemini</div>
             <div class="text-xs text-gray-400 mt-1">Version 1.0</div>
         </div>
@@ -124,8 +124,8 @@
 
     <!-- Back to Home Button -->
     <a href="index.html"
-        class="fixed bottom-4 left-4 z-30 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
-        <svg class="w-5 h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
+        class="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 z-30 p-2 sm:p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
             viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
             </path>
@@ -133,65 +133,65 @@
     </a>
 
     <!-- Main Content Area -->
-    <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full h-full">
+    <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full h-full px-2 sm:px-4 lg:px-0">
         <!-- Chat Container -->
         <div class="flex-1 flex flex-col min-h-0">
             <!-- Welcome Screen (shown when no messages) -->
-            <div id="welcomeScreen" class="flex-1 flex items-center justify-center p-8">
-                <div class="text-center max-w-2xl">
-                    <div class="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+            <div id="welcomeScreen" class="flex-1 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+                <div class="text-center max-w-2xl w-full">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <svg class="w-10 h-10 sm:w-12 sm:h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
                                 opacity="0.9" />
                         </svg>
                     </div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to FedenAI</h2>
-                    <p class="text-gray-600 mb-8">Your intelligent school management assistant. Get help with student information systems, academic planning, school administration, and educational best practices!</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">Welcome to FedenAI</h2>
+                    <p class="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 px-2 sm:px-0">Your intelligent school management assistant. Get help with student information systems, academic planning, school administration, and educational best practices!</p>
 
                     <!-- Example Prompts -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                         <button
-                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                            <div class="font-medium text-gray-800 mb-1">Student Management</div>
-                            <div class="text-sm text-gray-500">How to track student progress effectively</div>
+                            class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Student Management</div>
+                            <div class="text-xs sm:text-sm text-gray-500">How to track student progress effectively</div>
                         </button>
                         <button
-                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                            <div class="font-medium text-gray-800 mb-1">Academic Planning</div>
-                            <div class="text-sm text-gray-500">Best practices for curriculum design</div>
+                            class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Academic Planning</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Best practices for curriculum design</div>
                         </button>
                         <button
-                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                            <div class="font-medium text-gray-800 mb-1">School Administration</div>
-                            <div class="text-sm text-gray-500">Streamlining administrative processes</div>
+                            class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">School Administration</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Streamlining administrative processes</div>
                         </button>
                         <button
-                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                            <div class="font-medium text-gray-800 mb-1">Educational Technology</div>
-                            <div class="text-sm text-gray-500">Integrating digital tools in education</div>
+                            class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Educational Technology</div>
+                            <div class="text-xs sm:text-sm text-gray-500">Integrating digital tools in education</div>
                         </button>
                     </div>
                 </div>
             </div>
 
             <!-- Messages Container -->
-            <div id="messagesContainer" class="flex-1 overflow-y-auto px-4 py-6 space-y-6 hidden min-h-0">
+            <div id="messagesContainer" class="flex-1 overflow-y-auto px-2 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6 hidden min-h-0">
                 <!-- Messages will be dynamically inserted here -->
             </div>
         </div>
 
         <!-- Input Section (Fixed at bottom) -->
-        <div class="flex-shrink-0 p-4">
-            <div class="flex items-center gap-3 bg-gray-50 border border-gray-400 rounded-lg px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500">
+        <div class="flex-shrink-0 p-3 sm:p-4">
+            <div class="flex items-center gap-2 sm:gap-3 bg-gray-50 border border-gray-400 rounded-lg px-3 sm:px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500">
                 <!-- Text Input -->
                 <input id="messageInput" type="text" placeholder="Ask FedenAI anything ..."
                     class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
 
                 <!-- Send Button -->
                 <button id="sendButton"
-                    class="p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors"
+                    class="p-1.5 sm:p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors flex-shrink-0"
                     disabled>
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                     </svg>
@@ -203,10 +203,10 @@
     </div>
 
     <!-- Loading Overlay -->
-    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white rounded-lg p-6 flex items-center space-x-3">
-            <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-red-600"></div>
-            <span class="text-gray-700">FedenAI is thinking...</span>
+    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden px-4">
+        <div class="bg-white rounded-lg p-4 sm:p-6 flex items-center space-x-3 mx-4 max-w-sm w-full">
+            <div class="animate-spin rounded-full h-5 w-5 sm:h-6 sm:w-6 border-b-2 border-red-600"></div>
+            <span class="text-gray-700 text-sm sm:text-base">FedenAI is thinking...</span>
         </div>
     </div>
 
