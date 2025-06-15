@@ -229,10 +229,10 @@ class FedenAI {
             const chatItem = document.createElement('div');
             const isActive = this.currentSessionId === session.id;
             
-            chatItem.className = `group flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors text-sm ${
+            chatItem.className = `group flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors text-sm bg-white border border-gray-200 mb-2 ${
                 isActive 
-                    ? 'bg-red-50 text-red-700 border border-red-200' 
-                    : 'hover:bg-gray-50 text-gray-700'
+                    ? 'bg-red-50 text-red-700 border-red-200 shadow-sm' 
+                    : 'text-gray-700 hover:bg-red-50 hover:text-red-600 hover:border-red-200 hover:shadow-sm'
             }`;
             
             chatItem.innerHTML = `
@@ -240,14 +240,28 @@ class FedenAI {
                     <div class="truncate font-medium">${session.title}</div>
                     <div class="text-xs ${isActive ? 'text-red-500' : 'text-gray-500'}">${this.formatDate(session.timestamp)}</div>
                 </div>
-                <button class="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded transition-all" onclick="event.stopPropagation(); fedenAI.deleteChatSession('${session.id}')">
-                    <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button class="delete-btn opacity-0 group-hover:opacity-100 p-2 hover:bg-gray-200 rounded transition-all" data-session-id="${session.id}">
+                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>
                 </button>
             `;
 
-            chatItem.addEventListener('click', () => this.loadChatSession(session.id));
+            // Add click event for loading chat session
+            chatItem.addEventListener('click', (e) => {
+                // Only load session if clicking on the main area, not the delete button
+                if (!e.target.closest('.delete-btn')) {
+                    this.loadChatSession(session.id);
+                }
+            });
+
+            // Add click event for delete button
+            const deleteBtn = chatItem.querySelector('.delete-btn');
+            deleteBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.deleteChatSession(session.id);
+            });
+
             this.chatHistory.appendChild(chatItem);
         });
     }
