@@ -2,6 +2,7 @@ class FedenAI {
   constructor() {
     this.messages = [];
     this.isTyping = false;
+    this.shouldStopTyping = false;
     this.chatSessions = [];
     this.currentSessionId = null;
     this.sidebarOpen = false;
@@ -50,14 +51,24 @@ class FedenAI {
     this.sidebarOverlay?.addEventListener("click", () => this.closeSidebar());
     this.newChatBtn?.addEventListener("click", () => this.startNewChat());
 
-    // Send button click
-    this.sendButton.addEventListener("click", () => this.sendMessage());
+    // Send button click (handles both send and stop)
+    this.sendButton.addEventListener("click", () => {
+      if (this.isTyping) {
+        this.stopAIResponse();
+      } else {
+        this.sendMessage();
+      }
+    });
 
     // Enter key handling
     this.messageInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter" && !e.shiftKey) {
         e.preventDefault();
-        this.sendMessage();
+        if (this.isTyping) {
+          this.stopAIResponse();
+        } else {
+          this.sendMessage();
+        }
       }
     });
 
@@ -353,14 +364,31 @@ class FedenAI {
   updateSendButton() {
     const hasText = this.messageInput.value.trim().length > 0;
     const withinLimit = this.messageInput.value.length <= 2000;
-    this.sendButton.disabled = !hasText || !withinLimit || this.isTyping;
-
-    if (this.sendButton.disabled) {
-      this.sendButton.className =
-        "p-2 bg-gray-300 cursor-not-allowed rounded-full transition-colors";
+    
+    if (this.isTyping) {
+      // Show stop button when AI is typing
+      this.sendButton.disabled = false;
+      this.sendButton.className = "p-2 bg-red-600 hover:bg-red-700 rounded-full transition-colors";
+      this.sendButton.innerHTML = `
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+          <rect x="6" y="6" width="12" height="12" rx="2"/>
+        </svg>
+      `;
     } else {
-      this.sendButton.className =
-        "p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors";
+      // Show send button when not typing
+      this.sendButton.disabled = !hasText || !withinLimit;
+      
+      if (this.sendButton.disabled) {
+        this.sendButton.className = "p-2 bg-gray-300 cursor-not-allowed rounded-full transition-colors";
+      } else {
+        this.sendButton.className = "p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors";
+      }
+      
+      this.sendButton.innerHTML = `
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+      `;
     }
   }
 
@@ -395,6 +423,14 @@ class FedenAI {
 
     // Save chat session after each exchange
     this.saveCurrentChat();
+  }
+
+  stopAIResponse() {
+    console.log('Stopping AI response...');
+    this.shouldStopTyping = true;
+    this.isTyping = false;
+    this.removeTypingIndicator();
+    this.updateSendButton();
   }
 
   addMessage(content, sender) {
@@ -509,15 +545,27 @@ class FedenAI {
   }
 
   async simulateAIResponse(userMessage) {
+    this.shouldStopTyping = false; // Reset stop flag
+    
     try {
       // Call Gemini API with hardcoded key
       const response = await this.callGeminiAPI(userMessage, this.geminiApiKey);
+
+      if (this.shouldStopTyping) {
+        console.log('AI response stopped by user');
+        return;
+      }
 
       this.removeTypingIndicator();
 
       // Type the AI response
       await this.typeMessage(response);
     } catch (error) {
+      if (this.shouldStopTyping) {
+        console.log('AI response stopped by user during error handling');
+        return;
+      }
+      
       console.error("Detailed error getting AI response:", error);
       console.error("Error message:", error.message);
       console.error("Error stack:", error.stack);
@@ -561,6 +609,7 @@ class FedenAI {
     }
 
     this.isTyping = false;
+    this.shouldStopTyping = false;
     this.updateSendButton();
   }
 
@@ -703,6 +752,16 @@ User question: ${userMessage}`;
     // Type effect
     const words = content.split(" ");
     for (let i = 0; i < words.length; i++) {
+      // Check if user wants to stop typing
+      if (this.shouldStopTyping) {
+        console.log('Typing stopped by user');
+        // Add remaining content immediately
+        message.content = content;
+        messageContentSpan.innerHTML = this.formatMessageContent(message.content);
+        this.scrollToBottom();
+        return;
+      }
+      
       message.content += (i > 0 ? " " : "") + words[i];
       messageContentSpan.innerHTML = this.formatMessageContent(message.content);
       this.scrollToBottom();

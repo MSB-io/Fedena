@@ -55,6 +55,16 @@
         #chatHistory::-webkit-scrollbar-thumb:hover {
             background: rgba(156, 163, 175, 0.8);
         }
+
+        /* Hide scrollbar for messages container */
+        #messagesContainer {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+        }
+
+        #messagesContainer::-webkit-scrollbar {
+            display: none; /* WebKit browsers */
+        }
     </style>
 </head>
 
@@ -123,66 +133,70 @@
     </a>
 
     <!-- Main Content Area -->
-    <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full">
-        <!-- Welcome Screen (shown when no messages) -->
-        <div id="welcomeScreen" class="flex-1 flex items-center justify-center p-8">
-            <div class="text-center max-w-2xl">
-                <div class="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                    <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
-                            opacity="0.9" />
-                    </svg>
-                </div>
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to FedenAI</h2>
-                <p class="text-gray-600 mb-8">Your intelligent school management assistant. Get help with student information systems, academic planning, school administration, and educational best practices!</p>
+    <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full h-full">
+        <!-- Chat Container -->
+        <div class="flex-1 flex flex-col min-h-0">
+            <!-- Welcome Screen (shown when no messages) -->
+            <div id="welcomeScreen" class="flex-1 flex items-center justify-center p-8">
+                <div class="text-center max-w-2xl">
+                    <div class="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
+                                opacity="0.9" />
+                        </svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to FedenAI</h2>
+                    <p class="text-gray-600 mb-8">Your intelligent school management assistant. Get help with student information systems, academic planning, school administration, and educational best practices!</p>
 
-                <!-- Example Prompts -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <button
-                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                        <div class="font-medium text-gray-800 mb-1">Student Management</div>
-                        <div class="text-sm text-gray-500">How to track student progress effectively</div>
-                    </button>
-                    <button
-                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                        <div class="font-medium text-gray-800 mb-1">Academic Planning</div>
-                        <div class="text-sm text-gray-500">Best practices for curriculum design</div>
-                    </button>
-                    <button
-                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                        <div class="font-medium text-gray-800 mb-1">School Administration</div>
-                        <div class="text-sm text-gray-500">Streamlining administrative processes</div>
-                    </button>
-                    <button
-                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                        <div class="font-medium text-gray-800 mb-1">Educational Technology</div>
-                        <div class="text-sm text-gray-500">Integrating digital tools in education</div>
-                    </button>
+                    <!-- Example Prompts -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <button
+                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1">Student Management</div>
+                            <div class="text-sm text-gray-500">How to track student progress effectively</div>
+                        </button>
+                        <button
+                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1">Academic Planning</div>
+                            <div class="text-sm text-gray-500">Best practices for curriculum design</div>
+                        </button>
+                        <button
+                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1">School Administration</div>
+                            <div class="text-sm text-gray-500">Streamlining administrative processes</div>
+                        </button>
+                        <button
+                            class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                            <div class="font-medium text-gray-800 mb-1">Educational Technology</div>
+                            <div class="text-sm text-gray-500">Integrating digital tools in education</div>
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Messages Container -->
+            <div id="messagesContainer" class="flex-1 overflow-y-auto px-4 py-6 space-y-6 hidden min-h-0">
+                <!-- Messages will be dynamically inserted here -->
             </div>
         </div>
 
-        <!-- Messages Container -->
-        <div id="messagesContainer" class="flex-1 overflow-y-auto px-4 py-6 space-y-6 hidden">
-            <!-- Messages will be dynamically inserted here -->
-        </div>
+        <!-- Input Section (Fixed at bottom) -->
+        <div class="flex-shrink-0 p-4">
+            <div class="flex items-center gap-3 bg-gray-50 border border-gray-400 rounded-lg px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500">
+                <!-- Text Input -->
+                <input id="messageInput" type="text" placeholder="Ask FedenAI anything ..."
+                    class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
 
-        <!-- Clean Input Section -->
-        <div
-            class="sticky bottom-4 flex items-center gap-3 bg-gray-50 border border-gray-400 rounded-lg px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500 mx-4 mb-4">
-            <!-- Text Input -->
-            <input id="messageInput" type="text" placeholder="Ask FedenAI anything ..."
-                class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
-
-            <!-- Send Button -->
-            <button id="sendButton"
-                class="p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors"
-                disabled>
-                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </svg>
-            </button>
+                <!-- Send Button -->
+                <button id="sendButton"
+                    class="p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors"
+                    disabled>
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    </svg>
+                </button>
+            </div>
         </div>
 
     </div>
