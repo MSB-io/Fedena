@@ -754,11 +754,8 @@ User question: ${userMessage}`;
     for (let i = 0; i < words.length; i++) {
       // Check if user wants to stop typing
       if (this.shouldStopTyping) {
-        console.log('Typing stopped by user');
-        // Add remaining content immediately
-        message.content = content;
-        messageContentSpan.innerHTML = this.formatMessageContent(message.content);
-        this.scrollToBottom();
+        console.log('Typing stopped by user - stopping immediately');
+        // Don't add any more content, just stop here
         return;
       }
       
