@@ -30,18 +30,18 @@
   </div>
 
   <!-- Main Content Area with top padding for fixed navbar -->
-  <main class="pt-20">
+  <main class="pt-16 sm:pt-20">
     <!-- Hero Section -->
-    <section id="hero" class="bg-grey-50">
+    <section id="hero" class="bg-grey-50 relative">
       <div
         class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-5">
       </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 md:py-32 relative">
         <div class="max-w-3xl">
-          <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">About
+          <span class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">About
             Us</span>
-          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Empowering Education Worldwide</h1>
-          <p class="text-xl text-gray-600 leading-relaxed mb-8">We're on a mission to transform educational institutions
+          <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">Empowering Education Worldwide</h1>
+          <p class="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed mb-6 sm:mb-8">We're on a mission to transform educational institutions
             with powerful, user-friendly software solutions that streamline operations and enhance learning outcomes.
           </p>
         </div>
@@ -50,17 +50,17 @@
     </section>
 
     <!-- Our Story Section -->
-    <section id="our-story" class="py-20 bg-white">
+    <section id="our-story" class="py-12 sm:py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">Our
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">Our
             Journey</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Fedena Story</h2>
-          <p class="text-gray-600 leading-relaxed">From a small idea to a global educational platform</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Fedena Story</h2>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">From a small idea to a global educational platform</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="order-2 lg:order-1">
             <div class="relative">
               <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-xl">
                 <img
@@ -68,23 +68,23 @@
                   alt="Team collaborating" class="object-cover w-full h-full">
               </div>
               <div
-                class="absolute -bottom-6 -right-6 w-32 h-32 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg z-10">
+                class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-24 h-24 sm:w-32 sm:h-32 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-lg z-10">
                 Since<br>2009
               </div>
             </div>
           </div>
 
-          <div class="space-y-6">
-            <p class="text-gray-700 leading-relaxed">Founded in 2009, Fedena began with a simple vision: to create an
+          <div class="space-y-4 sm:space-y-6 order-1 lg:order-2">
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Founded in 2009, Fedena began with a simple vision: to create an
               intuitive school management system that could work for educational institutions of all sizes. What started
               as a solution for a handful of local schools has evolved into a comprehensive platform used by over 40,000
               institutions across 100+ countries.</p>
 
-            <p class="text-gray-700 leading-relaxed">Our team of educators, developers, and designers works tirelessly
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Our team of educators, developers, and designers works tirelessly
               to ensure Fedena remains at the cutting edge of educational technology while maintaining its user-friendly
               approach that administrators, teachers, and students love.</p>
 
-            <p class="text-gray-700 leading-relaxed">Through consistent innovation and a deep understanding of
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed">Through consistent innovation and a deep understanding of
               educational needs, we've expanded our platform to address the full spectrum of school management
               challenges—from student information systems to financial management, academic planning, and beyond.</p>
           </div>
@@ -93,66 +93,66 @@
     </section>
 
     <!-- Our Customers Section -->
-    <section id="customers" class="py-20 bg-grey-50">
+    <section id="customers" class="py-12 sm:py-16 md:py-20 bg-grey-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">Global
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">Global
             Impact</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Institutions Worldwide</h2>
-          <p class="text-gray-600 leading-relaxed">From small private schools to large universities, Fedena empowers
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted by Institutions Worldwide</h2>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">From small private schools to large universities, Fedena empowers
             educational institutions across the globe</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24"
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 text-red-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
               </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">40,000+</h3>
-            <p class="text-gray-600">Educational institutions using Fedena</p>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">40,000+</h3>
+            <p class="text-sm sm:text-base text-gray-600">Educational institutions using Fedena</p>
           </div>
 
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24"
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 text-red-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">100+</h3>
-            <p class="text-gray-600">Countries with active Fedena deployments</p>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">100+</h3>
+            <p class="text-sm sm:text-base text-gray-600">Countries with active Fedena deployments</p>
           </div>
 
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600" fill="none" viewBox="0 0 24 24"
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-8 sm:w-8 text-red-600" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">20+ Million</h3>
-            <p class="text-gray-600">Students managed through our platform</p>
+            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2">20+ Million</h3>
+            <p class="text-sm sm:text-base text-gray-600">Students managed through our platform</p>
           </div>
         </div>
 
         <!-- Customer Testimonial -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <div class="grid grid-cols-1 md:grid-cols-2">
-            <div class="bg-gradient-to-br from-red-600 to-red-800 p-8 md:p-12 text-white flex items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="bg-gradient-to-br from-red-600 to-red-800 p-6 sm:p-8 lg:p-12 text-white flex items-center">
               <div>
-                <h3 class="text-2xl font-bold mb-4">Success Stories</h3>
-                <p class="mb-6 opacity-90">Hear from our customers about how Fedena has transformed their educational
+                <h3 class="text-xl sm:text-2xl font-bold mb-4">Success Stories</h3>
+                <p class="mb-6 opacity-90 text-sm sm:text-base">Hear from our customers about how Fedena has transformed their educational
                   institutions.</p>
                 <a href="Case-Studies.html"
-                  class="inline-flex items-center px-4 py-2 bg-white text-red-600 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200">
+                  class="inline-flex items-center px-4 py-2 bg-white text-red-600 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200 text-sm sm:text-base">
                   View all case studies
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-2" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -160,18 +160,18 @@
                 </a>
               </div>
             </div>
-            <div class="p-8 md:p-12">
-              <blockquote class="italic text-gray-700 mb-6">"Implementing Fedena was a game-changer for our university.
+            <div class="p-6 sm:p-8 lg:p-12">
+              <blockquote class="italic text-gray-700 mb-6 text-sm sm:text-base leading-relaxed">"Implementing Fedena was a game-changer for our university.
                 The streamlined processes have saved countless administrative hours, and both our faculty and students
                 appreciate the intuitive interface. The support team has been exceptional throughout our journey."
               </blockquote>
               <div class="flex items-center">
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80"
-                  alt="John Smith" class="w-12 h-12 rounded-full object-cover mr-4">
+                  alt="John Smith" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4">
                 <div>
-                  <div class="font-medium text-gray-900">Dr. John Smith</div>
-                  <div class="text-sm text-gray-500">President, International University</div>
+                  <div class="font-medium text-gray-900 text-sm sm:text-base">Dr. John Smith</div>
+                  <div class="text-xs sm:text-sm text-gray-500">President, International University</div>
                 </div>
               </div>
             </div>
@@ -181,29 +181,29 @@
     </section>
 
     <!-- Media and Press Section -->
-    <section id="media-press" class="py-20 bg-white">
+    <section id="media-press" class="py-12 sm:py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-16">
-          <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">In The
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">In The
             News</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Media & Press</h2>
-          <p class="text-gray-600 leading-relaxed">Latest coverage and announcements about Fedena</p>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Media & Press</h2>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Latest coverage and announcements about Fedena</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <!-- Press Item 1 -->
           <div
             class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
             <img
               src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-              alt="Press coverage" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Fedena Announces AI-Powered Analytics for Educational
+              alt="Press coverage" class="w-full h-40 sm:h-48 object-cover">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 leading-tight">Fedena Announces AI-Powered Analytics for Educational
                 Insights</h3>
-              <p class="text-gray-600 mb-4 line-clamp-2">The latest update brings advanced analytics capabilities to
+              <p class="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">The latest update brings advanced analytics capabilities to
                 help institutions make data-driven decisions.</p>
               <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">May 15, 2025</span>
+                <span class="text-xs sm:text-sm text-gray-500">May 15, 2025</span>
               </div>
             </div>
           </div>
@@ -213,29 +213,29 @@
             class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
             <img
               src="https://images.unsplash.com/photo-1631624215749-b10b3dd7bca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
-              alt="Press coverage" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Fedena Partners with Global Learning Initiative</h3>
-              <p class="text-gray-600 mb-4 line-clamp-2">Strategic partnership aims to bring school management solutions
+              alt="Press coverage" class="w-full h-40 sm:h-48 object-cover">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 leading-tight">Fedena Partners with Global Learning Initiative</h3>
+              <p class="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">Strategic partnership aims to bring school management solutions
                 to underserved educational markets.</p>
               <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">April 3, 2025</span>
+                <span class="text-xs sm:text-sm text-gray-500">April 3, 2025</span>
               </div>
             </div>
           </div>
 
           <!-- Press Item 3 -->
           <div
-            class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200">
+            class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 sm:col-span-2 lg:col-span-1">
             <img
               src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-              alt="Press coverage" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">Fedena's Mobile App Reaches 5 Million Downloads</h3>
-              <p class="text-gray-600 mb-4 line-clamp-2">The popular school management platform's mobile application
+              alt="Press coverage" class="w-full h-40 sm:h-48 object-cover">
+            <div class="p-4 sm:p-6">
+              <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-2 leading-tight">Fedena's Mobile App Reaches 5 Million Downloads</h3>
+              <p class="text-sm sm:text-base text-gray-600 mb-4 line-clamp-2">The popular school management platform's mobile application
                 celebrates a major milestone in user adoption.</p>
               <div class="flex justify-between items-center">
-                <span class="text-sm text-gray-500">March 21, 2025</span>
+                <span class="text-xs sm:text-sm text-gray-500">March 21, 2025</span>
               </div>
             </div>
           </div>
@@ -244,58 +244,58 @@
     </section>
 
     <!-- Awards and Recognition Section -->
-    <section id="awards" class="py-20 bg-grey-50">
+    <section id="awards" class="py-12 sm:py-16 md:py-20 bg-grey-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto text-center mb-16">
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
           <span
-            class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">Excellence</span>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
-          <p class="text-gray-600 leading-relaxed">Celebrating our commitment to innovation and quality</p>
+            class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">Excellence</span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Awards & Recognition</h2>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">Celebrating our commitment to innovation and quality</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           <!-- Award 1 -->
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 mb-6">
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-yellow-500" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                   d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Best EdTech Solution</h3>
-            <p class="text-gray-500 mb-4">Global Education Awards, 2024</p>
-            <p class="text-gray-600">Recognized for our comprehensive and user-friendly approach to school management
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Best EdTech Solution</h3>
+            <p class="text-sm sm:text-base text-gray-500 mb-4">Global Education Awards, 2024</p>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Recognized for our comprehensive and user-friendly approach to school management
               software.</p>
           </div>
 
           <!-- Award 2 -->
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 mb-6">
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-blue-500" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                   d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Excellence in Security</h3>
-            <p class="text-gray-500 mb-4">EdTech Security Alliance, 2023</p>
-            <p class="text-gray-600">Awarded for our commitment to protecting student data and institutional
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Excellence in Security</h3>
+            <p class="text-sm sm:text-base text-gray-500 mb-4">EdTech Security Alliance, 2023</p>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Awarded for our commitment to protecting student data and institutional
               information.</p>
           </div>
 
           <!-- Award 3 -->
-          <div class="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
-            <div class="w-16 h-16 mb-6">
+          <div class="bg-white rounded-xl shadow-md p-6 sm:p-8 flex flex-col items-center text-center sm:col-span-2 lg:col-span-1">
+            <div class="w-12 h-12 sm:w-16 sm:h-16 mb-4 sm:mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-green-500" fill="none"
                 viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                   d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Best User Experience</h3>
-            <p class="text-gray-500 mb-4">International UX Design Awards, 2023</p>
-            <p class="text-gray-600">Celebrated for our intuitive interface design that prioritizes accessibility and
+            <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-2">Best User Experience</h3>
+            <p class="text-sm sm:text-base text-gray-500 mb-4">International UX Design Awards, 2023</p>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">Celebrated for our intuitive interface design that prioritizes accessibility and
               ease of use.</p>
           </div>
         </div>
@@ -303,24 +303,24 @@
     </section>
 
     <!-- Careers Section -->
-    <section id="careers" class="py-20 bg-white">
+    <section id="careers" class="py-12 sm:py-16 md:py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div>
-            <span class="inline-block px-4 py-1 rounded-full bg-red-100 text-red-800 text-sm font-medium mb-4">Join Our
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <span class="inline-block px-3 py-2 sm:px-4 sm:py-1 rounded-full bg-red-100 text-red-800 text-xs sm:text-sm font-medium mb-4">Join Our
               Team</span>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Grow Your Career at Fedena</h2>
-            <p class="text-gray-700 leading-relaxed mb-6">We're always looking for passionate individuals to join our
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">Grow Your Career at Fedena</h2>
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 sm:mb-6">We're always looking for passionate individuals to join our
               mission of transforming education through technology. At Fedena, you'll work on impactful products that
               make a difference in thousands of educational institutions worldwide.</p>
-            <p class="text-gray-700 leading-relaxed mb-8">We offer competitive benefits, a collaborative work
+            <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-6 sm:mb-8">We offer competitive benefits, a collaborative work
               environment, continuous learning opportunities, and the chance to shape the future of educational
               technology.</p>
             <div class="flex flex-wrap gap-4">
               <a href="Contact.html"
-                class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 inline-flex items-center">
+                class="px-4 py-3 sm:px-6 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors duration-200 inline-flex items-center text-sm sm:text-base">
                 Contact us for career opportunities
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:h-5 sm:w-5 ml-2" fill="none" viewBox="0 0 24 24"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -328,21 +328,21 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-6">
-            <div class="aspect-w-1 aspect-h-1">
+          <div class="grid grid-cols-2 gap-4 sm:gap-6 order-1 lg:order-2">
+            <div class="aspect-square">
               <img
                 src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Team collaboration" class="object-cover rounded-xl shadow-lg w-full h-full">
             </div>
-            <div class="aspect-w-1 aspect-h-1 mt-12">
+            <div class="aspect-square mt-8 sm:mt-12">
               <img
                 src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Modern office space" class="object-cover rounded-xl shadow-lg w-full h-full">
             </div>
-            <div class="aspect-w-1 aspect-h-1 col-span-2">
+            <div class="aspect-w-2 aspect-h-1 col-span-2">
               <img
                 src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
-                alt="Team meeting" class="object-cover rounded-xl shadow-lg w-full h-full">
+                alt="Team meeting" class="object-cover rounded-xl shadow-lg w-full h-32 sm:h-40">
             </div>
           </div>
         </div>
