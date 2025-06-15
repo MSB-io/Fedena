@@ -116,21 +116,22 @@
         </div>
 
         <!-- Sidebar Footer -->
-        <div class="p-3 sm:p-4 border-t border-gray-100 flex-shrink-0">
-            <div class="text-xs text-gray-500">Powered by Gemini</div>
-            <div class="text-xs text-gray-400 mt-1">Version 1.0</div>
+        <div class="p-3 sm:p-4 border-t border-gray-100 flex-shrink-0 flex items-center justify-between">
+            <div>
+                <div class="text-xs text-gray-500">Powered by Gemini</div>
+                <div class="text-xs text-gray-400 mt-1">Version 1.0</div>
+            </div>
+            <!-- Back to Home Button -->
+            <a href="index.html"
+                class="p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-lg transition-colors">
+                <svg class="w-4 h-4 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                    </path>
+                </svg>
+            </a>
         </div>
     </div>
-
-    <!-- Back to Home Button -->
-    <a href="index.html"
-        class="fixed bottom-3 left-3 sm:bottom-4 sm:left-4 z-30 p-2 sm:p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
-        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
-            viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
-            </path>
-        </svg>
-    </a>
 
     <!-- Main Content Area -->
     <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full h-full px-2 sm:px-4 lg:px-0">
