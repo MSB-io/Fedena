@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,60 +28,66 @@
             backdrop-filter: blur(8px);
             transform: translateX(-100%) translateY(-50%);
         }
-        
+
         #sidebarContainer.open {
             transform: translateX(0) translateY(-50%);
         }
-        
+
         /* Smooth backdrop */
         #sidebarOverlay {
             transition: opacity 0.25s ease-in-out;
         }
-        
+
         /* Custom scrollbar for sidebar */
         #chatHistory::-webkit-scrollbar {
             width: 4px;
         }
-        
+
         #chatHistory::-webkit-scrollbar-track {
             background: transparent;
         }
-        
+
         #chatHistory::-webkit-scrollbar-thumb {
             background: rgba(156, 163, 175, 0.5);
             border-radius: 2px;
         }
-        
+
         #chatHistory::-webkit-scrollbar-thumb:hover {
             background: rgba(156, 163, 175, 0.8);
         }
     </style>
 </head>
+
 <body class="bg-gray-50 h-screen flex flex-col relative">
     <!-- Floating Hamburger Icon -->
-    <button id="hamburgerToggle" class="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
+    <button id="hamburgerToggle"
+        class="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
         <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
     </button>
 
     <!-- Sidebar Overlay -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-20 z-40 opacity-0 pointer-events-none transition-opacity"></div>
+    <div id="sidebarOverlay"
+        class="fixed inset-0 bg-black bg-opacity-20 z-40 opacity-0 pointer-events-none transition-opacity"></div>
 
     <!-- Floating Sidebar Container -->
-    <div id="sidebarContainer" class="fixed top-1/2 left-0 z-40 w-80 h-[75vh] bg-white shadow-2xl border-r border-gray-200 rounded-r-2xl transform -translate-y-1/2">
+    <div id="sidebarContainer"
+        class="fixed top-1/2 left-0 z-40 w-80 h-[75vh] bg-white shadow-2xl border-r border-gray-200 rounded-r-2xl transform -translate-y-1/2">
         <!-- Sidebar Header -->
         <div class="p-4 border-b border-gray-100">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-3">
                     <div class="w-8 h-8 flex items-center justify-center">
                         <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                            <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
+                                opacity="0.9" />
                         </svg>
                     </div>
                 </div>
                 <!-- Square New Chat Button -->
-                <button id="newChatBtn" class="p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-lg transition-colors">
+                <button id="newChatBtn"
+                    class="p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-lg transition-colors">
                     <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
@@ -106,9 +113,12 @@
     </div>
 
     <!-- Back to Home Button -->
-    <a href="index.html" class="fixed bottom-4 left-4 z-30 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
-        <svg class="w-5 h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+    <a href="index.html"
+        class="fixed bottom-4 left-4 z-30 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
+        <svg class="w-5 h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+            </path>
         </svg>
     </a>
 
@@ -119,27 +129,33 @@
             <div class="text-center max-w-2xl">
                 <div class="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                     <svg class="w-12 h-12 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                        <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z"
+                            opacity="0.9" />
                     </svg>
                 </div>
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to FedenAI</h2>
-                <p class="text-gray-600 mb-8">Your intelligent educational assistant. Ask me anything about academics, learning strategies, or educational topics!</p>
-                
+                <p class="text-gray-600 mb-8">Your intelligent educational assistant. Ask me anything about academics,
+                    learning strategies, or educational topics!</p>
+
                 <!-- Example Prompts -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                    <button
+                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
                         <div class="font-medium text-gray-800 mb-1">Explain a concept</div>
                         <div class="text-sm text-gray-500">Help me understand quantum physics</div>
                     </button>
-                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                    <button
+                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
                         <div class="font-medium text-gray-800 mb-1">Study tips</div>
                         <div class="text-sm text-gray-500">Best practices for exam preparation</div>
                     </button>
-                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                    <button
+                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
                         <div class="font-medium text-gray-800 mb-1">Solve problems</div>
                         <div class="text-sm text-gray-500">Help with math equations</div>
                     </button>
-                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                    <button
+                        class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
                         <div class="font-medium text-gray-800 mb-1">Course planning</div>
                         <div class="text-sm text-gray-500">Create a study schedule</div>
                     </button>
@@ -158,26 +174,21 @@
                 <div class="relative flex items-end space-x-3">
                     <!-- Text Input -->
                     <div class="flex-1 relative">
-                        <textarea 
-                            id="messageInput" 
-                            placeholder="Ask FedenAI anything about education..." 
-                            rows="1"
-                            class="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 pr-12 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-20 bg-white text-gray-800 placeholder-gray-500 max-h-32 overflow-y-auto"
-                        ></textarea>
-                        
+                        <textarea id="messageInput" placeholder="Ask FedenAI anything about education..." rows="1"
+                            class="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 pr-12 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-20 bg-white text-gray-800 placeholder-gray-500 max-h-32 overflow-y-auto"></textarea>
+
                         <!-- Send Button -->
-                        <button 
-                            id="sendButton" 
+                        <button id="sendButton"
                             class="absolute right-2 bottom-2 p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-lg transition-colors"
-                            disabled
-                        >
+                            disabled>
                             <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                             </svg>
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Input Info -->
                 <div class="flex items-center justify-between mt-2 text-xs text-gray-500">
                     <span>Press Enter to send, Shift+Enter for new line</span>
@@ -185,7 +196,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     </div>
 
     <!-- Loading Overlay -->
@@ -199,4 +210,5 @@
     <!-- JavaScript -->
     <script src="FedenAI.js"></script>
 </body>
+
 </html>
