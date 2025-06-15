@@ -28,23 +28,26 @@
   </div>
 
   <!-- Main Content Area with top padding for fixed navbar -->
-  <main class="pt-32 pb-20">
+  <main class="pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
     <!-- Pricing Hero Section -->
-    <section class="bg-grey-50 mt-20 py-16">
+    <section class="bg-gray-50 py-8 sm:py-12 md:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Affordable Plans for Smart Institutes</h1>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">All plans include free cloud hosting with encrypted security.
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 leading-tight">
+          Affordable Plans for Smart Institutes
+        </h1>
+        <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-2">
+          All plans include free cloud hosting with encrypted security.
         </p>
 
-        <!-- App Type Toggle - Fixed Design without overlap -->
-        <div class="mt-10 flex justify-center">
-          <div class="inline-flex bg-gray-100 rounded-full p-1 shadow-inner border border-gray-200 relative w-96">
+        <!-- App Type Toggle - Mobile First Responsive Design -->
+        <div class="mt-6 sm:mt-8 md:mt-10 flex justify-center px-4">
+          <div class="inline-flex bg-gray-100 rounded-full p-1 shadow-inner border border-gray-200 relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:w-96">
             <div class="absolute top-1 left-1 bottom-1 w-[calc(50%-4px)] bg-gradient-to-br from-red-500 to-red-600 rounded-full transition-transform duration-300 ease-in-out shadow-md" id="toggle-slider"></div>
-            <button id="web-toggle" class="relative z-10 cursor-pointer py-2.5 px-4 font-semibold text-sm text-white text-center rounded-full flex-1 whitespace-nowrap">
-              <span class="inline-block px-2">Web App</span>
+            <button id="web-toggle" class="relative z-10 cursor-pointer py-2 sm:py-2.5 px-2 sm:px-4 font-semibold text-xs sm:text-sm text-white text-center rounded-full flex-1">
+              <span class="inline-block px-1 sm:px-2">Web App</span>
             </button>
-            <button id="mobile-toggle" class="relative z-10 cursor-pointer py-2.5 px-4 font-semibold text-sm text-gray-500 text-center rounded-full flex-1 whitespace-nowrap">
-              <span class="inline-block px-2">Both Web & Mobile App</span>
+            <button id="mobile-toggle" class="relative z-10 cursor-pointer py-2 sm:py-2.5 px-2 sm:px-4 font-semibold text-xs sm:text-sm text-gray-500 text-center rounded-full flex-1">
+              <span class="inline-block px-1 sm:px-2">Both Web & Mobile App</span>
             </button>
           </div>
         </div>
@@ -52,111 +55,253 @@
     </section>
 
     <!-- Pricing Cards Section -->
-    <section class="py-16">
+    <section class="py-8 sm:py-12 md:py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
 
           <!-- Standard Plan -->
-          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-            <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
-              <div class="mb-4">
-                <span class="text-4xl font-bold">₹ 50,000</span>
-                <span class="text-gray-500">+ GST</span>
-                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
+          <div class="bg-white border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="p-4 sm:p-6 lg:p-8 text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Standard</h3>
+              <div class="mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-bold">₹ 50,000</span>
+                <span class="text-sm sm:text-base text-gray-500">+ GST</span>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">(billed yearly)</p>
               </div>
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm text-center">
+                Get Standard
+              </a>
             </div>
-            <div class="border-t border-gray-200 p-6">
-              <ul class="space-y-3">
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 10 Premium Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 12 Ultimate Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
+            <div class="border-t border-gray-200 p-4 sm:p-6">
+              <ul class="space-y-2 sm:space-y-3">
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-times text-red-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>21 Core Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>17 Standard Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-times text-red-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>10 Premium Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-times text-red-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>12 Ultimate Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>One to one Online training</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Automatic Updates</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Email & Phone support</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Onboarding data & configuration</span>
+                </li>
               </ul>
+            </div>
+            <div class="p-4 sm:p-6 border-t border-gray-200">
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm text-center">
+                Contact Us
+              </a>
             </div>
           </div>
 
           <!-- Premium Plan -->
-          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
-            <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
-              <div class="mb-4">
-                <span class="text-4xl font-bold">₹ 75,000</span>
-                <span class="text-gray-500">+ GST</span>
-                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
+          <div class="bg-white border border-gray-200 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="p-4 sm:p-6 lg:p-8 text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Premium</h3>
+              <div class="mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-bold">₹ 75,000</span>
+                <span class="text-sm sm:text-base text-gray-500">+ GST</span>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">(billed yearly)</p>
               </div>
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors text-sm text-center">
+                Get Premium
+              </a>
             </div>
-            <div class="border-t border-gray-200 p-6">
-              <ul class="space-y-3">
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 10 Premium Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 12 Ultimate Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
+            <div class="border-t border-gray-200 p-4 sm:p-6">
+              <ul class="space-y-2 sm:space-y-3">
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>21 Core Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>17 Standard Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>10 Premium Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-times text-red-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>12 Ultimate Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>One to one Online training</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Automatic Updates</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Email & Phone support</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Onboarding data & configuration</span>
+                </li>
               </ul>
+            </div>
+            <div class="p-4 sm:p-6 border-t border-gray-200">
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-orange-500 text-white rounded-lg font-medium hover:bg-orange-600 transition-colors text-sm text-center">
+                Contact Us
+              </a>
             </div>
           </div>
 
           <!-- Ultimate Plan -->
-          <div class="bg-white border-2 border-red-500 rounded-2xl shadow-xl overflow-hidden relative">
-            <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 text-xs font-semibold rounded-bl-lg">
-              POPULAR</div>
-            <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">Ultimate</h3>
-              <div class="mb-4">
-                <span class="text-4xl font-bold">₹ 1,00,000</span>
-                <span class="text-gray-500">+ GST</span>
-                <p class="text-sm text-gray-500 mt-1">(billed yearly)</p>
-              </div>
+          <div class="bg-white border-2 border-red-500 rounded-xl sm:rounded-2xl shadow-xl overflow-hidden relative hover:shadow-2xl transition-shadow duration-300">
+            <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-2 sm:px-3 text-xs font-semibold rounded-bl-lg">
+              POPULAR
             </div>
-            <div class="border-t border-gray-200 p-6">
-              <ul class="space-y-3">
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 10 Premium Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 12 Ultimate Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
+            <div class="p-4 sm:p-6 lg:p-8 text-center">
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Ultimate</h3>
+              <div class="mb-3 sm:mb-4">
+                <span class="text-2xl sm:text-3xl lg:text-4xl font-bold">₹ 1,00,000</span>
+                <span class="text-sm sm:text-base text-gray-500">+ GST</span>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">(billed yearly)</p>
+              </div>
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors text-sm text-center">
+                Get Ultimate
+              </a>
+            </div>
+            <div class="border-t border-gray-200 p-4 sm:p-6">
+              <ul class="space-y-2 sm:space-y-3">
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>21 Core Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>17 Standard Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>10 Premium Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>12 Ultimate Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>One to one Online training</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Automatic Updates</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Email & Phone support</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Onboarding data & configuration</span>
+                </li>
               </ul>
+            </div>
+            <div class="p-4 sm:p-6 border-t border-gray-200">
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors text-sm text-center">
+                Contact Us
+              </a>
             </div>
           </div>
 
           <!-- Enterprise Plan -->
-          <div
-            class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-lg overflow-hidden">
-            <div class="p-8 text-center">
-              <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
-              <div class="mb-4">
-                <span class="text-xl">Custom Pricing</span>
-                <p class="text-sm text-gray-300 mt-1">Contact for details</p>
+          <div class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="p-4 sm:p-6 lg:p-8 text-center">
+              <h3 class="text-xl sm:text-2xl font-bold mb-2">Enterprise</h3>
+              <div class="mb-3 sm:mb-4">
+                <span class="text-lg sm:text-xl">Custom Pricing</span>
+                <p class="text-xs sm:text-sm text-gray-300 mt-1">Contact for details</p>
               </div>
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors text-sm text-center">
+                Get Enterprise
+              </a>
             </div>
-            <div class="border-t border-gray-700 p-6">
-              <ul class="space-y-3">
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 21 Core Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 17 Standard Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 10 Premium Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 12 Ultimate Modules</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Unlimited Users</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> One to one Online training</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Automatic Updates</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Email & Phone support</li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Onboarding data & configuration
+            <div class="border-t border-gray-700 p-4 sm:p-6">
+              <ul class="space-y-2 sm:space-y-3">
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>21 Core Modules</span>
                 </li>
-                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Product source code</li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>17 Standard Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>10 Premium Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>12 Ultimate Modules</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Unlimited Users</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>One to one Online training</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Automatic Updates</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Email & Phone support</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Onboarding data & configuration</span>
+                </li>
+                <li class="flex items-center text-sm sm:text-base">
+                  <i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> 
+                  <span>Product source code</span>
+                </li>
               </ul>
+            </div>
+            <div class="p-4 sm:p-6 border-t border-gray-700">
+              <a href="Contact.html" class="inline-block w-full py-2 px-4 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors text-sm text-center">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
@@ -164,16 +309,21 @@
     </section>
 
     <!-- Help Section -->
-    <section class="py-16 text-center bg-white">
-      <div class="max-w-3xl mt-10 mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">Can't decide which plan is right for you?</h3>
-          <p class="text-gray-600 mb-6">Our education specialists can guide you to the perfect solution based on your
-            institution's unique needs.</p>
-          <div class="flex flex-wrap justify-center gap-4">
+    <section class="py-8 sm:py-12 md:py-16 text-center bg-white">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gray-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-md">
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            Can't decide which plan is right for you?
+          </h3>
+          <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">
+            Our education specialists can guide you to the perfect solution based on your institution's unique needs.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
             <a href="Contact.html"
-              class="py-3 px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors">
-              <i class="fas fa-calendar-alt mr-2"></i> Contact Us for a Consultation
+              class="inline-flex items-center justify-center py-3 px-4 sm:px-6 bg-red-600 text-white rounded-lg font-medium hover:bg-red-700 transition-colors text-sm sm:text-base w-full sm:w-auto">
+              <i class="fas fa-calendar-alt mr-2"></i> 
+              <span class="hidden sm:inline">Contact Us for a Consultation</span>
+              <span class="sm:hidden">Contact Us</span>
             </a>
           </div>
         </div>
@@ -191,7 +341,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="accordian.js"></script>
   <script src="mobileMenu.js"></script>
   <script src="loadComponents.js"></script>
   <script src="Pricing.js"></script>

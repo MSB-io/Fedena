@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const webToggle = document.getElementById('web-toggle');
   const mobileToggle = document.getElementById('mobile-toggle');
 
-  // Price elements
-  const standardPrice = document.querySelector('.grid div:nth-child(1) .text-4xl');
-  const premiumPrice = document.querySelector('.grid div:nth-child(2) .text-4xl');
-  const ultimatePrice = document.querySelector('.grid div:nth-child(3) .text-4xl');
+  // Price elements - Updated selectors for responsive design
+  const standardPrice = document.querySelector('.grid div:nth-child(1) span[class*="font-bold"]');
+  const premiumPrice = document.querySelector('.grid div:nth-child(2) span[class*="font-bold"]');
+  const ultimatePrice = document.querySelector('.grid div:nth-child(3) span[class*="font-bold"]');
   
   // Feature elements - Core Modules labels
   const standardCoreModules = document.querySelector('.grid div:nth-child(1) ul li:first-child');
@@ -119,14 +119,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update core modules text (changes from "Core" to "Basic" depending on selection)
     const coreModuleText = currentAppType === 'webApp' ? 'Core' : 'Basic';
     
-    // Update the text content of the module labels
-    standardCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
-    premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
-    ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
+    // Update the text content of the module labels with responsive spacing
+    standardCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
     
-    // Enterprise always shows "Core Modules"
+    // Enterprise always shows "Core Modules" with responsive spacing
     if (enterpriseCoreModules) {
-      enterpriseCoreModules.innerHTML = `<i class="fas fa-check text-white mr-2"></i> 21 Core Modules`;
+      enterpriseCoreModules.innerHTML = `<i class="fas fa-check text-white mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 Core Modules</span>`;
     }
   }
 
