@@ -169,27 +169,21 @@
         </div>
 
         <!-- Clean Input Section -->
-        <div class="border-t border-gray-200 bg-white px-4 py-4">
-            <div class="max-w-4xl mx-auto">
-                <div
-                    class="flex items-center gap-3 bg-gray-50 border border-gray-300 rounded-full px-4 py-2 shadow-sm focus-within:ring-2 focus-within:ring-red-500">
+        <div
+            class="sticky bottom-4 flex items-center gap-3 bg-gray-50 border border-gray-400 rounded-lg px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500 mx-4 mb-4">
+            <!-- Text Input -->
+            <input id="messageInput" type="text" placeholder="Ask FedenAI anything ..."
+                class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
 
-                    <!-- Text Input -->
-                    <input id="messageInput" type="text" placeholder="Ask FedenAI anything about education..."
-                        class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
-
-                    <!-- Send Button -->
-                    <button id="sendButton"
-                        class="p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors"
-                        disabled>
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                        </svg>
-                    </button>
-
-                </div>
-            </div>
+            <!-- Send Button -->
+            <button id="sendButton"
+                class="p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors"
+                disabled>
+                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                </svg>
+            </button>
         </div>
 
     </div>
