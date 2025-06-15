@@ -95,17 +95,17 @@ class FedenAI {
   }
 
   initializeSidebar() {
-    console.log('Initializing sidebar...');
+    console.log("Initializing sidebar...");
     // Load chat sessions from localStorage
     this.loadChatSessions();
-    console.log('Chat sessions loaded, rendering history...');
+    console.log("Chat sessions loaded, rendering history...");
     this.renderChatHistory();
-    console.log('Chat history rendered');
+    console.log("Chat history rendered");
 
     // Start with sidebar closed
     this.sidebarOpen = false;
     this.updateSidebarDisplay();
-    console.log('Sidebar initialization complete');
+    console.log("Sidebar initialization complete");
   }
 
   toggleSidebar() {
@@ -187,15 +187,18 @@ class FedenAI {
   }
 
   loadChatSession(sessionId) {
-    console.log('Loading chat session:', sessionId);
+    console.log("Loading chat session:", sessionId);
     const session = this.chatSessions.find((s) => s.id == sessionId); // Use == instead of === to handle string/number mismatch
     if (!session) {
-      console.error('Session not found:', sessionId);
-      console.log('Available sessions:', this.chatSessions.map(s => s.id));
+      console.error("Session not found:", sessionId);
+      console.log(
+        "Available sessions:",
+        this.chatSessions.map((s) => s.id)
+      );
       return;
     }
 
-    console.log('Found session:', session);
+    console.log("Found session:", session);
 
     // Save current chat first
     if (this.messages.length > 0) {
@@ -210,17 +213,17 @@ class FedenAI {
     this.messagesContainer.innerHTML = "";
     this.welcomeScreen.classList.add("hidden");
     this.messagesContainer.classList.remove("hidden");
-    
+
     // Force display update
     this.messagesContainer.style.display = "block";
 
     // Render all messages
-    console.log('Rendering messages:', this.messages.length);
+    console.log("Rendering messages:", this.messages.length);
     this.messages.forEach((message, index) => {
       console.log(`Rendering message ${index}:`, message);
       this.renderMessage(message);
     });
-    
+
     // Scroll to bottom after a small delay to ensure messages are rendered
     setTimeout(() => {
       this.scrollToBottom();
@@ -243,35 +246,43 @@ class FedenAI {
       const saved = localStorage.getItem("fedenai_chat_sessions");
       if (saved) {
         this.chatSessions = JSON.parse(saved);
-        console.log('Loaded chat sessions:', this.chatSessions.length);
-        
+        console.log("Loaded chat sessions:", this.chatSessions.length);
+
         // Ensure all sessions have proper structure and convert date strings back to Date objects
-        this.chatSessions = this.chatSessions.filter(session => {
-          if (session && session.id && session.messages && Array.isArray(session.messages)) {
+        this.chatSessions = this.chatSessions.filter((session) => {
+          if (
+            session &&
+            session.id &&
+            session.messages &&
+            Array.isArray(session.messages)
+          ) {
             // Convert date strings back to Date objects
-            if (typeof session.timestamp === 'string') {
+            if (typeof session.timestamp === "string") {
               session.timestamp = new Date(session.timestamp);
             }
-            if (typeof session.lastUpdated === 'string') {
+            if (typeof session.lastUpdated === "string") {
               session.lastUpdated = new Date(session.lastUpdated);
             }
-            
+
             // Ensure message timestamps are also Date objects
-            session.messages.forEach(message => {
-              if (typeof message.timestamp === 'string') {
+            session.messages.forEach((message) => {
+              if (typeof message.timestamp === "string") {
                 message.timestamp = new Date(message.timestamp);
               }
             });
-            
+
             return true;
           }
           return false;
         });
-        
-        console.log('Valid sessions after processing:', this.chatSessions.length);
+
+        console.log(
+          "Valid sessions after processing:",
+          this.chatSessions.length
+        );
       } else {
         this.chatSessions = [];
-        console.log('No saved chat sessions found');
+        console.log("No saved chat sessions found");
       }
     } catch (error) {
       console.error("Error loading chat sessions:", error);
@@ -291,19 +302,19 @@ class FedenAI {
   }
 
   renderChatHistory() {
-    console.log('renderChatHistory called');
-    console.log('chatHistory element:', this.chatHistory);
-    console.log('chatSessions length:', this.chatSessions.length);
-    
+    console.log("renderChatHistory called");
+    console.log("chatHistory element:", this.chatHistory);
+    console.log("chatSessions length:", this.chatSessions.length);
+
     if (!this.chatHistory) {
-      console.error('chatHistory element not found!');
+      console.error("chatHistory element not found!");
       return;
     }
 
     this.chatHistory.innerHTML = "";
 
     if (this.chatSessions.length === 0) {
-      console.log('No chat sessions to render');
+      console.log("No chat sessions to render");
       return;
     }
 
@@ -338,7 +349,7 @@ class FedenAI {
       chatItem.addEventListener("click", (e) => {
         // Only load session if clicking on the main area, not the delete button
         if (!e.target.closest(".delete-btn")) {
-          console.log('Chat item clicked, loading session:', session.id);
+          console.log("Chat item clicked, loading session:", session.id);
           e.preventDefault();
           e.stopPropagation();
           this.loadChatSession(session.id);
@@ -354,8 +365,11 @@ class FedenAI {
 
       this.chatHistory.appendChild(chatItem);
     });
-    
-    console.log('Chat history rendering complete, items in DOM:', this.chatHistory.children.length);
+
+    console.log(
+      "Chat history rendering complete, items in DOM:",
+      this.chatHistory.children.length
+    );
   }
 
   deleteChatSession(sessionId) {
@@ -364,7 +378,8 @@ class FedenAI {
     this.renderChatHistory();
 
     // If deleting current session, start new chat
-    if (this.currentSessionId == sessionId) { // Use == instead of === for consistency
+    if (this.currentSessionId == sessionId) {
+      // Use == instead of === for consistency
       this.startNewChat();
     }
   }
@@ -404,11 +419,12 @@ class FedenAI {
   updateSendButton() {
     const hasText = this.messageInput.value.trim().length > 0;
     const withinLimit = this.messageInput.value.length <= 2000;
-    
+
     if (this.isTyping) {
       // Show stop button when AI is typing
       this.sendButton.disabled = false;
-      this.sendButton.className = "p-2 bg-red-600 hover:bg-red-700 rounded-full transition-colors";
+      this.sendButton.className =
+        "p-2 bg-red-600 hover:bg-red-700 rounded-full transition-colors";
       this.sendButton.innerHTML = `
         <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
           <rect x="6" y="6" width="12" height="12" rx="2"/>
@@ -417,13 +433,15 @@ class FedenAI {
     } else {
       // Show send button when not typing
       this.sendButton.disabled = !hasText || !withinLimit;
-      
+
       if (this.sendButton.disabled) {
-        this.sendButton.className = "p-2 bg-gray-300 cursor-not-allowed rounded-full transition-colors";
+        this.sendButton.className =
+          "p-2 bg-gray-300 cursor-not-allowed rounded-full transition-colors";
       } else {
-        this.sendButton.className = "p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors";
+        this.sendButton.className =
+          "p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors";
       }
-      
+
       this.sendButton.innerHTML = `
         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -466,7 +484,7 @@ class FedenAI {
   }
 
   stopAIResponse() {
-    console.log('Stopping AI response...');
+    console.log("Stopping AI response...");
     this.shouldStopTyping = true;
     this.isTyping = false;
     this.removeTypingIndicator();
@@ -586,13 +604,13 @@ class FedenAI {
 
   async simulateAIResponse(userMessage) {
     this.shouldStopTyping = false; // Reset stop flag
-    
+
     try {
       // Call Gemini API with hardcoded key
       const response = await this.callGeminiAPI(userMessage, this.geminiApiKey);
 
       if (this.shouldStopTyping) {
-        console.log('AI response stopped by user');
+        console.log("AI response stopped by user");
         return;
       }
 
@@ -602,10 +620,10 @@ class FedenAI {
       await this.typeMessage(response);
     } catch (error) {
       if (this.shouldStopTyping) {
-        console.log('AI response stopped by user during error handling');
+        console.log("AI response stopped by user during error handling");
         return;
       }
-      
+
       console.error("Detailed error getting AI response:", error);
       console.error("Error message:", error.message);
       console.error("Error stack:", error.stack);
@@ -794,11 +812,11 @@ User question: ${userMessage}`;
     for (let i = 0; i < words.length; i++) {
       // Check if user wants to stop typing
       if (this.shouldStopTyping) {
-        console.log('Typing stopped by user - stopping immediately');
+        console.log("Typing stopped by user - stopping immediately");
         // Don't add any more content, just stop here
         return;
       }
-      
+
       message.content += (i > 0 ? " " : "") + words[i];
       messageContentSpan.innerHTML = this.formatMessageContent(message.content);
       this.scrollToBottom();

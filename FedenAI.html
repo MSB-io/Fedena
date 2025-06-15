@@ -58,12 +58,15 @@
 
         /* Hide scrollbar for messages container */
         #messagesContainer {
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none;
+            /* Firefox */
+            -ms-overflow-style: none;
+            /* Internet Explorer 10+ */
         }
 
         #messagesContainer::-webkit-scrollbar {
-            display: none; /* WebKit browsers */
+            display: none;
+            /* WebKit browsers */
         }
     </style>
 </head>
@@ -98,7 +101,8 @@
                 <!-- Square New Chat Button -->
                 <button id="newChatBtn"
                     class="p-1.5 sm:p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-md sm:rounded-lg transition-colors">
-                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-red-600" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                     </svg>
                 </button>
@@ -109,7 +113,8 @@
         <div class="flex-1 overflow-hidden min-h-0">
             <div class="p-3 sm:p-4 h-full">
                 <h4 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">Recent Chats</h4>
-                <div id="chatHistory" class="space-y-1 h-[calc(100%-1.5rem)] sm:h-[calc(100%-2rem)] overflow-y-auto pr-1 sm:pr-2">
+                <div id="chatHistory"
+                    class="space-y-1 h-[calc(100%-1.5rem)] sm:h-[calc(100%-2rem)] overflow-y-auto pr-1 sm:pr-2">
                     <!-- Chat history items will be added here -->
                 </div>
             </div>
@@ -124,9 +129,10 @@
             <!-- Back to Home Button -->
             <a href="index.html"
                 class="p-2 bg-gray-50 hover:bg-red-50 border border-gray-200 hover:border-red-200 rounded-lg transition-colors">
-                <svg class="w-4 h-4 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                <svg class="w-4 h-4 text-gray-700 hover:text-red-600 transition-colors" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18">
                     </path>
                 </svg>
             </a>
@@ -147,14 +153,17 @@
                         </svg>
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">Welcome to FedenAI</h2>
-                    <p class="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 px-2 sm:px-0">Your intelligent school management assistant. Get help with student information systems, academic planning, school administration, and educational best practices!</p>
+                    <p class="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 px-2 sm:px-0">Your intelligent school
+                        management assistant. Get help with student information systems, academic planning, school
+                        administration, and educational best practices!</p>
 
                     <!-- Example Prompts -->
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
                         <button
                             class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
                             <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Student Management</div>
-                            <div class="text-xs sm:text-sm text-gray-500">How to track student progress effectively</div>
+                            <div class="text-xs sm:text-sm text-gray-500">How to track student progress effectively
+                            </div>
                         </button>
                         <button
                             class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
@@ -168,7 +177,8 @@
                         </button>
                         <button
                             class="example-prompt p-3 sm:p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
-                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Educational Technology</div>
+                            <div class="font-medium text-gray-800 mb-1 text-sm sm:text-base">Educational Technology
+                            </div>
                             <div class="text-xs sm:text-sm text-gray-500">Integrating digital tools in education</div>
                         </button>
                     </div>
@@ -176,14 +186,16 @@
             </div>
 
             <!-- Messages Container -->
-            <div id="messagesContainer" class="flex-1 overflow-y-auto px-2 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6 hidden min-h-0">
+            <div id="messagesContainer"
+                class="flex-1 overflow-y-auto px-2 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6 hidden min-h-0">
                 <!-- Messages will be dynamically inserted here -->
             </div>
         </div>
 
         <!-- Input Section (Fixed at bottom) -->
         <div class="flex-shrink-0 p-3 sm:p-4">
-            <div class="flex items-center gap-2 sm:gap-3 bg-gray-50 border border-gray-400 rounded-lg px-3 sm:px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500">
+            <div
+                class="flex items-center gap-2 sm:gap-3 bg-gray-50 border border-gray-400 rounded-lg px-3 sm:px-4 py-2 shadow-sm focus-within:ring-1 focus-within:ring-red-500">
                 <!-- Text Input -->
                 <input id="messageInput" type="text" placeholder="Ask FedenAI anything ..."
                     class="flex-1 bg-transparent outline-none text-sm text-gray-800 placeholder-gray-500" />
@@ -204,7 +216,8 @@
     </div>
 
     <!-- Loading Overlay -->
-    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden px-4">
+    <div id="loadingOverlay"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden px-4">
         <div class="bg-white rounded-lg p-4 sm:p-6 flex items-center space-x-3 mx-4 max-w-sm w-full">
             <div class="animate-spin rounded-full h-5 w-5 sm:h-6 sm:w-6 border-b-2 border-red-600"></div>
             <span class="text-gray-700 text-sm sm:text-base">FedenAI is thinking...</span>
