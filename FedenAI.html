@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FedenAI - AI Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'chat-bg': '#f9fafb',
+                        'chat-user': '#fecaca',
+                        'chat-bot': '#ffffff',
+                        'sidebar-bg': '#ffffff',
+                        'input-bg': '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Notion-style sliding sidebar container */
+        #sidebarContainer {
+            transition: transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+            backdrop-filter: blur(8px);
+            transform: translateX(-100%) translateY(-50%);
+        }
+        
+        #sidebarContainer.open {
+            transform: translateX(0) translateY(-50%);
+        }
+        
+        /* Smooth backdrop */
+        #sidebarOverlay {
+            transition: opacity 0.25s ease-in-out;
+        }
+        
+        /* Custom scrollbar for sidebar */
+        #chatHistory::-webkit-scrollbar {
+            width: 4px;
+        }
+        
+        #chatHistory::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        #chatHistory::-webkit-scrollbar-thumb {
+            background: rgba(156, 163, 175, 0.5);
+            border-radius: 2px;
+        }
+        
+        #chatHistory::-webkit-scrollbar-thumb:hover {
+            background: rgba(156, 163, 175, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen flex flex-col relative">
+    <!-- Floating Hamburger Icon -->
+    <button id="hamburgerToggle" class="fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-gray-50 transition-colors">
+        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black bg-opacity-20 z-40 opacity-0 pointer-events-none transition-opacity"></div>
+
+    <!-- Floating Sidebar Container -->
+    <div id="sidebarContainer" class="fixed top-1/2 left-0 z-40 w-80 h-[75vh] bg-white shadow-2xl border-r border-gray-200 transform -translate-y-1/2">
+        <!-- Sidebar Header -->
+        <div class="p-4 border-b border-gray-100">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">F</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-semibold text-gray-900">FedenAI</h3>
+                    <p class="text-xs text-gray-500">AI Assistant</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Chat Button -->
+        <div class="p-4 border-b border-gray-100">
+            <button id="newChatBtn" class="w-full flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors border border-red-100">
+                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <span>New Chat</span>
+            </button>
+        </div>
+
+        <!-- Chat History -->
+        <div class="flex-1 overflow-hidden">
+            <div class="p-4">
+                <h4 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">Recent Chats</h4>
+                <div id="chatHistory" class="space-y-1 max-h-[calc(75vh-200px)] overflow-y-auto pr-2">
+                    <!-- Chat history items will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Footer -->
+        <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-100 bg-white">
+            <div class="space-y-1">
+                <button class="w-full flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span>Help & FAQ</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="index.html" class="fixed bottom-4 left-4 z-30 p-2 bg-white rounded-lg shadow-lg border border-gray-200 hover:bg-red-50 hover:border-red-200 transition-colors">
+        <svg class="w-5 h-5 text-gray-700 hover:text-red-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+    </a>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col max-w-4xl mx-auto w-full">
+        <!-- Welcome Screen (shown when no messages) -->
+        <div id="welcomeScreen" class="flex-1 flex items-center justify-center p-8">
+            <div class="text-center max-w-2xl">
+                <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <span class="text-white font-bold text-2xl">F</span>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Welcome to FedenAI</h2>
+                <p class="text-gray-600 mb-8">Your intelligent educational assistant. Ask me anything about academics, learning strategies, or educational topics!</p>
+                
+                <!-- Example Prompts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                        <div class="font-medium text-gray-800 mb-1">Explain a concept</div>
+                        <div class="text-sm text-gray-500">Help me understand quantum physics</div>
+                    </button>
+                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                        <div class="font-medium text-gray-800 mb-1">Study tips</div>
+                        <div class="text-sm text-gray-500">Best practices for exam preparation</div>
+                    </button>
+                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                        <div class="font-medium text-gray-800 mb-1">Solve problems</div>
+                        <div class="text-sm text-gray-500">Help with math equations</div>
+                    </button>
+                    <button class="example-prompt p-4 bg-white rounded-lg border border-gray-200 hover:border-red-300 hover:shadow-md hover:bg-red-50 transition-all text-left">
+                        <div class="font-medium text-gray-800 mb-1">Course planning</div>
+                        <div class="text-sm text-gray-500">Create a study schedule</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Container -->
+        <div id="messagesContainer" class="flex-1 overflow-y-auto px-4 py-6 space-y-6 hidden">
+            <!-- Messages will be dynamically inserted here -->
+        </div>
+
+        <!-- Input Section -->
+        <div class="border-t border-gray-200 bg-white px-4 py-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="relative flex items-end space-x-3">
+                    <!-- Text Input -->
+                    <div class="flex-1 relative">
+                        <textarea 
+                            id="messageInput" 
+                            placeholder="Ask FedenAI anything about education..." 
+                            rows="1"
+                            class="w-full resize-none rounded-xl border border-gray-300 px-4 py-3 pr-12 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-20 bg-white text-gray-800 placeholder-gray-500 max-h-32 overflow-y-auto"
+                        ></textarea>
+                        
+                        <!-- Send Button -->
+                        <button 
+                            id="sendButton" 
+                            class="absolute right-2 bottom-2 p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-lg transition-colors"
+                            disabled
+                        >
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Input Info -->
+                <div class="flex items-center justify-between mt-2 text-xs text-gray-500">
+                    <span>Press Enter to send, Shift+Enter for new line</span>
+                    <span id="charCount">0/2000</span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 flex items-center space-x-3">
+            <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-red-600"></div>
+            <span class="text-gray-700">FedenAI is thinking...</span>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="FedenAI.js"></script>
+</body>
+</html>
