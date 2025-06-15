@@ -286,8 +286,11 @@ class FedenAI {
 
     updateCharCount() {
         const count = this.messageInput.value.length;
-        this.charCount.textContent = `${count}/2000`;
-        this.charCount.className = count > 1800 ? 'text-red-500' : 'text-gray-500';
+        // Only update if charCount element exists
+        if (this.charCount) {
+            this.charCount.textContent = `${count}/2000`;
+            this.charCount.className = count > 1800 ? 'text-red-500' : 'text-gray-500';
+        }
     }
 
     updateSendButton() {
@@ -296,9 +299,9 @@ class FedenAI {
         this.sendButton.disabled = !hasText || !withinLimit || this.isTyping;
         
         if (this.sendButton.disabled) {
-            this.sendButton.className = 'absolute right-2 bottom-2 p-2 bg-gray-300 cursor-not-allowed rounded-lg transition-colors';
+            this.sendButton.className = 'p-2 bg-gray-300 cursor-not-allowed rounded-full transition-colors';
         } else {
-            this.sendButton.className = 'absolute right-2 bottom-2 p-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors';
+            this.sendButton.className = 'p-2 bg-red-600 hover:bg-red-700 disabled:bg-gray-300 disabled:cursor-not-allowed rounded-full transition-colors';
         }
     }
 
@@ -452,20 +455,22 @@ class FedenAI {
             console.error('Error stack:', error.stack);
             this.removeTypingIndicator();
             
-            let errorMessage = "I'm having trouble connecting to the AI service. ";
+            // Fallback to local responses if API fails
+            let fallbackResponse;
+            
             if (error.message.includes('API key') || error.message.includes('400')) {
-                errorMessage += "There seems to be an issue with the API key configuration.";
+                fallbackResponse = "I'm currently experiencing some connection issues with the advanced AI service. Let me help you with a basic response:\n\n" + this.generateAIResponse(userMessage);
             } else if (error.message.includes('quota') || error.message.includes('429')) {
-                errorMessage += "The API quota has been exceeded. Please try again later.";
+                fallbackResponse = "The AI service quota has been reached. Here's a helpful response based on your question:\n\n" + this.generateAIResponse(userMessage);
             } else if (error.message.includes('CORS') || error.message.includes('blocked')) {
-                errorMessage += "Network access is blocked. This might be a CORS issue with the browser.";
+                fallbackResponse = "Network access is restricted in this environment. Let me provide a helpful response:\n\n" + this.generateAIResponse(userMessage);
             } else if (error.message.includes('Failed to fetch') || error.message.includes('network')) {
-                errorMessage += "Network connection failed. Please check your internet connection.";
+                fallbackResponse = "I'm having network connectivity issues. Here's an offline response to help you:\n\n" + this.generateAIResponse(userMessage);
             } else {
-                errorMessage += `Please try again in a moment. (Error: ${error.message})`;
+                fallbackResponse = "I encountered a temporary issue, but I can still help! Here's my response:\n\n" + this.generateAIResponse(userMessage);
             }
             
-            await this.typeMessage(errorMessage);
+            await this.typeMessage(fallbackResponse);
         }
 
         this.isTyping = false;
@@ -562,17 +567,46 @@ User question: ${userMessage}`;
         };
 
         this.messages.push(message);
-        this.renderMessage(message);
+        
+        // Create message element with unique ID for targeting
+        const messageId = `message-${message.id}`;
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'flex justify-start';
+        messageDiv.innerHTML = `
+            <div class="max-w-3xl">
+                <div class="flex items-start space-x-3">
+                    <div class="flex-shrink-0">
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-2 mb-1">
+                            <span class="text-sm font-medium text-gray-700">FedenAI</span>
+                            <span class="text-xs text-gray-500">${this.formatTime(message.timestamp)}</span>
+                        </div>
+                        <div class="prose prose-sm max-w-none">
+                            <div class="bg-gray-100 text-gray-800 rounded-2xl rounded-tl-sm px-4 py-3">
+                                <span id="${messageId}"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
 
-        // Get the message content div
-        const messageElements = this.messagesContainer.querySelectorAll('.prose div');
-        const messageContentDiv = messageElements[messageElements.length - 1];
+        this.messagesContainer.appendChild(messageDiv);
+        
+        // Get the message content span by ID
+        const messageContentSpan = document.getElementById(messageId);
 
         // Type effect
         const words = content.split(' ');
         for (let i = 0; i < words.length; i++) {
             message.content += (i > 0 ? ' ' : '') + words[i];
-            messageContentDiv.innerHTML = this.formatMessageContent(message.content);
+            messageContentSpan.innerHTML = this.formatMessageContent(message.content);
             this.scrollToBottom();
             await new Promise(resolve => setTimeout(resolve, 50 + Math.random() * 50));
         }
