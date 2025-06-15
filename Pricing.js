@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', function() {
   const mobileToggle = document.getElementById('mobile-toggle');
 
   // Price elements
-  const standardPrice = document.querySelector('.pricing-card:nth-child(1) .text-4xl');
-  const premiumPrice = document.querySelector('.pricing-card:nth-child(2) .text-4xl');
-  const ultimatePrice = document.querySelector('.pricing-card:nth-child(3) .text-4xl');
+  const standardPrice = document.querySelector('.grid div:nth-child(1) .text-4xl');
+  const premiumPrice = document.querySelector('.grid div:nth-child(2) .text-4xl');
+  const ultimatePrice = document.querySelector('.grid div:nth-child(3) .text-4xl');
   
   // Feature elements - Core Modules labels
-  const standardCoreModules = document.querySelector('.pricing-card:nth-child(1) ul li:first-child');
-  const premiumCoreModules = document.querySelector('.pricing-card:nth-child(2) ul li:first-child');
-  const ultimateCoreModules = document.querySelector('.pricing-card:nth-child(3) ul li:first-child');
-  const enterpriseCoreModules = document.querySelector('.pricing-card:nth-child(4) ul li:first-child');
+  const standardCoreModules = document.querySelector('.grid div:nth-child(1) ul li:first-child');
+  const premiumCoreModules = document.querySelector('.grid div:nth-child(2) ul li:first-child');
+  const ultimateCoreModules = document.querySelector('.grid div:nth-child(3) ul li:first-child');
+  const enterpriseCoreModules = document.querySelector('.grid div:nth-child(4) ul li:first-child');
 
   // Get the toggle slider element
   const toggleSlider = document.getElementById('toggle-slider');
@@ -86,9 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
   webToggle.addEventListener('click', function () {
     if (currentAppType !== 'webApp') {
       currentAppType = 'webApp';
-      webToggle.classList.add('toggle-active');
-      mobileToggle.classList.remove('toggle-active');
-      toggleSlider.classList.remove('right');
+      webToggle.classList.add('text-white');
+      webToggle.classList.remove('text-gray-500');
+      mobileToggle.classList.add('text-gray-500');
+      mobileToggle.classList.remove('text-white');
+      toggleSlider.classList.remove('translate-x-full');
       updatePrices();
     }
   });
@@ -96,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
   mobileToggle.addEventListener('click', function () {
     if (currentAppType !== 'bothWebAndMobile') {
       currentAppType = 'bothWebAndMobile';
-      mobileToggle.classList.add('toggle-active');
-      webToggle.classList.remove('toggle-active');
-      toggleSlider.classList.add('right');
+      mobileToggle.classList.add('text-white');
+      mobileToggle.classList.remove('text-gray-500');
+      webToggle.classList.add('text-gray-500');
+      webToggle.classList.remove('text-white');
+      toggleSlider.classList.add('translate-x-full');
       updatePrices();
     }
   });
@@ -116,9 +120,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const coreModuleText = currentAppType === 'webApp' ? 'Core' : 'Basic';
     
     // Update the text content of the module labels
-    standardCoreModules.innerHTML = `<i class="fas fa-check feature-check"></i> 21 ${coreModuleText} Modules`;
-    premiumCoreModules.innerHTML = `<i class="fas fa-check feature-check"></i> 21 ${coreModuleText} Modules`;
-    ultimateCoreModules.innerHTML = `<i class="fas fa-check feature-check"></i> 21 ${coreModuleText} Modules`;
+    standardCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
+    premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
+    ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2"></i> 21 ${coreModuleText} Modules`;
     
     // Enterprise always shows "Core Modules"
     if (enterpriseCoreModules) {

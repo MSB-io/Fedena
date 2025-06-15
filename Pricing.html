@@ -14,79 +14,6 @@
     body {
       font-family: 'Inter', sans-serif;
     }
-
-    .pricing-card {
-      /* Static card styling without hover effects */
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
-
-    .feature-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.75rem;
-    }
-
-    .feature-check {
-      color: #10B981;
-      margin-right: 0.5rem;
-    }
-
-    .feature-x {
-      color: #EF4444;
-      margin-right: 0.5rem;
-    }
-
-    /* Fixed toggle styling without overlap */
-    .toggle-container {
-      display: inline-flex;
-      background: #f3f4f6;
-      border-radius: 999px;
-      padding: 4px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
-      border: 1px solid #e5e7eb;
-      position: relative;
-      width: 420px; /* Fixed width to ensure proper spacing */
-    }
-    
-    .toggle-option {
-      position: relative;
-      z-index: 1;
-      cursor: pointer;
-      padding: 10px 0;
-      font-weight: 600;
-      font-size: 0.925rem;
-      color: #6b7280;
-      text-align: center;
-      border-radius: 999px;
-      flex: 1; /* Equal width for both options */
-    }
-    
-    .toggle-active {
-      color: white;
-    }
-    
-    .toggle-slider {
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      bottom: 4px;
-      width: calc(50% - 4px);
-      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-      border-radius: 999px;
-      transition: transform 0.3s ease;
-      box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
-    }
-    
-    .toggle-slider.right {
-      transform: translateX(100%);
-    }
-    
-    /* Make sure text doesn't overflow and is properly centered */
-    .toggle-text {
-      display: inline-block;
-      white-space: nowrap;
-      padding: 0 10px;
-    }
   </style>
 </head>
 
@@ -111,13 +38,13 @@
 
         <!-- App Type Toggle - Fixed Design without overlap -->
         <div class="mt-10 flex justify-center">
-          <div class="toggle-container">
-            <div class="toggle-slider" id="toggle-slider"></div>
-            <button id="web-toggle" class="toggle-option toggle-active">
-              <span class="toggle-text">Web App</span>
+          <div class="inline-flex bg-gray-100 rounded-full p-1 shadow-inner border border-gray-200 relative w-96">
+            <div class="absolute top-1 left-1 bottom-1 w-[calc(50%-4px)] bg-gradient-to-br from-red-500 to-red-600 rounded-full transition-transform duration-300 ease-in-out shadow-md" id="toggle-slider"></div>
+            <button id="web-toggle" class="relative z-10 cursor-pointer py-2.5 px-4 font-semibold text-sm text-white text-center rounded-full flex-1 whitespace-nowrap">
+              <span class="inline-block px-2">Web App</span>
             </button>
-            <button id="mobile-toggle" class="toggle-option">
-              <span class="toggle-text">Both Web & Mobile App</span>
+            <button id="mobile-toggle" class="relative z-10 cursor-pointer py-2.5 px-4 font-semibold text-sm text-gray-500 text-center rounded-full flex-1 whitespace-nowrap">
+              <span class="inline-block px-2">Both Web & Mobile App</span>
             </button>
           </div>
         </div>
@@ -130,7 +57,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
           <!-- Standard Plan -->
-          <div class="pricing-card bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
             <div class="p-8 text-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">Standard</h3>
               <div class="mb-4">
@@ -141,21 +68,21 @@
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
-                <li class="feature-item"><i class="fas fa-times feature-x"></i> 10 Premium Modules</li>
-                <li class="feature-item"><i class="fas fa-times feature-x"></i> 12 Ultimate Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 10 Premium Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 12 Ultimate Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
               </ul>
             </div>
           </div>
 
           <!-- Premium Plan -->
-          <div class="pricing-card bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
+          <div class="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden">
             <div class="p-8 text-center">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">Premium</h3>
               <div class="mb-4">
@@ -166,21 +93,21 @@
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 10 Premium Modules</li>
-                <li class="feature-item"><i class="fas fa-times feature-x"></i> 12 Ultimate Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 10 Premium Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-times text-red-500 mr-2"></i> 12 Ultimate Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
               </ul>
             </div>
           </div>
 
           <!-- Ultimate Plan -->
-          <div class="pricing-card bg-white border-2 border-red-500 rounded-2xl shadow-xl overflow-hidden relative">
+          <div class="bg-white border-2 border-red-500 rounded-2xl shadow-xl overflow-hidden relative">
             <div class="absolute top-0 right-0 bg-red-500 text-white py-1 px-3 text-xs font-semibold rounded-bl-lg">
               POPULAR</div>
             <div class="p-8 text-center">
@@ -193,22 +120,22 @@
             </div>
             <div class="border-t border-gray-200 p-6">
               <ul class="space-y-3">
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 21 Core Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 17 Standard Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 10 Premium Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> 12 Ultimate Modules</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Unlimited Users</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> One to one Online training</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Automatic Updates</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Email & Phone support</li>
-                <li class="feature-item"><i class="fas fa-check feature-check"></i> Onboarding data & configuration</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 21 Core Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 17 Standard Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 10 Premium Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> 12 Ultimate Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Users</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> One to one Online training</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Automatic Updates</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Email & Phone support</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-green-500 mr-2"></i> Onboarding data & configuration</li>
               </ul>
             </div>
           </div>
 
           <!-- Enterprise Plan -->
           <div
-            class="pricing-card bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-lg overflow-hidden">
+            class="bg-gradient-to-br from-gray-800 to-gray-900 text-white rounded-2xl shadow-lg overflow-hidden">
             <div class="p-8 text-center">
               <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
               <div class="mb-4">
@@ -218,17 +145,17 @@
             </div>
             <div class="border-t border-gray-700 p-6">
               <ul class="space-y-3">
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 21 Core Modules</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 17 Standard Modules</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 10 Premium Modules</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> 12 Ultimate Modules</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Unlimited Users</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> One to one Online training</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Automatic Updates</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Email & Phone support</li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Onboarding data & configuration
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 21 Core Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 17 Standard Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 10 Premium Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> 12 Ultimate Modules</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Unlimited Users</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> One to one Online training</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Automatic Updates</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Email & Phone support</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Onboarding data & configuration
                 </li>
-                <li class="feature-item"><i class="fas fa-check text-white mr-2"></i> Product source code</li>
+                <li class="flex items-center mb-3"><i class="fas fa-check text-white mr-2"></i> Product source code</li>
               </ul>
             </div>
           </div>
