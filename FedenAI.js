@@ -95,13 +95,17 @@ class FedenAI {
   }
 
   initializeSidebar() {
+    console.log('Initializing sidebar...');
     // Load chat sessions from localStorage
     this.loadChatSessions();
+    console.log('Chat sessions loaded, rendering history...');
     this.renderChatHistory();
+    console.log('Chat history rendered');
 
     // Start with sidebar closed
     this.sidebarOpen = false;
     this.updateSidebarDisplay();
+    console.log('Sidebar initialization complete');
   }
 
   toggleSidebar() {
@@ -240,10 +244,31 @@ class FedenAI {
       if (saved) {
         this.chatSessions = JSON.parse(saved);
         console.log('Loaded chat sessions:', this.chatSessions.length);
-        // Ensure all sessions have proper structure
-        this.chatSessions = this.chatSessions.filter(session => 
-          session && session.id && session.messages && Array.isArray(session.messages)
-        );
+        
+        // Ensure all sessions have proper structure and convert date strings back to Date objects
+        this.chatSessions = this.chatSessions.filter(session => {
+          if (session && session.id && session.messages && Array.isArray(session.messages)) {
+            // Convert date strings back to Date objects
+            if (typeof session.timestamp === 'string') {
+              session.timestamp = new Date(session.timestamp);
+            }
+            if (typeof session.lastUpdated === 'string') {
+              session.lastUpdated = new Date(session.lastUpdated);
+            }
+            
+            // Ensure message timestamps are also Date objects
+            session.messages.forEach(message => {
+              if (typeof message.timestamp === 'string') {
+                message.timestamp = new Date(message.timestamp);
+              }
+            });
+            
+            return true;
+          }
+          return false;
+        });
+        
+        console.log('Valid sessions after processing:', this.chatSessions.length);
       } else {
         this.chatSessions = [];
         console.log('No saved chat sessions found');
@@ -266,11 +291,24 @@ class FedenAI {
   }
 
   renderChatHistory() {
-    if (!this.chatHistory) return;
+    console.log('renderChatHistory called');
+    console.log('chatHistory element:', this.chatHistory);
+    console.log('chatSessions length:', this.chatSessions.length);
+    
+    if (!this.chatHistory) {
+      console.error('chatHistory element not found!');
+      return;
+    }
 
     this.chatHistory.innerHTML = "";
 
-    this.chatSessions.forEach((session) => {
+    if (this.chatSessions.length === 0) {
+      console.log('No chat sessions to render');
+      return;
+    }
+
+    this.chatSessions.forEach((session, index) => {
+      console.log(`Rendering session ${index}:`, session.title);
       const chatItem = document.createElement("div");
       const isActive = this.currentSessionId == session.id; // Use == instead of === for consistency
 
@@ -316,6 +354,8 @@ class FedenAI {
 
       this.chatHistory.appendChild(chatItem);
     });
+    
+    console.log('Chat history rendering complete, items in DOM:', this.chatHistory.children.length);
   }
 
   deleteChatSession(sessionId) {
