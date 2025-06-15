@@ -360,8 +360,10 @@ class FedenAI {
                             ? `<div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
                                  <span class="text-white text-sm font-medium">U</span>
                                </div>`
-                            : `<div class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                                 <span class="text-white text-sm font-bold">F</span>
+                            : `<div class="w-8 h-8 flex items-center justify-center">
+                                 <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                                     <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                                 </svg>
                                </div>`
                         }
                     </div>
@@ -400,8 +402,10 @@ class FedenAI {
             <div class="max-w-3xl">
                 <div class="flex items-start space-x-3">
                     <div class="flex-shrink-0">
-                        <div class="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">F</span>
+                        <div class="w-8 h-8 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                            </svg>
                         </div>
                     </div>
                     <div class="flex-1">
