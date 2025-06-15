@@ -71,23 +71,25 @@
     <div id="sidebarContainer" class="fixed top-1/2 left-0 z-40 w-80 h-[75vh] bg-white shadow-2xl border-r border-gray-200 transform -translate-y-1/2">
         <!-- Sidebar Header -->
         <div class="p-4 border-b border-gray-100">
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
-                    </svg>
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0L15.09 8.26L24 12L15.09 15.74L12 24L8.91 15.74L0 12L8.91 8.26L12 0Z" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900">FedenAI</h3>
+                        <p class="text-xs text-gray-500">AI Assistant</p>
+                    </div>
                 </div>
+                <!-- Square New Chat Button -->
+                <button id="newChatBtn" class="p-2 bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-300 rounded-lg transition-colors">
+                    <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
             </div>
-        </div>
-
-        <!-- New Chat Button -->
-        <div class="p-4 border-b border-gray-100">
-            <button id="newChatBtn" class="w-full flex items-center space-x-2 px-3 py-2 text-sm text-gray-700 bg-red-50 hover:bg-red-100 rounded-lg transition-colors border border-red-100">
-                <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-                </svg>
-                <span>New Chat</span>
-            </button>
         </div>
 
         <!-- Chat History -->
