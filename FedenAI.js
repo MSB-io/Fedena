@@ -155,7 +155,7 @@ class FedenAI {
 
     // Update existing session or add new one
     const existingIndex = this.chatSessions.findIndex(
-      (s) => s.id === session.id
+      (s) => s.id == session.id // Use == instead of === for consistent comparison
     );
     if (existingIndex >= 0) {
       this.chatSessions[existingIndex] = session;
@@ -172,8 +172,15 @@ class FedenAI {
   }
 
   loadChatSession(sessionId) {
-    const session = this.chatSessions.find((s) => s.id === sessionId);
-    if (!session) return;
+    console.log('Loading chat session:', sessionId);
+    const session = this.chatSessions.find((s) => s.id == sessionId); // Use == instead of === to handle string/number mismatch
+    if (!session) {
+      console.error('Session not found:', sessionId);
+      console.log('Available sessions:', this.chatSessions.map(s => s.id));
+      return;
+    }
+
+    console.log('Found session:', session);
 
     // Save current chat first
     if (this.messages.length > 0) {
@@ -188,10 +195,21 @@ class FedenAI {
     this.messagesContainer.innerHTML = "";
     this.welcomeScreen.classList.add("hidden");
     this.messagesContainer.classList.remove("hidden");
+    
+    // Force display update
+    this.messagesContainer.style.display = "block";
 
     // Render all messages
-    this.messages.forEach((message) => this.renderMessage(message));
-    this.scrollToBottom();
+    console.log('Rendering messages:', this.messages.length);
+    this.messages.forEach((message, index) => {
+      console.log(`Rendering message ${index}:`, message);
+      this.renderMessage(message);
+    });
+    
+    // Scroll to bottom after a small delay to ensure messages are rendered
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 100);
 
     // Close sidebar after loading chat
     this.closeSidebar();
@@ -208,7 +226,17 @@ class FedenAI {
   loadChatSessions() {
     try {
       const saved = localStorage.getItem("fedenai_chat_sessions");
-      this.chatSessions = saved ? JSON.parse(saved) : [];
+      if (saved) {
+        this.chatSessions = JSON.parse(saved);
+        console.log('Loaded chat sessions:', this.chatSessions.length);
+        // Ensure all sessions have proper structure
+        this.chatSessions = this.chatSessions.filter(session => 
+          session && session.id && session.messages && Array.isArray(session.messages)
+        );
+      } else {
+        this.chatSessions = [];
+        console.log('No saved chat sessions found');
+      }
     } catch (error) {
       console.error("Error loading chat sessions:", error);
       this.chatSessions = [];
@@ -233,7 +261,7 @@ class FedenAI {
 
     this.chatSessions.forEach((session) => {
       const chatItem = document.createElement("div");
-      const isActive = this.currentSessionId === session.id;
+      const isActive = this.currentSessionId == session.id; // Use == instead of === for consistency
 
       chatItem.className = `group flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors text-sm bg-white border border-gray-200 mb-2 ${
         isActive
@@ -261,6 +289,9 @@ class FedenAI {
       chatItem.addEventListener("click", (e) => {
         // Only load session if clicking on the main area, not the delete button
         if (!e.target.closest(".delete-btn")) {
+          console.log('Chat item clicked, loading session:', session.id);
+          e.preventDefault();
+          e.stopPropagation();
           this.loadChatSession(session.id);
         }
       });
@@ -277,12 +308,12 @@ class FedenAI {
   }
 
   deleteChatSession(sessionId) {
-    this.chatSessions = this.chatSessions.filter((s) => s.id !== sessionId);
+    this.chatSessions = this.chatSessions.filter((s) => s.id != sessionId); // Use != instead of !== for consistency
     this.saveChatSessions();
     this.renderChatHistory();
 
     // If deleting current session, start new chat
-    if (this.currentSessionId === sessionId) {
+    if (this.currentSessionId == sessionId) { // Use == instead of === for consistency
       this.startNewChat();
     }
   }
