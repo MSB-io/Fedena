@@ -10,33 +10,6 @@
     <base href="./">
     <script src="https://cdn.tailwindcss.com">
     </script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    height: {
-                        '100vh': '100vh',
-                        '85vh': '85vh',
-                        '75vh': '75vh',
-                    },
-                    minHeight: {
-                        '90vh': '90vh',
-                        '80vh': '80vh',
-                        '70vh': '70vh',
-                        '60vh': '60vh',
-                    },
-                    screens: {
-                        'xs': '375px',
-                        'sm': '640px',
-                        'md': '768px',
-                        'lg': '1024px',
-                        'xl': '1280px',
-                        '2xl': '1536px',
-                    }
-                },
-            }
-        }
-    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
 </head>
@@ -50,7 +23,8 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen mt-0 pt-20 pb-8 flex items-center justify-center overflow-hidden bg-grey-50 sm:mt-8 sm:pt-16 lg:h-75vh">
+    <section
+        class="relative min-h-screen mt-0 pt-20 pb-8 flex items-center justify-center overflow-hidden bg-grey-50 sm:mt-8 sm:pt-16 lg:h-screen lg:max-h-[75vh]">
 
         <div
             class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
@@ -62,20 +36,23 @@
             </div>
 
             <!-- Main Heading -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-center px-2">
+            <h1
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-center px-2">
                 <span class="text-black">Discover The Power of</span>
                 <br class="hidden sm:block">
                 <span class="block sm:inline text-red-600">Fedena ERP</span>
             </h1>
 
             <!-- Subheading -->
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed text-center px-2">
+            <p
+                class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed text-center px-2">
                 Explore our comprehensive suite of features designed to streamline operations and
                 enhance the educational experience for all <span class="font-semibold text-red-600">stakeholders</span>.
             </p>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-col w-full max-w-sm sm:max-w-none sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-2 px-4 sm:px-0">
+            <div
+                class="flex flex-col w-full max-w-sm sm:max-w-none sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-2 px-4 sm:px-0">
                 <a href="Contact.html"
                     class="group relative w-full sm:w-auto overflow-hidden bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white text-base sm:text-lg font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl">
                     <span class="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
@@ -99,30 +76,35 @@
     </section>
 
     <!-- Overview Section -->
-    <section class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-90vh bg-grey-50 flex items-center">
-       
+    <section class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-[90vh] bg-grey-50 flex items-center">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16">
 
-                <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900 px-2">
+                <h2
+                    class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8 text-gray-900 px-2">
                     Complete <span class="text-red-600">School Management Solution</span>
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
                     Fedena provides a unified platform to manage all aspects of your educational institution with ease
                     and efficiency.
                 </p>
             </div>
 
             <!-- Card layout with features -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-xs sm:max-w-3xl lg:max-w-5xl mx-auto">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-xs sm:max-w-3xl lg:max-w-5xl mx-auto">
                 <!-- Feature card 1 -->
                 <div
                     class="bg-gradient-to-br from-white to-red-50 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-tachometer-alt text-white text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">User-Friendly Dashboards</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">User-Friendly Dashboards
+                        </h3>
                     </div>
                     <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                         Customized access for teachers, administrative staff, students, parents, and management
@@ -134,10 +116,12 @@
                 <div
                     class="bg-gradient-to-br from-white to-red-50 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-puzzle-piece text-white text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">Comprehensive Modules</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">Comprehensive Modules
+                        </h3>
                     </div>
                     <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                         Covers everything from student admissions to timetable management, attendance tracking,
@@ -149,10 +133,12 @@
                 <div
                     class="bg-gradient-to-br from-white to-red-50 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-users text-white text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">Enhanced Collaboration</h3>
+                        <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">Enhanced Collaboration
+                        </h3>
                     </div>
                     <p class="text-sm sm:text-base text-gray-700 leading-relaxed">
                         Integrated tools like Tasks, Discussions, Polls, Blogs, and Video conferencing
@@ -164,7 +150,8 @@
                 <div
                     class="bg-gradient-to-br from-white to-red-50 p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-dollar-sign text-white text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900">HR & Finance</h3>
@@ -190,7 +177,8 @@
     </section>
 
     <!-- Modules sections -->
-    <section id="core-modules" class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-80vh bg-grey-50 flex flex-col justify-center">
+    <section id="core-modules"
+        class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-[80vh] bg-grey-50 flex flex-col justify-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Module Categories -->
@@ -198,7 +186,8 @@
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-gray-900 px-2">
                     <span class="text-red-600">Core</span> Modules (22)
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
                     Explore our comprehensive set of essential modules that form the backbone of Fedena's powerful
                     school management system
                 </p>
@@ -208,286 +197,418 @@
                 <!-- Module Card 1 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-book-open text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Courses and Batches</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Courses and Batches</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Manage course structures, academic years, and student batches with
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Manage course structures, academic years, and student batches with
                         complete flexibility.</p>
                 </div>
 
                 <!-- Module Card 2 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user-friends text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Human Resources</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Human Resources</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Complete employee management with payroll, leave tracking, and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Complete employee management with payroll, leave tracking, and
                         performance evaluation.</p>
                 </div>
 
                 <!-- Module Card 3 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user-check text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Student Attendance</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Student Attendance</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track and manage attendance with automated reports and instant parent
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Track and manage attendance with automated reports and instant parent
                         notifications.</p>
                 </div>
 
                 <!-- Module Card 4 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-calendar-alt text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Timetable</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Timetable</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Create and manage complex schedules with flexible timetable generation
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Create and manage complex schedules with flexible timetable generation
                         and management.</p>
                 </div>
 
                 <!-- Module Card 5 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-clipboard-list text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Gradebook</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Gradebook</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track student performance with customizable grading systems and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Track student performance with customizable grading systems and
                         comprehensive reporting.</p>
                 </div>
 
                 <!-- Module Card 6 - Existing -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-alt text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Examination</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Examination</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Create, schedule, and grade exams with automated result generation and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Create, schedule, and grade exams with automated result generation and
                         analysis.</p>
                 </div>
 
                 <!-- Module Card 7 - Multiple Dashboards -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-tachometer-alt text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Multiple Dashboards</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Multiple Dashboards</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Role-specific dashboards for administrators, teachers, students, and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Role-specific dashboards for administrators, teachers, students, and
                         parents with personalized insights.</p>
                 </div>
 
                 <!-- Module Card 8 - News Management -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-newspaper text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">News Management</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            News Management</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Share announcements, news, and updates with specific user groups or
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Share announcements, news, and updates with specific user groups or
                         the entire institution.</p>
                 </div>
 
                 <!-- Module Card 9 - Student Admission -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user-plus text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Student Admission</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Student Admission</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Streamline the admission process with online applications, document
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Streamline the admission process with online applications, document
                         management, and automatic notifications.</p>
                 </div>
 
                 <!-- Module Card 10 - Messaging System -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-comments text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Messaging System</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Messaging System</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Built-in communication platform for direct messaging between students,
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Built-in communication platform for direct messaging between students,
                         teachers, parents, and administration.</p>
                 </div>
 
                 <!-- Module Card 11 - Finance -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-coins text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Finance</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Finance</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Comprehensive financial management with fee collection, expense
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Comprehensive financial management with fee collection, expense
                         tracking, and financial reporting.</p>
                 </div>
 
                 <!-- Module Card 12 - User Management -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-users-cog text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">User Management</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            User Management</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Control access levels and permissions with role-based authentication
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Control access levels and permissions with role-based authentication
                         and detailed user profiles.</p>
                 </div>
 
                 <!-- Module Card 13 - Report Center -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chart-bar text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Report Center</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Report Center</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Generate and analyze detailed reports across all modules with custom
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Generate and analyze detailed reports across all modules with custom
                         filters and visualization options.</p>
                 </div>
 
                 <!-- Module Card 14 - Employee/Teacher Login -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-chalkboard-teacher text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Employee / Teacher Login</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Employee / Teacher Login</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Dedicated portal for faculty with attendance management, grade
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Dedicated portal for faculty with attendance management, grade
                         submission, and communication tools.</p>
                 </div>
 
                 <!-- Module Card 15 - Students/Parents Login -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user-graduate text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Students / Parents Login</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Students / Parents Login</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Separate portals for students and parents to track progress, view
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Separate portals for students and parents to track progress, view
                         assignments, and communicate with teachers.</p>
                 </div>
 
                 <!-- Module Card 16 - Student Information -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-id-card text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Student Information</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Student Information</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Comprehensive student profiles with academic records, contact
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Comprehensive student profiles with academic records, contact
                         information, and performance analytics.</p>
                 </div>
 
                 <!-- Module Card 17 - Custom Student Remarks -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-comment-dots text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Custom Student Remarks</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Custom Student Remarks</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Add personalized notes and feedback on student performance, behavior,
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Add personalized notes and feedback on student performance, behavior,
                         and achievements.</p>
                 </div>
 
                 <!-- Module Card 18 - Certificate Generator -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-certificate text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Certificate Generator</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Certificate Generator</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Create and print professional certificates for completions,
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Create and print professional certificates for completions,
                         achievements, and graduations.</p>
                 </div>
 
                 <!-- Module Card 19 - ID Card Generator -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-id-badge text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">ID Card Generator</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            ID Card Generator</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Design and print student and staff ID cards with customizable
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Design and print student and staff ID cards with customizable
                         templates and batch processing.</p>
                 </div>
 
                 <!-- Module Card 20 - SMS Integration -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-sms text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">SMS Integration</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            SMS Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Send important notifications via SMS for attendance, emergency alerts,
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Send important notifications via SMS for attendance, emergency alerts,
                         and payment reminders.</p>
                 </div>
 
                 <!-- Module Card 21 - School/Events Calendar -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-calendar-week text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">School / Events Calendar</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            School / Events Calendar</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Interactive calendar for scheduling and tracking academic events,
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Interactive calendar for scheduling and tracking academic events,
                         holidays, and important dates.</p>
                 </div>
 
                 <!-- Module Card 22 - Advance Fees -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-invoice-dollar text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Advance Fees</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Advance Fees</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Advanced fee management with flexible payment plans, automated
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Advanced fee management with flexible payment plans, automated
                         reminders, and online payment options.</p>
                 </div>
             </div>
@@ -501,7 +622,8 @@
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-gray-900 px-2">
                     <span class="text-red-600">Addon</span> Modules (39)
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
                     Extend your Fedena experience with these powerful addon modules designed to meet specific needs of
                     your institution
                 </p>
@@ -511,507 +633,653 @@
                 <!-- Addon Module Card 1 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-building text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Hostel / Dormitory</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Hostel / Dormitory</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Complete hostel management with room allocation, fee tracking, and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Complete hostel management with room allocation, fee tracking, and
                         amenities management.</p>
                 </div>
 
                 <!-- Addon Module Card 2 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-bolt text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Instant Fees</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Instant Fees</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Real-time fee collection with instant receipts, payment tracking, and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Real-time fee collection with instant receipts, payment tracking, and
                         financial reports.</p>
                 </div>
 
                 <!-- Addon Module Card 3 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-book text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Library</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Library</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Digital library management with book tracking, digital resources, and
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Digital library management with book tracking, digital resources, and
                         lending system.</p>
                 </div>
 
                 <!-- Addon Module Card 4 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-database text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Data Management</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Data Management</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Advanced data handling tools for importing, exporting, and managing
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Advanced data handling tools for importing, exporting, and managing
                         institutional data.</p>
                 </div>
 
                 <!-- Addon Module Card 5 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-envelope text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Email Integration</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Email Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Send automated emails for announcements, reports, and notifications to
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Send automated emails for announcements, reports, and notifications to
                         stakeholders.</p>
                 </div>
 
                 <!-- Addon Module Card 6 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-bus text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">Transportation</h3>
+                        <h3
+                            class="text-base sm:text-base sm:text-lg font-semibold text-gray-900 leading-tight leading-tight">
+                            Transportation</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Manage vehicle fleet, routes, drivers, and transportation fees with
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">
+                        Manage vehicle fleet, routes, drivers, and transportation fees with
                         GPS tracking.</p>
                 </div>
 
                 <!-- Addon Module Card 7 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-import text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Custom Import</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Import data from various formats with custom mapping and validation
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Import data from various formats
+                        with custom mapping and validation
                         rules.</p>
                 </div>
 
                 <!-- Addon Module Card 8 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-blog text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Blog</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Built-in blogging platform for school news, announcements, and student
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Built-in blogging platform for
+                        school news, announcements, and student
                         publications.</p>
                 </div>
 
                 <!-- Addon Module Card 9 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-poll text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Poll</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create and manage surveys and polls for feedback collection and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create and manage surveys and
+                        polls for feedback collection and
                         decision making.</p>
                 </div>
 
                 <!-- Addon Module Card 10 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-contract text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Custom Report</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create customized reports with specific data points, formats, and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create customized reports with
+                        specific data points, formats, and
                         visualization options.</p>
                 </div>
 
                 <!-- Addon Module Card 11 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-palette text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Theme</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Customize the look and feel of your Fedena instance with branded
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Customize the look and feel of
+                        your Fedena instance with branded
                         themes and colors.</p>
                 </div>
 
                 <!-- Addon Module Card 12 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-briefcase text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Placement</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track and manage student placement activities, job listings, and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track and manage student
+                        placement activities, job listings, and
                         career services.</p>
                 </div>
 
                 <!-- Addon Module Card 13 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-images text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Gallery</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Organize and showcase photos and videos from school events and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Organize and showcase photos and
+                        videos from school events and
                         activities.</p>
                 </div>
 
                 <!-- Addon Module Card 14 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-tasks text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Task</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create and assign tasks to staff members with deadlines, priority, and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Create and assign tasks to staff
+                        members with deadlines, priority, and
                         progress tracking.</p>
                 </div>
 
                 <!-- Addon Module Card 15 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-boxes text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Inventory</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track school assets, supplies, and resources with purchase orders and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track school assets, supplies,
+                        and resources with purchase orders and
                         depreciation.</p>
                 </div>
 
                 <!-- Addon Module Card 16 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-comments text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Discussion</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Forum-style discussion boards for academic topics, collaborative
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Forum-style discussion boards for
+                        academic topics, collaborative
                         learning, and community exchange.</p>
                 </div>
 
                 <!-- Addon Module Card 17 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-gavel text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Discipline</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track student behavior, manage disciplinary actions, and document
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">Track student behavior, manage
+                        disciplinary actions, and document
                         incidents.</p>
                 </div>
 
                 <!-- Addon Module Card 18 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-export text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Data Export</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Export institutional data in various formats for analysis, reporting,
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Export
+                        institutional data in various formats for analysis, reporting,
                         and compliance.</p>
                 </div>
 
                 <!-- Addon Module Card 19 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-sync-alt text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Tally Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Tally Integration
+                        </h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Synchronize financial data with Tally accounting software for
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Synchronize
+                        financial data with Tally accounting software for
                         streamlined bookkeeping.</p>
                 </div>
 
                 <!-- Addon Module Card 20 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-credit-card text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Payment Gateway Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Payment Gateway
+                            Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Accept online payments through various payment gateways for fees and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Accept online
+                        payments through various payment gateways for fees and
                         other charges.</p>
                 </div>
 
                 <!-- Addon Module Card 21 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-signature text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Student Assignment Management</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Student Assignment
+                            Management</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Distribute, collect, and grade student assignments with plagiarism
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Distribute,
+                        collect, and grade student assignments with plagiarism
                         detection.</p>
                 </div>
 
                 <!-- Addon Module Card 22 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-invoice text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Fees Import</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Bulk import fee structures, payment records, and financial data from
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Bulk import fee
+                        structures, payment records, and financial data from
                         external sources.</p>
                 </div>
 
                 <!-- Addon Module Card 23 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-google text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Google SSO</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Enable single sign-on with Google accounts for simplified
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Enable single
+                        sign-on with Google accounts for simplified
                         authentication and access.</p>
                 </div>
 
                 <!-- Addon Module Card 24 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-wpforms text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Form Builder</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Create custom forms for applications, surveys, feedback, and data
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Create custom
+                        forms for applications, surveys, feedback, and data
                         collection.</p>
                 </div>
 
                 <!-- Addon Module Card 25 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-bell text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Reminder</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Set up automated reminders for deadlines, events, meetings, and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Set up automated
+                        reminders for deadlines, events, meetings, and
                         important tasks.</p>
                 </div>
 
                 <!-- Addon Module Card 26 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-window-restore text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">App Frame</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Embed third-party applications within Fedena for seamless workflow
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Embed third-party
+                        applications within Fedena for seamless workflow
                         integration.</p>
                 </div>
 
                 <!-- Addon Module Card 27 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-clipboard-check text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Enquiry & Registration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Enquiry &
+                            Registration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Manage prospect inquiries and streamline the registration process for
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Manage prospect
+                        inquiries and streamline the registration process for
                         new students.</p>
                 </div>
 
                 <!-- Addon Module Card 28 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-user-graduate text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Alumni</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track graduates, organize alumni events, and facilitate networking
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track graduates,
+                        organize alumni events, and facilitate networking
                         opportunities.</p>
                 </div>
 
                 <!-- Addon Module Card 29 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-alt text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Audit</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track and review all system activities with detailed logs for
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Track and review
+                        all system activities with detailed logs for
                         compliance and security.</p>
                 </div>
 
                 <!-- Addon Module Card 30 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-microsoft text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Azure Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Azure Integration
+                        </h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Connect with Microsoft Azure services for enhanced security, storage,
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Connect with
+                        Microsoft Azure services for enhanced security, storage,
                         and authentication.</p>
                 </div>
 
                 <!-- Addon Module Card 31 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-folder-open text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Doc Manager</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Organize, store, and share documents with version control and access
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Organize, store,
+                        and share documents with version control and access
                         permissions.</p>
                 </div>
 
                 <!-- Addon Module Card 32 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-calendar-plus text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Automatic Timetable Generator</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Automatic Timetable
+                            Generator</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">AI-powered scheduling tool that creates optimal timetables based on
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">AI-powered
+                        scheduling tool that creates optimal timetables based on
                         constraints and preferences.</p>
                 </div>
 
                 <!-- Addon Module Card 33 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-file-invoice-dollar text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Paybooks Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Paybooks Integration
+                        </h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Connect with Paybooks for streamlined payroll processing and salary
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Connect with
+                        Paybooks for streamlined payroll processing and salary
                         disbursement.</p>
                 </div>
 
                 <!-- Addon Module Card 34 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-door-open text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Gate Management</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Control and monitor campus entry/exit with ID scanning and attendance
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Control and
+                        monitor campus entry/exit with ID scanning and attendance
                         recording.</p>
                 </div>
 
                 <!-- Addon Module Card 35 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-google-drive text-red-600 text-lg sm:text-xl"></i>
                         </div>
                         <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Google Docs</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Integrate with Google Docs for collaborative document creation and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Integrate with
+                        Google Docs for collaborative document creation and
                         editing.</p>
                 </div>
 
                 <!-- Addon Module Card 36 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-edit text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Online Examination</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Online Examination
+                        </h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Conduct paperless exams with automated grading, proctoring, and result
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Conduct paperless
+                        exams with automated grading, proctoring, and result
                         analysis.</p>
                 </div>
 
                 <!-- Addon Module Card 37 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-book-reader text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">QuickBooks Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">QuickBooks
+                            Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Sync financial data with QuickBooks for comprehensive accounting and
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Sync financial
+                        data with QuickBooks for comprehensive accounting and
                         bookkeeping.</p>
                 </div>
 
                 <!-- Addon Module Card 38 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fab fa-google text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Google Meet Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Google Meet
+                            Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Launch and manage Google Meet sessions directly from Fedena for
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Launch and manage
+                        Google Meet sessions directly from Fedena for
                         virtual classes.</p>
                 </div>
 
                 <!-- Addon Module Card 39 -->
                 <div
                     class="bg-white p-4 sm:p-5 lg:p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div
+                        class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-3 sm:mb-4">
+                        <div
+                            class="w-10 h-10 sm:w-12 sm:h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-video text-red-600 text-lg sm:text-xl"></i>
                         </div>
-                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Bigbluebutton Integration</h3>
+                        <h3 class="text-base sm:text-lg font-semibold text-gray-900 leading-tight">Bigbluebutton
+                            Integration</h3>
                     </div>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Host virtual classrooms and webinars with whiteboard, screen sharing,
+                    <p class="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed leading-relaxed">Host virtual
+                        classrooms and webinars with whiteboard, screen sharing,
                         and recording.</p>
                 </div>
             </div>
@@ -1019,13 +1287,14 @@
     </section>
 
     <!-- Feature Highlights Section -->
-    <section class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-90vh bg-grey-50 flex flex-col justify-center">
+    <section class="py-12 sm:py-16 lg:py-20 min-h-[70vh] sm:min-h-[90vh] bg-grey-50 flex flex-col justify-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-gray-900 px-2">
                     Key <span class="text-red-600">Feature Highlights</span>
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
                     Discover the standout capabilities that make Fedena the preferred choice for educational
                     institutions worldwide
                 </p>
@@ -1040,7 +1309,8 @@
                         <i class="fas fa-mobile-alt text-white text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Mobile Accessibility</h3>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
                         Access Fedena on any device with our responsive design and dedicated mobile applications for
                         Android and iOS platforms.
                     </p>
@@ -1068,7 +1338,8 @@
                         <i class="fas fa-chart-pie text-white text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Advanced Analytics</h3>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
                         Make data-driven decisions with comprehensive analytics dashboards and customizable reporting
                         tools.
                     </p>
@@ -1096,7 +1367,8 @@
                         <i class="fas fa-shield-alt text-white text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Enterprise Security</h3>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-5 leading-relaxed">
                         Keep your institutional data secure with enterprise-grade security protocols and compliance
                         measures.
                     </p>
@@ -1120,13 +1392,14 @@
     </section>
 
     <!-- Testimonial Section -->
-    <section class="py-12 sm:py-16 lg:py-20 min-h-[60vh] sm:min-h-70vh bg-grey-50 flex items-center">
+    <section class="py-12 sm:py-16 lg:py-20 min-h-[60vh] sm:min-h-[70vh] bg-grey-50 flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-12 lg:mb-16">
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 lg:mb-6 text-gray-900 px-2">
                     What Our <span class="text-red-600">Users Say</span>
                 </h2>
-                <p class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
+                <p
+                    class="text-base sm:text-lg lg:text-xl text-gray-600 max-w-xs sm:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed px-2">
                     Join thousands of satisfied educational institutions already using Fedena
                 </p>
             </div>
@@ -1187,7 +1460,8 @@
                 </div>
 
                 <!-- Testimonial 3 -->
-                <div class="p-4 sm:p-6 lg:p-8 bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 sm:col-span-2 lg:col-span-1">
+                <div
+                    class="p-4 sm:p-6 lg:p-8 bg-white rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 sm:col-span-2 lg:col-span-1">
                     <div class="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
                         <div
                             class="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 font-bold text-sm sm:text-lg lg:text-xl">
@@ -1219,7 +1493,8 @@
     <section class="bg-grey-50 mt-8 sm:mt-12 lg:mt-16 py-8 sm:py-12 lg:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-8 sm:mb-10 lg:mb-12">
-                <span class="inline-block px-3 sm:px-4 py-2 rounded-full bg-red-100 text-red-600 text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                <span
+                    class="inline-block px-3 sm:px-4 py-2 rounded-full bg-red-100 text-red-600 text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                     EXTEND FUNCTIONALITY
                 </span>
                 <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 px-2">
@@ -1233,39 +1508,45 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 lg:p-8 transform hover:-translate-y-1">
-                    <div class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
+                    <div
+                        class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
                         <i class="fas fa-mobile-alt text-red-600 text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                         Fedena Mobile App
                     </h4>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
                         Customized iOS & Android apps with your institution's branding for seamless engagement between
                         parents, teachers & students
                     </p>
                 </div>
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 lg:p-8 transform hover:-translate-y-1">
-                    <div class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
+                    <div
+                        class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
                         <i class="fas fa-building text-red-600 text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                         Multi-School ERP System
                     </h4>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
                         Unified dashboard to centrally manage, track, and monitor all your institutions with
                         comprehensive analytics and reporting
                     </p>
                 </div>
                 <div
                     class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 lg:p-8 transform hover:-translate-y-1 sm:col-span-2 lg:col-span-1">
-                    <div class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
+                    <div
+                        class="bg-red-100 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
                         <i class="fas fa-cogs text-red-600 text-lg sm:text-xl lg:text-2xl"></i>
                     </div>
                     <h4 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
                         Fedena Integration
                     </h4>
-                    <p class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
+                    <p
+                        class="text-sm sm:text-base text-sm sm:text-base text-gray-600 mb-4 leading-relaxed sm:mb-6 leading-relaxed">
                         Seamlessly connect Fedena with your existing systems and third-party tools through our robust
                         API and integration services
                     </p>
@@ -1278,9 +1559,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
                 <!-- Resell Fedena Card -->
-                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
+                <div
+                    class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
                     <div class="p-4 sm:p-6 lg:p-8 xl:p-10">
-                        <div class="bg-red-600/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
+                        <div
+                            class="bg-red-600/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
                             <i class="fas fa-handshake text-red-600 text-lg sm:text-xl lg:text-2xl"></i>
                         </div>
                         <h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -1312,9 +1595,11 @@
                 </div>
 
                 <!-- Buy Fedena Card -->
-                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
+                <div
+                    class="bg-gradient-to-br from-red-50 to-red-100 rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden">
                     <div class="p-4 sm:p-6 lg:p-8 xl:p-10">
-                        <div class="bg-red-600/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
+                        <div
+                            class="bg-red-600/10 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-5 lg:mb-6">
                             <i class="fas fa-rocket text-red-600 text-lg sm:text-xl lg:text-2xl"></i>
                         </div>
                         <h4 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">

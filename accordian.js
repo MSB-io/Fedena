@@ -27,14 +27,14 @@ function initAccordion() {
     console.log(
       "No standard accordion buttons found. Trying alternative selectors..."
     );
-    
+
     // Try a more general approach - find any button inside a white background container
     const fallbackButtons = document.querySelectorAll(
       ".space-y-4 .bg-white button, .space-y-6 .bg-white button"
     );
-    
+
     console.log("Found fallback accordion buttons:", fallbackButtons.length);
-    
+
     if (fallbackButtons.length > 0) {
       initStandardAccordions(fallbackButtons);
     }
