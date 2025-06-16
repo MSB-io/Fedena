@@ -4,6 +4,8 @@
 
 Fedena is a comprehensive, web-based school management system designed to streamline educational institution operations. This project provides a complete enterprise resource planning (ERP) solution for schools, colleges, and educational institutions with 100+ integrated modules covering everything from student management to financial operations.
 
+### Website is live at: https://msb-io.github.io/Fedena/
+
 ### Premium Features
 - **FedenAI** - AI-powered assistant for educational management
 - **Mobile Applications** - Native iOS and Android apps
