@@ -123,13 +123,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update the text content of the module labels - Check if elements exist
     if (standardCoreModules) {
-      standardCoreModules.innerHTML = `<i class="fas fa-${currentAppType === "webApp" ? "times text-red-500" : "check text-green-500"} mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+      standardCoreModules.textContent = `21 ${coreModuleText} Modules`;
     }
     if (premiumCoreModules) {
-      premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+      premiumCoreModules.textContent = `21 ${coreModuleText} Modules`;
     }
     if (ultimateCoreModules) {
-      ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+      ultimateCoreModules.textContent = `21 ${coreModuleText} Modules`;
     }
 
     // Enterprise always shows "Core Modules" with responsive spacing
