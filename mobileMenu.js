@@ -51,6 +51,3 @@ window.initMobileMenu = function () {
     }
   });
 };
-
-// Export the function so it can be used in other files
-window.initMobileMenu = initMobileMenu;
