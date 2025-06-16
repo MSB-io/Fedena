@@ -68,27 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const webToggle = document.getElementById("web-toggle");
   const mobileToggle = document.getElementById("mobile-toggle");
 
-  // Price elements - Updated selectors for responsive design
-  const standardPrice = document.querySelector(
-    '.grid div:nth-child(1) span[class*="font-bold"]'
-  );
-  const premiumPrice = document.querySelector(
-    '.grid div:nth-child(2) span[class*="font-bold"]'
-  );
-  const ultimatePrice = document.querySelector(
-    '.grid div:nth-child(3) span[class*="font-bold"]'
-  );
+  // Price elements - Using specific IDs for reliable targeting
+  const standardPrice = document.getElementById("standard-price");
+  const premiumPrice = document.getElementById("premium-price");
+  const ultimatePrice = document.getElementById("ultimate-price");
 
-  // Feature elements - Core Modules labels
-  const standardCoreModules = document.querySelector(
-    ".grid div:nth-child(1) ul li:first-child"
-  );
-  const premiumCoreModules = document.querySelector(
-    ".grid div:nth-child(2) ul li:first-child"
-  );
-  const ultimateCoreModules = document.querySelector(
-    ".grid div:nth-child(3) ul li:first-child"
-  );
+  // Feature elements - Core Modules labels using specific IDs
+  const standardCoreModules = document.getElementById("standard-core-modules");
+  const premiumCoreModules = document.getElementById("premium-core-modules");
+  const ultimateCoreModules = document.getElementById("ultimate-core-modules");
   const enterpriseCoreModules = document.querySelector(
     ".grid div:nth-child(4) ul li:first-child"
   );
@@ -125,18 +113,24 @@ document.addEventListener("DOMContentLoaded", function () {
   function updatePrices() {
     const data = pricingData[currentAppType];
 
-    // Update prices
-    standardPrice.textContent = data.standard.price;
-    premiumPrice.textContent = data.premium.price;
-    ultimatePrice.textContent = data.ultimate.price;
+    // Update prices - Check if elements exist before updating
+    if (standardPrice) standardPrice.textContent = data.standard.price;
+    if (premiumPrice) premiumPrice.textContent = data.premium.price;
+    if (ultimatePrice) ultimatePrice.textContent = data.ultimate.price;
 
     // Update core modules text (changes from "Core" to "Basic" depending on selection)
     const coreModuleText = currentAppType === "webApp" ? "Core" : "Basic";
 
-    // Update the text content of the module labels with responsive spacing
-    standardCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
-    premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
-    ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    // Update the text content of the module labels - Check if elements exist
+    if (standardCoreModules) {
+      standardCoreModules.innerHTML = `<i class="fas fa-${currentAppType === "webApp" ? "times text-red-500" : "check text-green-500"} mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    }
+    if (premiumCoreModules) {
+      premiumCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    }
+    if (ultimateCoreModules) {
+      ultimateCoreModules.innerHTML = `<i class="fas fa-check text-green-500 mr-2 sm:mr-3 flex-shrink-0"></i> <span>21 ${coreModuleText} Modules</span>`;
+    }
 
     // Enterprise always shows "Core Modules" with responsive spacing
     if (enterpriseCoreModules) {
