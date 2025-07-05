@@ -2,9 +2,9 @@
 
 // EmailJS Configuration
 const EMAILJS_CONFIG = {
-  publicKey: "ogZ9to8iUkDP1ZMh5", // Replace with your actual EmailJS public key
-  serviceId: "service_24sgw1k", // Replace with your EmailJS service ID
-  templateId: "template_cpsuwa9", // Replace with your EmailJS template ID
+  publicKey: "", // Replace with your actual EmailJS public key
+  serviceId: "", // Replace with your EmailJS service ID
+  templateId: "", // Replace with your EmailJS template ID
 };
 
 document.addEventListener("DOMContentLoaded", function () {
