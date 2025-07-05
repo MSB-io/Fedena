@@ -7,7 +7,7 @@ class FedenAI {
     this.currentSessionId = null;
     this.sidebarOpen = false;
     // Gemini API configuration
-    this.geminiApiKey = "AIzaSyDHCJeUoxZCeLlfqU506k9YmVCqvnVd9UE"; // Replace with your actual Gemini API key
+    this.geminiApiKey = ""; // Replace with your actual Gemini API key
     this.geminiApiUrl =
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
     this.init();
